@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseurl = "https://caseyho.dev"
 languageCode = "en-us"
 title = "Hugo Tania"
 theme = "hugo-tania"
@@ -19,15 +19,8 @@ disqusShortname = "https-hugo-tania-netlify-app"
 
   siteName = "Hugo Tania is Amazing"
   siteDesc = "Hugo is Absurdly Fast!"
-  author = "Hugo Tania"
+  author = "Casey"
 
-  #[params.colorScheme]
-    # Enable toggle colorScheme
-    # Default to true
-    #toggle = true
-    # Default colorScheme
-    # Default to auto
-    #default = auto
 
   # Limit how many categories filter show above search input.
   # Default to 5
@@ -36,7 +29,7 @@ disqusShortname = "https-hugo-tania-netlify-app"
   # Show your social information with icon on index bio with `_index.md` content.
   [params.socialOptions]
     dev-to = ""
-    email = ""
+    email = "chiayingho.ca@gmail.com"
     facebook = ""
     github = "https://github.com/iosum"
     instagram = ""
