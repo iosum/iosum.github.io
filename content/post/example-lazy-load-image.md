@@ -1,7 +1,7 @@
 ---
 author: "Hugo Authors"
 title: "Example Lazy Load Image"
-date: "2019-03-09"
+date: "2022-03-09"
 description: "Example Lazy Load Image"
 tags:
 - markdown
