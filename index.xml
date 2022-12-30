@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo Tania</title><link>https://example.com/</link><description>Recent content on Hugo Tania</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 13 Jul 2022 17:56:00 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml"/><item><title>排序後再 SELECT TOP N 筆資料 | ORACLE SQL</title><link>https://example.com/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link><pubDate>Wed, 13 Jul 2022 17:56:00 +0800</pubDate><author>Casey</author><guid>https://example.com/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo Tania</title><link>https://caseyho.dev/</link><description>Recent content on Hugo Tania</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 13 Jul 2022 17:56:00 +0800</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>排序後再 SELECT TOP N 筆資料 | ORACLE SQL</title><link>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link><pubDate>Wed, 13 Jul 2022 17:56:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid><description>
 &lt;p>寫法一：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -75,7 +75,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ROWNUM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">MIN_ROW&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">MAX_ROW&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>定義變數 | ORACLE SQL</title><link>https://example.com/post/2022-07-11-define-variables-oracle-sql/</link><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://example.com/post/2022-07-11-define-variables-oracle-sql/</guid><description>
+&lt;/div></description></item><item><title>定義變數 | ORACLE SQL</title><link>https://caseyho.dev/post/2022-07-11-define-variables-oracle-sql/</link><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-11-define-variables-oracle-sql/</guid><description>
 &lt;h3 id="目的">
 &lt;a href="#%e7%9b%ae%e7%9a%84" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -171,7 +171,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料：
 &lt;/h3>
 &lt;p>&lt;a href="https://stackoverflow.com/questions/72853678/declare-bind-variable-in-the-oracle-sql-developer">Declare bind variable in the Oracle SQL Developer&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://iter01.com/397633.html">Oracle 變數定義的三種方式(define,variable,declare)&lt;/a>&lt;/p></description></item><item><title>Katex support</title><link>https://example.com/post/test-katex/</link><pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://example.com/post/test-katex/</guid><description>
+&lt;p>&lt;a href="https://iter01.com/397633.html">Oracle 變數定義的三種方式(define,variable,declare)&lt;/a>&lt;/p></description></item><item><title>Katex support</title><link>https://caseyho.dev/post/test-katex/</link><pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://caseyho.dev/post/test-katex/</guid><description>
 &lt;p>The following&lt;/p>
 &lt;p>$$ \int_{a}^{b} x^2 dx $$&lt;/p>
 &lt;p>Is an integral&lt;/p>
@@ -200,7 +200,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Block math:&lt;/p>
-&lt;p>$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$&lt;/p></description></item><item><title>MathJax support</title><link>https://example.com/post/test-mathjax/</link><pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://example.com/post/test-mathjax/</guid><description>
+&lt;p>$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$&lt;/p></description></item><item><title>MathJax support</title><link>https://caseyho.dev/post/test-mathjax/</link><pubDate>Sat, 22 May 2021 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://caseyho.dev/post/test-mathjax/</guid><description>
 &lt;p>The following&lt;/p>
 &lt;p>$$ \int_{a}^{b} x^2 dx $$&lt;/p>
 &lt;p>Is an integral&lt;/p>
@@ -228,7 +228,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Block math:&lt;/p>
-&lt;p>$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$&lt;/p></description></item><item><title>Markdown Syntax Guide</title><link>https://example.com/post/markdown-syntax/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://example.com/post/markdown-syntax/</guid><description>
+&lt;p>$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$&lt;/p></description></item><item><title>Markdown Syntax Guide</title><link>https://caseyho.dev/post/markdown-syntax/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://caseyho.dev/post/markdown-syntax/</guid><description>
 &lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p>
 &lt;h2 id="headings">
 &lt;a href="#headings" class="anchor">
@@ -597,7 +597,7 @@ Other Elements — abbr, sub, sup, kbd, mark
 &lt;p>The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk&lt;/a> during Gopherfest, November 18, 2015.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Example Lazy Load Image</title><link>https://example.com/post/example-lazy-load-image/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://example.com/post/example-lazy-load-image/</guid><description>
+&lt;/div></description></item><item><title>Example Lazy Load Image</title><link>https://caseyho.dev/post/example-lazy-load-image/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://caseyho.dev/post/example-lazy-load-image/</guid><description>
 &lt;h2 id="nya-nya-nyan-meow-meow-mama">
 &lt;a href="#nya-nya-nyan-meow-meow-mama" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -669,7 +669,7 @@ alt="Cute CAT"
 src="https://images.unsplash.com/photo-1489084917528-a57e68a79a1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=750&amp;amp;q=80"
 alt="Cute CAT"
 />&lt;/p>
-&lt;p>Thanks by cats.&lt;/p></description></item><item><title>Placeholder Text</title><link>https://example.com/post/placeholder-text/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://example.com/post/placeholder-text/</guid><description>
+&lt;p>Thanks by cats.&lt;/p></description></item><item><title>Placeholder Text</title><link>https://caseyho.dev/post/placeholder-text/</link><pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://caseyho.dev/post/placeholder-text/</guid><description>
 &lt;p>Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p>
 &lt;p>Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p>
 &lt;ol>
@@ -710,7 +710,7 @@ Mane refeci capiebant unda mulcebat
 &lt;/h2>
 &lt;p>Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong>Faces illo pepulere&lt;/strong> tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p>
 &lt;p>Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p>
-&lt;p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong>mitis temploque&lt;/strong> vocatus, inque alis, &lt;em>oculos nomen&lt;/em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong>parte&lt;/strong>.&lt;/p></description></item><item><title>Emoji Support</title><link>https://example.com/post/emoji-support/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://example.com/post/emoji-support/</guid><description>
+&lt;p>Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong>mitis temploque&lt;/strong> vocatus, inque alis, &lt;em>oculos nomen&lt;/em> non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong>parte&lt;/strong>.&lt;/p></description></item><item><title>Emoji Support</title><link>https://caseyho.dev/post/emoji-support/</link><pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate><author>Hugo Authors</author><guid>https://caseyho.dev/post/emoji-support/</guid><description>
 &lt;p>Emoji can be enabled in a Hugo project in a number of ways.&lt;/p>
 &lt;p>The &lt;a href="https://gohugo.io/functions/emojify/">&lt;code>emojify&lt;/code>&lt;/a> function can be called directly in templates or &lt;a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes&lt;/a>.&lt;/p>
 &lt;p>To enable emoji globally, set &lt;code>enableEmoji&lt;/code> to &lt;code>true&lt;/code> in your site&amp;rsquo;s &lt;a href="https://gohugo.io/getting-started/configuration/">configuration&lt;/a> and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p>
