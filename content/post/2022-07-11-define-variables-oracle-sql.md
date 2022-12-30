@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 定義變數 | ORACLE SQL
+title: 定義變數
 author: Casey
 date: 2022-07-11
 categories: Snippets

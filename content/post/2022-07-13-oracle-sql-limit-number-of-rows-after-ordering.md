@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 排序後再 SELECT TOP N 筆資料 | ORACLE SQL
+title: 排序後再 SELECT TOP N 筆資料
 author: Casey
 date: 2022-07-13 17:56:00 +08:00
 categories: Snippets
