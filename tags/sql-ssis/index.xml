@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>sql ssis on Hugo Tania</title><link>https://caseyho.dev/tags/sql-ssis/</link><description>Recent content in sql ssis on Hugo Tania</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 27 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/tags/sql-ssis/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 SSIS 的 RetainSameConnection 屬性 | SSIS</title><link>https://caseyho.dev/post/2022-09-28-ssis-remainsameconnection-intro/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><guid>https://caseyho.dev/post/2022-09-28-ssis-remainsameconnection-intro/</guid><description>RetainSameConnection 的預設值為 False，為什麼? 當RetainSameConnection=false，SSIS 的每個工作在開始使用和資料庫連線時才會打開連線，在工作結束時，關閉連線。
+因此每個工作都會打開和關閉連線，且每個工作所使用的連線都是不同的。
+以上面的圖片，執行 SQL 工作和資料流程工作的連線就會不是同一條，即便他們都是連到同一個資料庫。
+當初的用意應該是如果執行 SQL 工作和資料流程工作用的是不同的資料庫連線，例如執行 SQL 工作連到的是 ORACLE DB，資料流程工作連到的是 SQL SERVER，當執行完執行 SQL 工作完成時，資料流程工作其實用不到 ORACLE 的連線，所以就會在完成執行 SQL 工作結束時關閉連線。
+這也是合理的，因為有一些工作流程可能是打開檔案，發送信件，那麼打開檔案，發送信件這一些工作就不需要資料庫的連線，因此也不會浪費資源。
+Temp Table 當RetainSameConnection=true，表示只要一執行封裝，連線就會打開，直到整個封裝執行結束。以剛剛的圖做舉例，如果我們在執行 SQL工作裡面新增一個 Temp Table，那麼資料流程工作也可以存取這一個 Temp Table，因為執行 SQL工作和資料流程工作連線是一樣的，資源還沒有被釋放掉，Temp Table 還會存在 DB 裡面。
+但是如果RetainSameConnection=false，表示每一個的工作連線都是獨立的，如果在執行 SQL工作新增 Temp Table，資料流程工作就不會存取到這一個 Temp Table，因為 Temp Table 早就因為執行 SQL工作結束跟著一起被連線釋放掉。
+參考資料 What is the RetainSameConnection Property of OLEDB Connection in SSIS?
+使用 Connetion 的屬性 RetainSameConnection</description></item></channel></rss>

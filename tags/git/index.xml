@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Hugo Tania</title><link>https://caseyho.dev/tags/git/</link><description>Recent content in git on Hugo Tania</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 27 Aug 2022 23:11:00 +0800</lastBuildDate><atom:link href="https://caseyho.dev/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>設置 Git SSH key - Windows11 版本 | Git</title><link>https://caseyho.dev/post/2022-08-27-setup-ssh-key-win11/</link><pubDate>Sat, 27 Aug 2022 23:11:00 +0800</pubDate><guid>https://caseyho.dev/post/2022-08-27-setup-ssh-key-win11/</guid><description>設置步驟 這一篇主要紀錄設定 Github 的 SSH key - Windows 11 版本
+安裝 Git ：下載網址 git --version
+如果不確定電腦有沒有安裝 Git，可以使用 git --version 確認，如果有，會顯示安裝的版本，如果沒有，請去官網下載，基本上只要一直按下一步即可。
+產生 SSH key 為 4 個步驟。
+ssh-keygen 按下 Enter - 使用預設路徑，檔案 按下 Enter - 不使用密碼保護私鑰 按下 Enter - 確認上述動作 使用 ssh-keygen 可以產生 SSH key ，接下來會被問到你想要把 SSH key 放在哪一個 file，直接按下 Enter，即是放在預設路徑，檔案。
+完成檔案新增後，會要求輸入 passphrase，passphrase 就是密碼，這一個密碼可以用來保護私鑰，雖然設置密碼保護私鑰能多一層的保障，但是每一次執行 Git 時就會被要求輸入密碼，這倒是一大缺點，這裡我不使用密碼。
+按下 Enter 後會被要求再輸入一次密碼，如果剛剛沒有設定密碼，直接按 Enter，反之打上剛剛設定的密碼。
+如果有看到像是亂碼的東西，表示 SSH Key 已經新增成功，如要看 SSH Key 放在哪一個檔案，可以到 C 槽的使用者底下有一個 .ssh 的資料夾，點開後就會有檔案 (假設使用的是預設路徑)。</description></item></channel></rss>
