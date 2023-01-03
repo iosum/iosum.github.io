@@ -1,0 +1,41 @@
+---
+layout: post
+title: 使用 OPENQUERY 新增 Temp Table | SQL
+author: Casey
+date: 2022-09-27
+categories: Snippets
+tags: sql
+---
+
+因為 CTE 無法使用 2 個以上的 QUERIES，所以使用 TEMP TABLE 代替 CTE。也因為資料量較大(有 20 多萬筆)，所以我選擇 TEMP TABLE，而不是 TABLE VARIABLE。
+
+1. 刪除 TEMP TABLE
+2. 將 SUB QUERY 的資料使用 SELECT ... INTO 加到 TEMP TABLE
+
+> SELECT ... INTO 會 CREATE 一個 TEMP TABLE 並將資料 INSERT 到 TEMP TABLE 中
+
+> TEMP TABLE 的資料來源可以是別的 DATA SOURCE。例如：ORACLE
+
+```sql
+	DROP TABLE IF EXISTS #TEMP_TABLE;
+
+	SELECT INSERTED.NAME, INSERTED.ID
+	INTO #TEMP_TABLE
+	FROM (
+		SELECT A.NAME, A.ID
+		FROM (
+			SELECT *
+			FROM OPENQUERY(ANOTHER_DB_SOURCE, '
+				SELECT A.NAME, A.ID
+				FROM A'
+			)
+		) ANOTHER_DB_SOURCE_QUERY
+		INNER JOIN (
+			SELECT *
+			FROM B
+		) B
+		ON B.ID = ANOTHER_DB_SOURCE_QUERY.ID
+
+	) INSERTED
+
+```
