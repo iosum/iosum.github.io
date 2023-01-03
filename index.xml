@@ -1,14 +1,85 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo Tania</title><link>https://caseyho.dev/</link><description>Recent content on Hugo Tania</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 15 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>執行 selenium 出包，此版本的 %1 與您執行的 Windows 版本不相容</title><link>https://caseyho.dev/post/2022-12-15-windows-not-compatible/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-12-15-windows-not-compatible/</guid><description>
-&lt;h1 id="此版本的-1-與您執行的-windows-版本不相容">
-&lt;a href="#%e6%ad%a4%e7%89%88%e6%9c%ac%e7%9a%84-1-%e8%88%87%e6%82%a8%e5%9f%b7%e8%a1%8c%e7%9a%84-windows-%e7%89%88%e6%9c%ac%e4%b8%8d%e7%9b%b8%e5%ae%b9" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-此版本的 %1 與您執行的 Windows 版本不相容
-&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 03 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 Selenium 和手打驗證碼登入網頁</title><link>https://caseyho.dev/post/2023-01-03-auto-login-using-selenium/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-01-03-auto-login-using-selenium/</guid><description>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">webdriver&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium.webdriver.chrome.options&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Options&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_experimental_option&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;detach&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">webdriver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Chrome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">chrome_options&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 開啟登入網頁&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;login page url&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Account&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_acct_box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;Acct&amp;#34;]&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_acct_box&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">send_keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># password&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_pwd_box&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;Pwd&amp;#34;]&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_pwd_box&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">send_keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 在 termianl 上面輸入 input&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">captcha&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">input&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Please enter the CAPTCHA: &amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">captcha_input&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;Captcha&amp;#34;]&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">captcha_input&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">send_keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">captcha&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;驗證碼已完成&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 停2s&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Find the submit button and click it&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">submit_button&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;Login_box&amp;#34;]/form/div/div/div/div[3]/input&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">submit_button&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">click&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;登入已完成&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#如果需要執行完自動關閉，就要加上下面這一行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#browser.close()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>執行 selenium 出包，此版本的 %1 與您執行的 Windows 版本不相容</title><link>https://caseyho.dev/post/2022-12-15-windows-not-compatible/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-12-15-windows-not-compatible/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -55,31 +126,56 @@ src="https://i.imgur.com/pxI5Wrc.png"
 alt="https://i.imgur.com/pxI5Wrc.png"
 />&lt;/p>
 &lt;p>可以執行 Sample Code 看能不能成功&lt;/p>
-&lt;pre tabindex="0">&lt;code>from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-#使用chrome的webdriver
-chrome_options = Options()
-chrome_options.add_experimental_option(&amp;#34;detach&amp;#34;, True)
-driver = webdriver.Chrome(options=chrome_options)
-#開啟google首頁
-driver.get(&amp;#39;&amp;lt;https://www.google.com/&amp;gt;&amp;#39;)
-#如果需要執行完自動關閉，就要加上下面這一行
-#browser.close()
-&lt;/code>&lt;/pre>&lt;p>成功的畫面&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">webdriver&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium.webdriver.chrome.options&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#使用chrome的webdriver&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Options&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_experimental_option&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;detach&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">webdriver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Chrome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">chrome_options&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#開啟google首頁&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://www.google.com/&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#如果需要執行完自動關閉，就要加上下面這一行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#browser.close()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>成功的畫面&lt;/p>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/kYFb9e5.png"
 alt="https://i.imgur.com/kYFb9e5.png"
 />&lt;/p></description></item><item><title>No valid Oracle clients found. You need at least one 64-bit client properly configured. | Toad for Oracle</title><link>https://caseyho.dev/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</link><pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</guid><description>
-&lt;h1 id="no-valid-oracle-clients-found-you-need-at-least-one-64-bit-client-properly-configured--toad-for-oracle">
-&lt;a href="#no-valid-oracle-clients-found-you-need-at-least-one-64-bit-client-properly-configured--toad-for-oracle" class="anchor">
+&lt;h2 id="錯誤訊息">
+&lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-No valid Oracle clients found. You need at least one 64-bit client properly configured. | Toad for Oracle
-&lt;/h1>
+錯誤訊息
+&lt;/h2>
+&lt;blockquote>
+&lt;p>No valid Oracle clients found. You need at least one 64-bit client properly configured.&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="錯誤原因">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e5%8e%9f%e5%9b%a0" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -107,7 +203,7 @@ src="https://i.imgur.com/EjzuQ47.png"
 alt="Imgur"
 />&lt;/p>
 &lt;blockquote>
-&lt;p>如果之前有安裝過，可以執行 sqlplus.exe 並打開工作管理員之後查看 Oracle Instant Client 的版本&lt;/p>
+&lt;p>如果之前有安裝過 sqlplus，可以執行 sqlplus.exe 並打開工作管理員之後查看 Oracle Instant Client 的版本&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/hkpGsjz.png"
@@ -200,16 +296,16 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://blog.toadworld.com/how-to-install-an-oracle-instant-client-for-toad-for-oracle">How to install an Oracle Instant Client for Toad® for Oracle&lt;/a>&lt;/p></description></item><item><title>將多筆資料合併為一筆顯示 - FOR XML PATH | SQL</title><link>https://caseyho.dev/post/2022-11-21-merge-column-data-to-a-cell/</link><pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-21-merge-column-data-to-a-cell/</guid><description>
-&lt;h1 id="將多筆資料合併為一筆顯示for-xml-path--sql">
-&lt;a href="#%e5%b0%87%e5%a4%9a%e7%ad%86%e8%b3%87%e6%96%99%e5%90%88%e4%bd%b5%e7%82%ba%e4%b8%80%e7%ad%86%e9%a1%af%e7%a4%bafor-xml-path--sql" class="anchor">
+&lt;h2 id="前情提要">
+&lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-將多筆資料合併為一筆顯示FOR XML PATH | SQL
-&lt;/h1>
+前情提要
+&lt;/h2>
 &lt;p>本篇使用 AdventureWorks2016 資料庫，將每一個產品的利用 FOR XML PATH 將評論人顯示多筆資料。&lt;/p>
 &lt;h2 id="步驟">
 &lt;a href="#%e6%ad%a5%e9%a9%9f" class="anchor">
@@ -366,16 +462,6 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/h2>
 &lt;p>&lt;a href="https://dotblogs.com.tw/kevinya/2012/06/01/72553">[SQL]將多筆資料合併為一筆顯示(FOR XML PATH)&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://dotblogs.com.tw/supershowwei/2016/01/26/145353">[食譜好菜] SQL Server 使用「FOR XML」語法做欄位合併&lt;/a>&lt;/p></description></item><item><title>如何壓縮 Transaction Log 檔案 | SQL</title><link>https://caseyho.dev/post/2022-11-11-how-to-compress-transaction-logs/</link><pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-11-how-to-compress-transaction-logs/</guid><description>
-&lt;h1 id="如何壓縮-transaction-log-檔案">
-&lt;a href="#%e5%a6%82%e4%bd%95%e5%a3%93%e7%b8%ae-transaction-log-%e6%aa%94%e6%a1%88" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-如何壓縮 Transaction Log 檔案
-&lt;/h1>
 &lt;h2 id="方法">
 &lt;a href="#%e6%96%b9%e6%b3%95" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -477,7 +563,39 @@ alt="Imgur"
 &lt;ol start="3">
 &lt;li>按下確定即可壓縮 log 檔&lt;/li>
 &lt;/ol>
-&lt;h2 id="參考資料">
+&lt;h3 id="tsql-1">
+&lt;a href="#tsql-1" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+TSQL
+&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="n">USE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">master&lt;/span>&lt;span class="p">];&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GO&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c1">-- 要備份的資料庫名稱
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">BACKUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DATABASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">SQLTestDB&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">TO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">DISK&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="s1">&amp;#39;Z:\SQLServerBackups\AdvWorksData.bak&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WITH&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOFORMAT&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOINIT&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">NAME&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="s1">&amp;#39;SQLTestDB-Full Database Backup&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SKIP&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOREWIND&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOUNLOAD&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">STATS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GO&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">
 &lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -489,16 +607,6 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/h2>
 &lt;p>&lt;a href="https://www.mssqltips.com/sqlservertutorial/3311/how-to-shrink-the-transaction-log/">How to shrink the transaction log&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://itorz324.blogspot.com/">阿湯哥@IT三兩事&lt;/a>&lt;/p></description></item><item><title>The DELETE statement conflicted with the REFERENCE constraint "FK_subplan_job_id" | SQL</title><link>https://caseyho.dev/post/2022-11-10-the-delete-statemet-conflicted/</link><pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-10-the-delete-statemet-conflicted/</guid><description>
-&lt;h1 id="the-delete-statement-conflicted-with-the-reference-constraint-fk_subplan_job_id">
-&lt;a href="#the-delete-statement-conflicted-with-the-reference-constraint-fk_subplan_job_id" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-The DELETE statement conflicted with the REFERENCE constraint &amp;ldquo;FK_subplan_job_id&amp;rdquo;
-&lt;/h1>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -522,15 +630,26 @@ delete 陳述式與reference 條件的約束&amp;rsquo;FK_subplan_job_id&amp;rsq
 &lt;blockquote>
 &lt;p>TITLE: Microsoft SQL Server Management Studio &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; Drop failed for Job &amp;lsquo;manual_db_backups.Subplan_1&amp;rsquo;. (Microsoft.SqlServer.Smo) For help, click: &lt;a href="http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&amp;amp;ProdVer=9.00.3042.00&amp;amp;EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.FailedOperationExceptionText&amp;amp;EvtID=Drop+Job&amp;amp;LinkId=20476">http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&amp;amp;ProdVer=9.00.3042.00&amp;amp;EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.FailedOperationExceptionText&amp;amp;EvtID=Drop+Job&amp;amp;LinkId=20476&lt;/a> &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; ADDITIONAL INFORMATION: An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo) &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; The DELETE statement conflicted with the REFERENCE constraint &amp;ldquo;FK_subplan_job_id&amp;rdquo;. The conflict occurred in database &amp;ldquo;msdb&amp;rdquo;, table &amp;ldquo;dbo.sysmaintplan_subplans&amp;rdquo;, column &amp;lsquo;job_id&amp;rsquo;. The statement has been terminated. (Microsoft SQL Server, Error: 547) For help, click: &lt;a href="http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&amp;amp;ProdVer=09.00.3042&amp;amp;EvtSrc=MSSQLServer&amp;amp;EvtID=547&amp;amp;LinkId=20476">http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&amp;amp;ProdVer=09.00.3042&amp;amp;EvtSrc=MSSQLServer&amp;amp;EvtID=547&amp;amp;LinkId=20476&lt;/a>&lt;/p>
 &lt;/blockquote>
-&lt;h2 id="解決辦法">
-&lt;a href="#%e8%a7%a3%e6%b1%ba%e8%be%a6%e6%b3%95" class="anchor">
+&lt;h2 id="發生原因">
+&lt;a href="#%e7%99%bc%e7%94%9f%e5%8e%9f%e5%9b%a0" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-解決辦法
+發生原因
+&lt;/h2>
+&lt;p>因為先刪除主計畫之後，再刪除子計畫時，就會找不到主計畫在哪裡，因此無法刪除。&lt;/p>
+&lt;h2 id="解決步驟">
+&lt;a href="#%e8%a7%a3%e6%b1%ba%e6%ad%a5%e9%a9%9f" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+解決步驟
 &lt;/h2>
 &lt;p>Step 1：先查詢子計畫和子計畫的 log&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -591,17 +710,6 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Step 3：到 SQL Agent Server 刪除該計畫即可&lt;/p>
-&lt;h2 id="發生原因">
-&lt;a href="#%e7%99%bc%e7%94%9f%e5%8e%9f%e5%9b%a0" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-發生原因
-&lt;/h2>
-&lt;p>因為先刪除主計畫之後，再刪除子計畫時，就會找不到主計畫在哪裡，因此無法刪除。&lt;/p>
 &lt;h2 id="參考資料">
 &lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -613,103 +721,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://dbamohsin.wordpress.com/2011/12/13/the-delete-statement-conflicted-with-the-reference-constraint-fk_subplan_job_id/">The DELETE statement conflicted with the REFERENCE constraint &amp;ldquo;FK_subplan_job_id&amp;rdquo;&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://twchuck.blogspot.com/2010/10/ms-sql-server-jobs.html">MS SQL SERVER 刪除 工作排程(JOBS)時出現錯誤&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h1 id="備份資料庫">
-&lt;a href="#%e5%82%99%e4%bb%bd%e8%b3%87%e6%96%99%e5%ba%ab" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-備份資料庫
-&lt;/h1>
-&lt;h2 id="方法">
-&lt;a href="#%e6%96%b9%e6%b3%95" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-方法
-&lt;/h2>
-&lt;ul>
-&lt;li>SSMS&lt;/li>
-&lt;li>TSQL&lt;/li>
-&lt;/ul>
-&lt;h3 id="ssms">
-&lt;a href="#ssms" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-SSMS
-&lt;/h3>
-&lt;ol>
-&lt;li>資料庫按右鍵 &amp;gt; 工作 &amp;gt; 備份&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img loading="lazy"
-src="https://i.imgur.com/xYl9Jbv.png"
-alt="Imgur"
-/>&lt;/p>
-&lt;p>&lt;img loading="lazy"
-src="https://learn.microsoft.com/zh-tw/sql/relational-databases/backup-restore/media/quickstart-backup-restore-database/backup-db-ssms.png?view=sql-server-ver16"
-alt=""
-/>&lt;/p>
-&lt;ol start="2">
-&lt;li>按加入，選擇要把備份檔放哪裡，之後按確定即可備份。&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img loading="lazy"
-src="https://i.imgur.com/aC3aNGU.png"
-alt="Imgur"
-/>&lt;/p>
-&lt;h3 id="tsql">
-&lt;a href="#tsql" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-TSQL
-&lt;/h3>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="n">USE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">master&lt;/span>&lt;span class="p">];&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GO&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c1">-- 要備份的資料庫名稱
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="n">BACKUP&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">DATABASE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">SQLTestDB&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">TO&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">DISK&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="s1">&amp;#39;Z:\SQLServerBackups\AdvWorksData.bak&amp;#39;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WITH&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOFORMAT&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOINIT&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">NAME&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="s1">&amp;#39;SQLTestDB-Full Database Backup&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SKIP&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOREWIND&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">NOUNLOAD&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">STATS&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GO&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>縮小 SSIS DB 檔案大小 | SSIS</title><link>https://caseyho.dev/post/2022-11-07-shrink-ssis-db-files/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-07-shrink-ssis-db-files/</guid><description>
-&lt;h1 id="縮小-ssis-db-檔案大小">
-&lt;a href="#%e7%b8%ae%e5%b0%8f-ssis-db-%e6%aa%94%e6%a1%88%e5%a4%a7%e5%b0%8f" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-縮小 SSIS DB 檔案大小
-&lt;/h1>
+&lt;p>&lt;a href="https://twchuck.blogspot.com/2010/10/ms-sql-server-jobs.html">MS SQL SERVER 刪除 工作排程(JOBS)時出現錯誤&lt;/a>&lt;/p></description></item><item><title>縮小 SSIS DB 檔案大小 | SSIS</title><link>https://caseyho.dev/post/2022-11-07-shrink-ssis-db-files/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-07-shrink-ssis-db-files/</guid><description>
 &lt;ol>
 &lt;li>
 &lt;p>將週期天數從預設的 365 天改到 30 天或其他更小的數字。
@@ -727,7 +739,7 @@ alt="Imgur"
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="k">Alter&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">procedure&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SSISDB&lt;/span>&lt;span class="p">.[&lt;/span>&lt;span class="n">internal&lt;/span>&lt;span class="p">].[&lt;/span>&lt;span class="n">cleanup_server_retention_window&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">delete_batch_size&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1000&lt;/span>&lt;span class="w">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">Alter&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">procedure&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SSISDB&lt;/span>&lt;span class="p">.[&lt;/span>&lt;span class="n">internal&lt;/span>&lt;span class="p">].[&lt;/span>&lt;span class="n">cleanup_server_retention_window&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">delete_batch_size&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1000&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol start="4">
@@ -758,11 +770,23 @@ alt="Imgur"
 &lt;/div>&lt;ol start="4">
 &lt;li>Shrink the db&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>USE [SSISDB]
-GO
-DBCC SHRINKDATABASE(N&amp;#39;SSISDB&amp;#39; )
-GO
-&lt;/code>&lt;/pre>&lt;h2 id="參考資料">
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="n">USE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">SSISDB&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GO&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">DBCC&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">SHRINKDATABASE&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">N&lt;/span>&lt;span class="s1">&amp;#39;SSISDB&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">GO&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="參考資料">
 &lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -772,17 +796,17 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://sqlvikas.blogspot.com/2014/08/how-to-reduce-ssisdb-size-issue-ssisdb.html">How to Reduce SSISDB Size&lt;/a>&lt;/p></description></item><item><title>dynamic type 介紹 | c#</title><link>https://caseyho.dev/post/2022-10-24-dynamic-type-in-c-sharp/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-24-dynamic-type-in-c-sharp/</guid><description>
-&lt;h1 id="dynamic-type-in-c">
-&lt;a href="#dynamic-type-in-c" class="anchor">
+&lt;p>&lt;a href="https://sqlvikas.blogspot.com/2014/08/how-to-reduce-ssisdb-size-issue-ssisdb.html">How to Reduce SSISDB Size&lt;/a>&lt;/p></description></item><item><title>Dynamic Type 介紹 | c#</title><link>https://caseyho.dev/post/2022-10-24-dynamic-type-in-c-sharp/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-24-dynamic-type-in-c-sharp/</guid><description>
+&lt;h2 id="前情提要">
+&lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-Dynamic Type in C#
-&lt;/h1>
+前情提要
+&lt;/h2>
 &lt;p>在 C# 4.0，有一個新的 Type 叫做 Dynamic Type。&lt;/p>
 &lt;p>Dynamic Type 不會在 compile time 做 checking，而是在 runtime 的時候編譯器才會知道該變數的 type ，並在 runtime 做 checking。&lt;/p>
 &lt;h2 id="須注意事項">
@@ -1838,16 +1862,16 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>&lt;a href="https://zh-tw.learnlayout.com/">學習 CSS 版面配置&lt;/a>&lt;/p>
 &lt;p>&lt;a href="http://www.ruanyifeng.com/blog/2019/11/css-position.html">CSS 定位詳解&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://ithelp.ithome.com.tw/articles/10212202">CSS relative? absolute? 傻傻分不清楚&lt;/a>&lt;/p></description></item><item><title>Hover div 的時候放大圖片 | css</title><link>https://caseyho.dev/post/2022-10-18-zoom-a-div-with-hover/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-18-zoom-a-div-with-hover/</guid><description>
-&lt;h1 id="hover-div-的時候放大左右兩邊的圖片">
-&lt;a href="#hover-div-%e7%9a%84%e6%99%82%e5%80%99%e6%94%be%e5%a4%a7%e5%b7%a6%e5%8f%b3%e5%85%a9%e9%82%8a%e7%9a%84%e5%9c%96%e7%89%87" class="anchor">
+&lt;h2 id="預設結果">
+&lt;a href="#%e9%a0%90%e8%a8%ad%e7%b5%90%e6%9e%9c" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
 d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-Hover div 的時候放大左右兩邊的圖片
-&lt;/h1>
+預設結果
+&lt;/h2>
 &lt;p>此為我們要做的結果圖。&lt;/p>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/JyJAMJJ.gif"
@@ -2093,16 +2117,6 @@ src="https://i.imgur.com/Ms9ND66.png"
 alt="Imgur"
 />&lt;/p>
 &lt;p>那麼 flex item 3 ~ flex item 5 都和 flex item 1 的計算方式一樣，這裡就不多贅述。&lt;/p></description></item><item><title>PO - 採購單 | ORACLE ERP R12</title><link>https://caseyho.dev/post/2022-10-11-oracle-erp-ebs-r12-po-intro/</link><pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-11-oracle-erp-ebs-r12-po-intro/</guid><description>
-&lt;h1 id="採購訂單">
-&lt;a href="#%e6%8e%a1%e8%b3%bc%e8%a8%82%e5%96%ae" class="anchor">
-&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
-&lt;path fill-rule="evenodd"
-d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
-&lt;/path>
-&lt;/svg>
-&lt;/a>
-採購訂單
-&lt;/h1>
 &lt;p>&lt;a href="https://docs.oracle.com/en/cloud/saas/procurement/22b/oedmp/poheadersall-3719.html#poheadersall-3719">ORACLE 官方文件&lt;/a>&lt;/p>
 &lt;h2 id="po_headers_all">
 &lt;a href="#po_headers_all" class="anchor">
@@ -3777,8 +3791,17 @@ src="https://i.imgur.com/w15Srgk.png"
 alt="Imgur"
 />&lt;/p>
 &lt;hr>
-&lt;p>參考資料：
-&lt;a href="https://stackoverflow.com/questions/3575029/c-sharp-liststring-to-string-with-delimiter">C# List&amp;lt;string&amp;gt; to string with delimiter&lt;/a>&lt;/p></description></item><item><title>2 陣列中找出至少有一個相同之元素 | JavaScript</title><link>https://caseyho.dev/post/2022-08-24-two-array-comparisions/</link><pubDate>Wed, 24 Aug 2022 14:14:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-24-two-array-comparisions/</guid><description>
+&lt;h2 id="參考資料">
+&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+參考資料：
+&lt;/h2>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/3575029/c-sharp-liststring-to-string-with-delimiter">C# List&amp;lt;string&amp;gt; to string with delimiter&lt;/a>&lt;/p></description></item><item><title>2 陣列中找出至少有一個相同之元素 | JavaScript</title><link>https://caseyho.dev/post/2022-08-24-two-array-comparisions/</link><pubDate>Wed, 24 Aug 2022 14:14:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-24-two-array-comparisions/</guid><description>
 &lt;p>使用 &lt;code>Array.prototype.some()&lt;/code> 和 &lt;code>Array.prototype.filter()&lt;/code>，找出 2 個 array 至少有一個相同的元素。&lt;/p>
 &lt;ul>
 &lt;li>
@@ -3843,7 +3866,16 @@ src="https://i.imgur.com/yNIjuzY.png"
 alt="Imgur"
 />&lt;/p>
 &lt;hr>
-&lt;p>參考資料：&lt;/p>
+&lt;h2 id="參考資料">
+&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+參考資料：
+&lt;/h2>
 &lt;p>&lt;a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/some">mdn web docs - Array.prototype.some()&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#%E5%98%97%E8%A9%A6%E4%B8%80%E4%B8%8B">mdn web docs - Array.prototype.filter()&lt;/a>&lt;/p></description></item><item><title>AD 驗證有可能造成資安問題嗎?</title><link>https://caseyho.dev/post/2022-08-19-is-attacking-available-when-using-ad-login-auth/</link><pubDate>Fri, 19 Aug 2022 21:14:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-19-is-attacking-available-when-using-ad-login-auth/</guid><description>
 &lt;p>有一天我被我主管問到這件事，若企業網站使用 AD 驗證方式登入帳密，使用 POST 的方式將未加密的帳密傳至伺服器中，整個過程都是使用內網，有沒有可能會被壞人竊取帳號密碼? (假設沒有惡意主動攻擊的狀況下)&lt;/p>
@@ -3952,7 +3984,7 @@ alt="Imgur"
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>定義變數</title><link>https://caseyho.dev/post/2022-07-11-define-variables-oracle-sql/</link><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-11-define-variables-oracle-sql/</guid><description>
-&lt;h3 id="目的">
+&lt;h2 id="目的">
 &lt;a href="#%e7%9b%ae%e7%9a%84" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -3961,9 +3993,9 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 目的
-&lt;/h3>
+&lt;/h2>
 &lt;p>Oracle SQL 定義變數跟 SQL Server 的用法十分不一樣(踩到非常多坑啊 😭)，所以這一篇主要紀錄 Oracle SQL 定義變數 的 &lt;code>VARIABLE&lt;/code> 和 &lt;code>DEFINE&lt;/code>。&lt;/p>
-&lt;h4 id="define-的-variable-的差別">
+&lt;h3 id="define-的-variable-的差別">
 &lt;a href="#define-%e7%9a%84-variable-%e7%9a%84%e5%b7%ae%e5%88%a5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -3972,7 +4004,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 &lt;code>DEFINE&lt;/code> 的 &lt;code>VARIABLE&lt;/code> 的差別
-&lt;/h4>
+&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;code>DEFINE&lt;/code> 的目的是&lt;strong>替代&lt;/strong>變數，在 client 端執行解析，需要加入&lt;code>&amp;amp;&lt;/code>在變數名稱前面，且必須要有變數名稱和預設值。不可以指定 data type，唯一的 data type 為 &lt;code>char&lt;/code>。&lt;/p>
@@ -4035,8 +4067,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">);&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;hr>
-&lt;h3 id="參考資料">
+&lt;/div>&lt;h2 id="參考資料">
 &lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -4045,6 +4076,6 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 參考資料：
-&lt;/h3>
+&lt;/h2>
 &lt;p>&lt;a href="https://stackoverflow.com/questions/72853678/declare-bind-variable-in-the-oracle-sql-developer">Declare bind variable in the Oracle SQL Developer&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://iter01.com/397633.html">Oracle 變數定義的三種方式(define,variable,declare)&lt;/a>&lt;/p></description></item></channel></rss>
