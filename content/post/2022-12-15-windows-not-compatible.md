@@ -8,7 +8,6 @@ tags: selenium
 ---
 
 
-# 此版本的 %1 與您執行的 Windows 版本不相容
 
 ## 錯誤訊息
 
@@ -38,7 +37,7 @@ Driver 也需要下載相同的版本
 
 可以執行 Sample Code 看能不能成功
 
-```
+```python
 from  selenium  import  webdriver
 from  selenium.webdriver.chrome.options  import  Options
 
@@ -48,7 +47,7 @@ chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 
 #開啟google首頁
-driver.get('<https://www.google.com/>')
+driver.get('https://www.google.com/')
 
 #如果需要執行完自動關閉，就要加上下面這一行
 #browser.close()

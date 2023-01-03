@@ -1,13 +1,13 @@
 ---
 layout: post
-title: dynamic type 介紹  | c#
+title: Dynamic Type 介紹  | c#
 author: Casey
 date: 2022-10-24
 categories: Snippets
 tags: c#
 ---
 
-# Dynamic Type in C#
+## 前情提要
 
 在 C# 4.0，有一個新的 Type 叫做 Dynamic Type。
 

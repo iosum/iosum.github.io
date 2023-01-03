@@ -7,7 +7,6 @@ categories: Blogging
 tags: R12
 ---
 
-# 採購訂單
 
 [ORACLE 官方文件](https://docs.oracle.com/en/cloud/saas/procurement/22b/oedmp/poheadersall-3719.html#poheadersall-3719)
 

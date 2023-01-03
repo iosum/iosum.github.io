@@ -7,8 +7,9 @@ categories: Debugging
 tags: toad
 ---
 
-# No valid Oracle clients found. You need at least one 64-bit client properly configured. | Toad for Oracle
 
+## 錯誤訊息
+> No valid Oracle clients found. You need at least one 64-bit client properly configured.
 
 ## 錯誤原因
 
@@ -21,7 +22,7 @@ tags: toad
 
 ![Imgur](https://i.imgur.com/EjzuQ47.png)
 
-> 如果之前有安裝過，可以執行 sqlplus.exe 並打開工作管理員之後查看 Oracle Instant Client 的版本
+> 如果之前有安裝過 sqlplus，可以執行 sqlplus.exe 並打開工作管理員之後查看 Oracle Instant Client 的版本
 
 ![Imgur](https://i.imgur.com/hkpGsjz.png)
 

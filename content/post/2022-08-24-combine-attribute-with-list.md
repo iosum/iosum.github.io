@@ -48,5 +48,6 @@ public class User
 
 ---
 
-參考資料：
+## 參考資料：
+
 [C# List\<string\> to string with delimiter](https://stackoverflow.com/questions/3575029/c-sharp-liststring-to-string-with-delimiter)

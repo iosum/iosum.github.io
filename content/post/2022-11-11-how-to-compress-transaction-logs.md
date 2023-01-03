@@ -8,8 +8,6 @@ tags: sql
 ---
 
 
-# 如何壓縮 Transaction Log 檔案
-
 ## 方法
 
 有 2 種方法
@@ -59,6 +57,21 @@ SET RECOVERY FULL
 ![Imgur](https://i.imgur.com/2N1kHVu.png)
 
 3. 按下確定即可壓縮 log 檔
+
+
+### TSQL
+
+
+```sql
+USE [master];
+GO
+-- 要備份的資料庫名稱
+BACKUP DATABASE [SQLTestDB]
+TO DISK = N'Z:\SQLServerBackups\AdvWorksData.bak' 
+WITH NOFORMAT, NOINIT,
+NAME = N'SQLTestDB-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, STATS = 10;
+GO
+```
 
 
 ## 參考資料

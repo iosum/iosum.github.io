@@ -7,7 +7,7 @@ categories: Blogging
 tags: sql
 ---
 
-# 將多筆資料合併為一筆顯示FOR XML PATH | SQL
+## 前情提要
 
 本篇使用 AdventureWorks2016 資料庫，將每一個產品的利用 FOR XML PATH 將評論人顯示多筆資料。
 

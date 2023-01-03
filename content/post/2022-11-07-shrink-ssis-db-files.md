@@ -7,15 +7,13 @@ categories: Blogging
 tags: ssis
 ---
 
-# 縮小 SSIS DB 檔案大小
-
 1. 將週期天數從預設的 365 天改到 30 天或其他更小的數字。
 ![Imgur](https://i.imgur.com/pY2Rf6P.png)
 
 2.  將 delete_batch_size 設定為 1000，預設為 10。
 
 ```sql
-	Alter procedure SSISDB.[internal].[cleanup_server_retention_window] SET @delete_batch_size  =  1000
+Alter procedure SSISDB.[internal].[cleanup_server_retention_window] SET @delete_batch_size  =  1000
 ```
 
 
@@ -34,13 +32,11 @@ ALTER TABLE  [internal].[execution_data_statistics]  REBUILD  PARTITION  =  ALL 
 
 4. Shrink the db
 
-```
+```sql
 USE [SSISDB]
-
 GO
 
-DBCC SHRINKDATABASE(N'SSISDB'  )
-
+DBCC SHRINKDATABASE(N'SSISDB')
 GO
 ```
 

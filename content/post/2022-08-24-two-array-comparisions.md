@@ -44,7 +44,7 @@ result1.filter((o1) => !result2.some((o2) => o1.id === o2.id));
 
 ---
 
-參考資料：
+## 參考資料：
 
 [mdn web docs - Array.prototype.some()](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 

@@ -7,7 +7,7 @@ categories: Blogging
 tags: css
 ---
 
-# Hover div 的時候放大左右兩邊的圖片
+## 預設結果
 
 此為我們要做的結果圖。
 
