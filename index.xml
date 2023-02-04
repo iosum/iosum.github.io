@@ -1,4 +1,62 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 16 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>在SSMS上刪除SQL Server Agent 失敗</title><link>https://caseyho.dev/post/2023-01-16-fail-to-delete-sql-server-agenet/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-01-16-fail-to-delete-sql-server-agenet/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 04 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>找不到 bin\roslyn\csc.exe 檔案</title><link>https://caseyho.dev/post/2023-02-04-can-not-find-roslyn-csc-exe-file/</link><pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-02-04-can-not-find-roslyn-csc-exe-file/</guid><description>
+&lt;h2 id="錯誤訊息">
+&lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+錯誤訊息
+&lt;/h2>
+&lt;p>找不到路徑 &amp;lsquo;D:\xxx\bin\roslyn\csc.exe&amp;rsquo; 的一部分。&lt;/p>
+&lt;p>&lt;img loading="lazy"
+src="https://i.imgur.com/lOxQsXK.png"
+alt="Imgur"
+/>&lt;/p>
+&lt;h2 id="解決方法">
+&lt;a href="#%e8%a7%a3%e6%b1%ba%e6%96%b9%e6%b3%95" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+解決方法
+&lt;/h2>
+&lt;p>找到 &lt;code>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0&lt;/code>&lt;/p>
+&lt;p>&lt;img loading="lazy"
+src="https://i.imgur.com/cXkYN3u.png"
+alt="Imgur"
+/>&lt;/p>
+&lt;p>進入 &lt;code>tools&lt;/code>&lt;/p>
+&lt;p>&lt;img loading="lazy"
+src="https://i.imgur.com/ujEHZ3X.png"
+alt="Imgur"
+/>&lt;/p>
+&lt;p>進入 &lt;code>Roslyn45&lt;/code>&lt;/p>
+&lt;p>&lt;img loading="lazy"
+src="https://i.imgur.com/wkHGnrW.png"
+alt="Imgur"
+/>&lt;/p>
+&lt;p>貼到專案的 &lt;code>Bin&lt;/code> folder，並重新命名為 &lt;code>roslyn&lt;/code>&lt;/p>
+&lt;p>&lt;img loading="lazy"
+src="https://i.imgur.com/U9q8uZU.png"
+alt="Imgur"
+/>&lt;/p>
+&lt;p>再重啟專案，即可成功&lt;/p>
+&lt;h2 id="參考資料">
+&lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+參考資料
+&lt;/h2>
+&lt;p>&lt;a href="https://blog.darkthread.net/blog/aspnet-bin-roslyn-folder/">神祕的 ASP.NET bin\roslyn 目錄&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://dotblogs.com.tw/initials/2021/02/11/144248">[沒有蠢問題] 找不到路徑 bin\roslyn\csc.exe&lt;/a>&lt;/p></description></item><item><title>在SSMS上刪除SQL Server Agent 失敗</title><link>https://caseyho.dev/post/2023-01-16-fail-to-delete-sql-server-agenet/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-01-16-fail-to-delete-sql-server-agenet/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
