@@ -1,0 +1,139 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=theme-color content="dark"><title>Automapper 簡介 | Casey's Blog</title><meta property="og:site_name" content><meta property="og:title" content="Automapper 簡介 | Casey's Blog"><meta itemprop=name content="Automapper 簡介 | Casey's Blog"><meta name=twitter:title content="Automapper 簡介 | Casey's Blog"><meta name=application-name content="Automapper 簡介 | Casey's Blog"><meta name=twitter:card content="summary"><meta name=description content><meta name=twitter:description content><meta itemprop=description content><meta property="og:description" content><meta property="og:type" content="article"><meta property="article:publisher" content="Casey"><meta property="og:article:published_time" content="2023-03-20T00:00:00Z"><meta property="article:published_time" content="2023-03-20T00:00:00Z"><meta property="og:article:author" content="Casey"><meta property="article:author" content="Casey"><meta name=author content="Casey"><script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"Automapper 簡介","author":{"@type":"Person","name":"Casey"},"datePublished":"2023-03-20","description":"","wordCount":379,"mainEntityOfPage":"True","dateModified":"2023-03-20","publisher":{"@type":"Organization","name":"Casey","logo":{"@type":"imageObject","url":"https:\/\/caseyho.dev\/favicon.ico"}}}</script><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=stylesheet href=/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css></head><script>(function(){const e="ThemeColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="ThemeColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.userColorScheme="dark":document.documentElement.dataset.userColorScheme="light"})()</script><body class=dark><nav class=navbar><div class=container><div class=flex><div><a class=brand href=/><span class=emoji>😎</span>
+Casey's Blog</a></div><div class=flex><a href=/articles/>Articles</a>
+<button id=dark-mode-button><svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163.0 101.643 1.641 1.163 1.163.0 00-1.643-1.641zm-16.022 14.38a1.74 1.74.0 000 2.465 1.742 1.742.0 100-2.465zm13.968-2.147a2.904 2.904.0 01-4.108.0 2.902 2.902.0 010-4.107 2.902 2.902.0 014.108.0 2.902 2.902.0 010 4.107z" fill="#ffcc4d"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg><svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 36 36"><path fill="#ffd983" d="M16 2s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2V2zm18 14s2 0 2 2-2 2-2 2h-2s-2 0-2-2 2-2 2-2h2zM4 16s2 0 2 2-2 2-2 2H2s-2 0-2-2 2-2 2-2h2zm5.121-8.707s1.414 1.414.0 2.828-2.828.0-2.828.0L4.878 8.708s-1.414-1.414.0-2.829c1.415-1.414 2.829.0 2.829.0l1.414 1.414zm21 21s1.414 1.414.0 2.828-2.828.0-2.828.0l-1.414-1.414s-1.414-1.414.0-2.828 2.828.0 2.828.0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828.0.0-2.828.0-2.828l1.414-1.414s1.414-1.414 2.828.0.0 2.828.0 2.828l-1.414 1.414zM16 32s0-2 2-2 2 2 2 2v2s0 2-2 2-2-2-2-2v-2z"/><circle fill="#ffd983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)"/></svg></button></div></div></div></nav><main><div class=container><article><header class=article-header><div class=thumb><div><h1>Automapper 簡介</h1><div class=post-meta><div>By Casey | <time>March 20, 2023</time>
+| 2 minutes</div><div class=tags><a href=/tags/.net/>.NET</a></div></div></div></div></header></article><div class=article-post><h1 id=automapper-是什麼><a href=#automapper-%e6%98%af%e4%bb%80%e9%ba%bc class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>AutoMapper 是什麼</h1><p>AutoMapper 是一個在 .NET 平台上使用的工具，它可以幫助開發人員更快速、更方便地處理不同物件之間的 Mapping。</p><p>什麼是物件之間的 Mapping，是指把一個物件的某些屬性自動地複製到另一個物件對應的屬性。</p><p>這樣描述似乎有一點複雜，可以參考以下範例和步驟。</p><h1 id=使用步驟><a href=#%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%a9%9f class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>使用步驟</h1><ol><li><p>透過 <a href=https://www.nuget.org/packages/automapper/>Nuget</a> 安裝 AutoMapper 套件。</p></li><li><p>建立 DTO 和 Entity 類別，<a href=#%E7%AC%AC%E4%BA%8C%E6%AD%A5>Click here</a></p></li><li><p>建立 Profile 類別，設定 Attribute Mapping 的關係，<a href=#%E7%AC%AC%E4%B8%89%E6%AD%A5>Click here</a></p></li><li><p>Setup AutoMapper，指定使用哪些 Profile 類別，<a href=#%E7%AC%AC%E5%9B%9B%E6%AD%A5>Click here</a></p></li><li><p>在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換，<a href=#%E7%AC%AC%E4%BA%94%E6%AD%A5>Click here</a></p></li></ol><h1 id=範例><a href=#%e7%af%84%e4%be%8b class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>範例</h1><h2 id=第二步><a href=#%e7%ac%ac%e4%ba%8c%e6%ad%a5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>第二步</h2><p>建立 DTO 和 Entity 類別，假設我們有一個 <code>User</code> class 和一個 <code>UserInfo</code> class，它們分別如下所示：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>public</span> <span class=k>class</span> <span class=nc>User</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=kt>int</span> <span class=n>Id</span> <span class=p>{</span> <span class=k>get</span><span class=p>;</span> <span class=k>set</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=kt>string</span> <span class=n>Name</span> <span class=p>{</span> <span class=k>get</span><span class=p>;</span> <span class=k>set</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=kt>int</span> <span class=n>Age</span> <span class=p>{</span> <span class=k>get</span><span class=p>;</span> <span class=k>set</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>public</span> <span class=k>class</span> <span class=nc>UserInfo</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=kt>int</span> <span class=n>Id</span> <span class=p>{</span> <span class=k>get</span><span class=p>;</span> <span class=k>set</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=kt>string</span> <span class=n>Name</span> <span class=p>{</span> <span class=k>get</span><span class=p>;</span> <span class=k>set</span><span class=p>;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>我們希望將 <code>User</code> 物件的值 mapping 到 <code>UserInfo</code> 物件上，只保留 Id 和 Name 屬性的值，這樣可以得到一個新的 UserInfo 物件。</p><h2 id=第三步><a href=#%e7%ac%ac%e4%b8%89%e6%ad%a5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>第三步</h2><p>建立 Profile 類別，設定 Attribute Mapping 的關係</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>public</span> <span class=k>class</span> <span class=nc>UserProfile</span> <span class=p>:</span> <span class=n>Profile</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=n>UserProfile</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// dest =&gt; dest.Name 為目標 class 的 attribute，在這邊指的是 UserInfo.Name</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// opt 是表示目標 class 的 attribute 的 mapping 的參數名稱</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// src 則是表示來源 class 的 attribute。在這邊指的是 User.Name</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// opt.MapFrom(src =&gt; src.Name) 的意思是，把 User.Name mapping 到 UserInfo.Name</span>
+</span></span><span class=line><span class=cl>        <span class=n>CreateMap</span><span class=p>&lt;</span><span class=n>User</span><span class=p>,</span> <span class=n>UserInfo</span><span class=p>&gt;()</span>
+</span></span><span class=line><span class=cl>            <span class=p>.</span><span class=n>ForMember</span><span class=p>(</span><span class=n>dest</span> <span class=p>=&gt;</span> <span class=n>dest</span><span class=p>.</span><span class=n>Name</span><span class=p>,</span> <span class=n>opt</span> <span class=p>=&gt;</span> <span class=n>opt</span><span class=p>.</span><span class=n>MapFrom</span><span class=p>(</span><span class=n>src</span> <span class=p>=&gt;</span> <span class=n>src</span><span class=p>.</span><span class=n>Name</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=第四步><a href=#%e7%ac%ac%e5%9b%9b%e6%ad%a5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>第四步</h2><p>Setup AutoMapper，指定使用哪些 Profile 類別</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=c1>// Startup.cs</span>
+</span></span><span class=line><span class=cl><span class=k>public</span> <span class=k>void</span> <span class=n>ConfigureServices</span><span class=p>(</span><span class=n>IServiceCollection</span> <span class=n>services</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 註冊 AutoMapper</span>
+</span></span><span class=line><span class=cl>    <span class=n>services</span><span class=p>.</span><span class=n>AddAutoMapper</span><span class=p>(</span><span class=k>typeof</span><span class=p>(</span><span class=n>Startup</span><span class=p>));</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// 注冊其他服務</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// ...</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=第五步><a href=#%e7%ac%ac%e4%ba%94%e6%ad%a5 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>第五步</h2><p>在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=k>public</span> <span class=k>class</span> <span class=nc>ControllerBase</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=k>readonly</span> <span class=n>IMapper</span> <span class=n>_mapper</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>		<span class=k>public</span> <span class=n>ControllerBase</span><span class=p>(</span><span class=n>IMapper</span> <span class=n>mapper</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>		<span class=p>{</span>
+</span></span><span class=line><span class=cl>	     <span class=n>_mapper</span> <span class=p>=</span> <span class=n>mapper</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-csharp data-lang=csharp><span class=line><span class=cl><span class=na>[ApiController]</span>
+</span></span><span class=line><span class=cl><span class=na>[Route(&#34;[controller]</span><span class=s>&#34;)]
+</span></span></span><span class=line><span class=cl><span class=s></span><span class=k>public</span> <span class=k>class</span> <span class=nc>UserController</span> <span class=p>:</span> <span class=n>ControllerBase</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>private</span> <span class=k>readonly</span> <span class=n>IUserService</span> <span class=n>_userService</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// base(mapper) 是在呼叫 base class ControllerBase 的 constructor 並傳入 mapper 參數，</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 在 UserController 的實例化過程中，先初始化 base controller (ControllerBase) 的部分，</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 確保base controller (ControllerBase)所需的資源、設定或狀態等已經被正確初始化。</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 因為 UserController 是繼承自 ControllerBase，而 ControllerBase 的建構子需要一個 IMapper 物件，</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 所以在 UserController 的建構子中需要先呼叫基底類別的建構子，</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 並傳入 IMapper 物件。使用 base(mapper) 的方式可以達到這個目的。</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=n>UserController</span><span class=p>(</span><span class=n>IMapper</span> <span class=n>mapper</span><span class=p>,</span> <span class=n>IUserService</span> <span class=n>userService</span><span class=p>)</span> <span class=p>:</span> <span class=k>base</span><span class=p>(</span><span class=n>mapper</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>_userService</span> <span class=p>=</span> <span class=n>userService</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>public</span> <span class=n>IActionResult</span> <span class=n>GetUser</span><span class=p>(</span><span class=kt>int</span> <span class=n>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>var</span> <span class=n>user</span> <span class=p>=</span> <span class=n>_userService</span><span class=p>.</span><span class=n>GetUser</span><span class=p>(</span><span class=n>id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>var</span> <span class=n>userDto</span> <span class=p>=</span> <span class=n>_mapper</span><span class=p>.</span><span class=n>Map</span><span class=p>&lt;</span><span class=n>UserDto</span><span class=p>&gt;(</span><span class=n>user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>Ok</span><span class=p>(</span><span class=n>userDto</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h1 id=參考資料><a href=#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99 class=anchor><svg class="icon" aria-hidden="true" focusable="false" height="16" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5.0-3-1.69-3-3.5S2.55 3 4 3h4c1.45.0 3 1.69 3 3.5.0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98.0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98.0-2-1.22-2-2.5.0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45.0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>參考資料</h1><p><a href=https://docs.automapper.org/en/latest/Getting-started.html>AutoMapper 官網</a></p></div></div><div class=container><nav class="flex container suggested"><a rel=prev href=/post/2023-03-20-c-sharp-delegate-intro/ title="Previous post (older)"><span>Previous</span>
+C# Delegate 簡介</a></nav></div><div class=container><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//https-hugo-tania-netlify-app.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script></div></main></main><footer class="footer flex"><section class=container><nav class=footer-links></nav></section><script defer src=/ts/features.706a523ba43e6d0427c7fdf2b9d05dbd0920d3f12942b453690b495cb2522743.js data-enable-footnotes=true></script></footer></body></html>
