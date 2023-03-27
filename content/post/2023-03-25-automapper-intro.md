@@ -2,12 +2,12 @@
 layout: post
 title: Automapper 簡介
 author: Casey
-date: 2023-03-20
+date: 2023-03-25
 categories: Blogging
 tags: .NET
 ---
 
-# AutoMapper 是什麼
+## AutoMapper 是什麼
 
 AutoMapper 是一個在 .NET 平台上使用的工具，它可以幫助開發人員更快速、更方便地處理不同物件之間的 Mapping。
 
@@ -15,7 +15,7 @@ AutoMapper 是一個在 .NET 平台上使用的工具，它可以幫助開發人
 
 這樣描述似乎有一點複雜，可以參考以下範例和步驟。
 
-# 使用步驟
+## 使用步驟
 
 1. 透過 [Nuget](https://www.nuget.org/packages/automapper/) 安裝 AutoMapper 套件。
 
@@ -27,9 +27,9 @@ AutoMapper 是一個在 .NET 平台上使用的工具，它可以幫助開發人
 
 5. 在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換，[Click here](#第五步)
 
-# 範例
+## 範例
 
-## 第二步
+### 第二步
 
 建立 DTO 和 Entity 類別，假設我們有一個 `User` class 和一個 `UserInfo` class，它們分別如下所示：
 
@@ -50,7 +50,7 @@ public class UserInfo
 
 我們希望將 `User` 物件的值 mapping 到 `UserInfo` 物件上，只保留 Id 和 Name 屬性的值，這樣可以得到一個新的 UserInfo 物件。
 
-## 第三步
+### 第三步
 
 建立 Profile 類別，設定 Attribute Mapping 的關係
 
@@ -69,7 +69,7 @@ public class UserProfile : Profile
 }
 ```
 
-## 第四步
+### 第四步
 
 Setup AutoMapper，指定使用哪些 Profile 類別
 
@@ -85,7 +85,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-## 第五步
+### 第五步
 
 在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換
 
@@ -129,6 +129,6 @@ public class UserController : ControllerBase
 }
 ```
 
-# 參考資料
+## 參考資料
 
 [AutoMapper 官網](https://docs.automapper.org/en/latest/Getting-started.html)
