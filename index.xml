@@ -1,5 +1,118 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Automapper 簡介</title><link>https://caseyho.dev/post/2023-03-25-automapper-intro/</link><pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-25-automapper-intro/</guid><description>
-&lt;h1 id="automapper-是什麼">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>View 簡介</title><link>https://caseyho.dev/post/2023-03-27-database-view-intro/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-27-database-view-intro/</guid><description>
+&lt;h2 id="什麼是-view-">
+&lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-view-" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+什麼是 View ?
+&lt;/h2>
+&lt;p>View 是 Select 完多個 Table 所組合而成的資料表，是一種 Virtual Structure，並且可以在資料表上進行 SELECT、INSERT、UPDATE、DELETE 的操作。&lt;/p>
+&lt;h2 id="優點">
+&lt;a href="#%e5%84%aa%e9%bb%9e" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+優點
+&lt;/h2>
+&lt;p>SQL Server Database View 具有以下優點：&lt;/p>
+&lt;ol>
+&lt;li>提供了一個簡單的方式來查詢多個 Table&lt;/li>
+&lt;li>View 可以簡化複雜的查詢，並且讓使用者只查看他們需要的資訊，而不用顧慮底層的資料表結構&lt;/li>
+&lt;li>View 可以提高資料安全性，因為可以限制使用者只能查詢特定欄位&lt;/li>
+&lt;/ol>
+&lt;h2 id="缺點">
+&lt;a href="#%e7%bc%ba%e9%bb%9e" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+缺點
+&lt;/h2>
+&lt;p>SQL Server Database View 也有一些缺點：&lt;/p>
+&lt;ol>
+&lt;li>View 的效能可能會比直接查詢 Table 差，因為需要額外的資源和時間來處理 View&lt;/li>
+&lt;li>View 可能會讓資料庫設計更複雜，因為需要考慮許多 Table 之間的關係&lt;/li>
+&lt;li>View 可能會增加資料庫的存儲空間，因為 View 通常需要儲存 Table 的複本&lt;/li>
+&lt;/ol>
+&lt;h2 id="為什麼要使用">
+&lt;a href="#%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e4%bd%bf%e7%94%a8" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+為什麼要使用
+&lt;/h2>
+&lt;ol>
+&lt;li>查詢多個 Table：如果需要查詢多個 Table 來取得所需資訊，使用 View 可以簡化這個過程，讓查詢更加簡單。&lt;/li>
+&lt;li>保持資料庫的一致性：透過 View，可以將 Table 的結構和應用程式分離，讓資料庫的設計更具有彈性，並且保持資料庫的一致性。&lt;/li>
+&lt;li>提高資料安全性：可以使用 View 來限制使用者只能查詢特定欄位，提高資料安全性。&lt;/li>
+&lt;/ol>
+&lt;h2 id="常用的場景">
+&lt;a href="#%e5%b8%b8%e7%94%a8%e7%9a%84%e5%a0%b4%e6%99%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+常用的場景
+&lt;/h2>
+&lt;p>通常會用到 View 的地方都是 Data Access 的時候，需要 LEFT JOIN 或是 INNER JOIN View&lt;/p>
+&lt;h2 id="範例">
+&lt;a href="#%e7%af%84%e4%be%8b" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+範例
+&lt;/h2>
+&lt;p>以下是一個簡單的範例，該 View 可以從兩個 Table（Customers 和 Orders）中 Select 出顧客的訂單資訊：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">CREATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">VIEW&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">CustomerOrders&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">AS&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">SELECT&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Customers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CustomerID&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Customers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CustomerName&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">OrderID&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">OrderDate&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">FROM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Customers&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">INNER&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">JOIN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Customers&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CustomerID&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">Orders&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CustomerID&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="翻譯">
+&lt;a href="#%e7%bf%bb%e8%ad%af" class="anchor">
+&lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+&lt;path fill-rule="evenodd"
+d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+&lt;/path>
+&lt;/svg>
+&lt;/a>
+翻譯
+&lt;/h2>
+&lt;p>SSMS 翻譯叫做檢視&lt;/p>
+&lt;p>&lt;img loading="lazy"
+src="https://i.imgur.com/okutHK1.png"
+alt="Imgur"
+/>&lt;/p></description></item><item><title>Automapper 簡介</title><link>https://caseyho.dev/post/2023-03-25-automapper-intro/</link><pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-25-automapper-intro/</guid><description>
+&lt;h2 id="automapper-是什麼">
 &lt;a href="#automapper-%e6%98%af%e4%bb%80%e9%ba%bc" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -8,11 +121,11 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 AutoMapper 是什麼
-&lt;/h1>
+&lt;/h2>
 &lt;p>AutoMapper 是一個在 .NET 平台上使用的工具，它可以幫助開發人員更快速、更方便地處理不同物件之間的 Mapping。&lt;/p>
 &lt;p>什麼是物件之間的 Mapping，是指把一個物件的某些屬性自動地複製到另一個物件對應的屬性。&lt;/p>
 &lt;p>這樣描述似乎有一點複雜，可以參考以下範例和步驟。&lt;/p>
-&lt;h1 id="使用步驟">
+&lt;h2 id="使用步驟">
 &lt;a href="#%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%a9%9f" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -21,7 +134,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 使用步驟
-&lt;/h1>
+&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>透過 &lt;a href="https://www.nuget.org/packages/automapper/">Nuget&lt;/a> 安裝 AutoMapper 套件。&lt;/p>
@@ -39,7 +152,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換，&lt;a href="#%E7%AC%AC%E4%BA%94%E6%AD%A5">Click here&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;h1 id="範例">
+&lt;h2 id="範例">
 &lt;a href="#%e7%af%84%e4%be%8b" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -48,8 +161,8 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 範例
-&lt;/h1>
-&lt;h2 id="第二步">
+&lt;/h2>
+&lt;h3 id="第二步">
 &lt;a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -58,7 +171,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 第二步
-&lt;/h2>
+&lt;/h3>
 &lt;p>建立 DTO 和 Entity 類別，假設我們有一個 &lt;code>User&lt;/code> class 和一個 &lt;code>UserInfo&lt;/code> class，它們分別如下所示：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -91,7 +204,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>我們希望將 &lt;code>User&lt;/code> 物件的值 mapping 到 &lt;code>UserInfo&lt;/code> 物件上，只保留 Id 和 Name 屬性的值，這樣可以得到一個新的 UserInfo 物件。&lt;/p>
-&lt;h2 id="第三步">
+&lt;h3 id="第三步">
 &lt;a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -100,7 +213,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 第三步
-&lt;/h2>
+&lt;/h3>
 &lt;p>建立 Profile 類別，設定 Attribute Mapping 的關係&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -132,7 +245,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="第四步">
+&lt;/div>&lt;h3 id="第四步">
 &lt;a href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -141,7 +254,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 第四步
-&lt;/h2>
+&lt;/h3>
 &lt;p>Setup AutoMapper，指定使用哪些 Profile 類別&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -167,7 +280,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="第五步">
+&lt;/div>&lt;h3 id="第五步">
 &lt;a href="#%e7%ac%ac%e4%ba%94%e6%ad%a5" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -176,7 +289,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 第五步
-&lt;/h2>
+&lt;/h3>
 &lt;p>在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -258,7 +371,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h1 id="參考資料">
+&lt;/div>&lt;h2 id="參考資料">
 &lt;a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
 &lt;path fill-rule="evenodd"
@@ -267,7 +380,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/svg>
 &lt;/a>
 參考資料
-&lt;/h1>
+&lt;/h2>
 &lt;p>&lt;a href="https://docs.automapper.org/en/latest/Getting-started.html">AutoMapper 官網&lt;/a>&lt;/p></description></item><item><title>C# Delegate 簡介</title><link>https://caseyho.dev/post/2023-03-20-c-sharp-delegate-intro/</link><pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-20-c-sharp-delegate-intro/</guid><description>
 &lt;h2 id="定義">
 &lt;a href="#%e5%ae%9a%e7%be%a9" class="anchor">
