@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如果我使用網頁觸發按鈕執行 stored procedure，stored procedure 會執行 SSIS dtsx，如果在 stored procedure 執行時將網頁關閉, stored procedure 還會繼續執行嗎?
+title: 網頁觸發按鈕執行 SP，SP 會執行 SSIS dtsx，如果在 SP 執行時將網頁關閉，SP 還會繼續執行嗎?
 author: Casey
 date: 2023-03-28
 categories: Blogging
