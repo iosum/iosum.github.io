@@ -2,7 +2,7 @@
 layout: post
 title: 排序後再 SELECT TOP N 筆資料
 author: Casey
-date: 2022-07-13 17:56:00 +08:00
+date: 2022-07-13
 categories: Snippets
 tags: oracle-sql
 ---

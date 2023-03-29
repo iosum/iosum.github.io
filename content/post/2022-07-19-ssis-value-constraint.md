@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 值違反資料行的完整性條件約束 | SSIS
+title: 值違反資料行的完整性條件約束
 author: Casey
-date: 2022-07-19 09:18:00 +08:00
+date: 2022-07-19
 categories: Debugging
 tags: ssis
 ---
