@@ -21,7 +21,7 @@ Driver 也需要下載相同的版本
 &amp;lt;modules runAllManagedModulesForAllRequests=&amp;quot;true&amp;quot; /&amp;gt;
 更正後的 web.config 大概會長這樣：
 &amp;lt;configuration&amp;gt; &amp;lt;system.webServer&amp;gt; &amp;lt;directoryBrowse enabled=&amp;#34;true&amp;#34; /&amp;gt; &amp;lt;modules runAllManagedModulesForAllRequests=&amp;#34;true&amp;#34; /&amp;gt; &amp;lt;/system.webServer&amp;gt; &amp;lt;/configuration&amp;gt; 參考資料：
-How to enable Directory browsing by default on IIS Express</description></item><item><title>值違反資料行的完整性條件約束 | SSIS</title><link>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</link><pubDate>Tue, 19 Jul 2022 09:18:00 +0800</pubDate><guid>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</guid><description>錯誤訊息：
+How to enable Directory browsing by default on IIS Express</description></item><item><title>值違反資料行的完整性條件約束</title><link>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</link><pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate><guid>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</guid><description>錯誤訊息：
 DataFlow:錯誤: 寫入 Table_A.輸入[OLE DB 目的地輸入] 上的 寫入 Table_A 輸入[OLE DB 目的地輸入].資料行[Column_A] 發生錯誤。傳回的資料行狀態是: &amp;ldquo;值違反資料行的完整性條件約束。&amp;quot;。
 解決方法：
 Table_A.Column_A 不接受 NULL，但是傳入的資料是 NULL</description></item></channel></rss>

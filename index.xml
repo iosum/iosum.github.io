@@ -1,4 +1,117 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 28 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>網頁觸發按鈕執行 SP，SP 會執行 SSIS dtsx，如果在 SP 執行時將網頁關閉，SP 還會繼續執行嗎?</title><link>https://caseyho.dev/post/2023-03-28-close-window-to-stop-stored-proc/</link><pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-28-close-window-to-stop-stored-proc/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>簡單 UI Testing Script</title><link>https://caseyho.dev/post/2023-03-29-python-simple-test-selenium/</link><pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate><guid>https://caseyho.dev/post/2023-03-29-python-simple-test-selenium/</guid><description>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">webdriver&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">selenium.webdriver.chrome.options&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Options&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">time&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#使用chrome的webdriver&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">Options&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">chrome_options&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">add_experimental_option&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;detach&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">webdriver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Chrome&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">options&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">chrome_options&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 開啟全螢幕&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">maximize_window&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#開啟google首頁&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://personal-vknq.outsystemscloud.com/Test/WebScreen3.aspx&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Pagination&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">pagination&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;wt70_OutSystemsUIWeb_wt18_block_wtContent_wtMainContent_RichWidgets_wt31_block_wtPageNavigator_ctl02_wtLink8&amp;#34;]&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">pagination&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">click&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;2nd page 已完成&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Search Keyword&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_search&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;wt70_OutSystemsUIWeb_wt18_block_wtContent_wtMainContent_OutSystemsUIWeb_wt13_block_wtInput_wtSearchInput&amp;#34;]&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">input_search&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">send_keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;some&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Search已完成&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Table Sort&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">columns&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">col_num&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">columns&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;wt70_OutSystemsUIWeb_wt18_block_wtContent_wtMainContent_wtTable&amp;#34;]/thead/tr/th[&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s1">]&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">col_num&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">col&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">click&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;col&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s1">正向已完成&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">col_num&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Table Sort&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">columns&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">col_num&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">columns&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">driver&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">find_element&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;xpath&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;//*[@id=&amp;#34;wt70_OutSystemsUIWeb_wt18_block_wtContent_wtMainContent_wtTable&amp;#34;]/thead/tr/th[&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s1">]&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">col_num&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">col&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">click&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">time&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sleep&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;col&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s1">反向已完成&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">col_num&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>網頁觸發按鈕執行 SP，SP 會執行 SSIS dtsx，如果在 SP 執行時將網頁關閉，SP 還會繼續執行嗎?</title><link>https://caseyho.dev/post/2023-03-28-close-window-to-stop-stored-proc/</link><pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-28-close-window-to-stop-stored-proc/</guid><description>
 &lt;p>如果在網頁上觸發按鈕執行的 stored procedure 中，執行了一個包含 SSIS 封裝的 dtsx 檔案，當你關閉網頁時，stored procedure 仍然會繼續執行。&lt;/p>
 &lt;p>這是因為在 SQL Server 中，stored procedure 通常在執行時是作為一個單獨的執行緒在運行的，而這個執行緒是獨立於網頁的。&lt;/p>
 &lt;p>換句話說，即使你關閉了網頁，stored procedure 仍然會在 SQL Server 上運行，直到其執行完成或被手動停止。&lt;/p>
@@ -4768,13 +4881,13 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>如有不同的想法，歡迎留言討論。&lt;/p>
 &lt;hr>
 &lt;p>參考資料：
-&lt;a href="https://ithelp.ithome.com.tw/articles/10000019">HTTPS 的連線夠安全嗎？&lt;/a>&lt;/p></description></item><item><title>值違反資料行的完整性條件約束 | SSIS</title><link>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</link><pubDate>Tue, 19 Jul 2022 09:18:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</guid><description>
+&lt;a href="https://ithelp.ithome.com.tw/articles/10000019">HTTPS 的連線夠安全嗎？&lt;/a>&lt;/p></description></item><item><title>值違反資料行的完整性條件約束</title><link>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</link><pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</guid><description>
 &lt;p>錯誤訊息：&lt;/p>
 &lt;blockquote>
 &lt;p>DataFlow:錯誤: 寫入 Table_A.輸入[OLE DB 目的地輸入] 上的 寫入 Table_A 輸入[OLE DB 目的地輸入].資料行[Column_A] 發生錯誤。傳回的資料行狀態是: &amp;ldquo;值違反資料行的完整性條件約束。&amp;quot;。&lt;/p>
 &lt;/blockquote>
 &lt;p>解決方法：&lt;/p>
-&lt;p>&lt;code>Table_A&lt;/code>.&lt;code>Column_A&lt;/code> 不接受 NULL，但是傳入的資料是 NULL&lt;/p></description></item><item><title>排序後再 SELECT TOP N 筆資料</title><link>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link><pubDate>Wed, 13 Jul 2022 17:56:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid><description>
+&lt;p>&lt;code>Table_A&lt;/code>.&lt;code>Column_A&lt;/code> 不接受 NULL，但是傳入的資料是 NULL&lt;/p></description></item><item><title>排序後再 SELECT TOP N 筆資料</title><link>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link><pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid><description>
 &lt;p>寫法一：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -4943,7 +5056,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/path>
 &lt;/svg>
 &lt;/a>
-參考資料：
+參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://stackoverflow.com/questions/72853678/declare-bind-variable-in-the-oracle-sql-developer">Declare bind variable in the Oracle SQL Developer&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://iter01.com/397633.html">Oracle 變數定義的三種方式(define,variable,declare)&lt;/a>&lt;/p></description></item></channel></rss>
