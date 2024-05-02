@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://caseyho.dev/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://caseyho.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>簡單 UI Testing Script</title><link>https://caseyho.dev/post/2023-03-29-python-simple-test-selenium/</link><pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate><guid>https://caseyho.dev/post/2023-03-29-python-simple-test-selenium/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Casey's Blog</title><link>https://iosum.github.io/</link><description>Recent content on Casey's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 29 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://iosum.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>簡單 UI Testing Script</title><link>https://iosum.github.io/post/2023-03-29-python-simple-test-selenium/</link><pubDate>Wed, 29 Mar 2023 00:00:00 +0000</pubDate><guid>https://iosum.github.io/post/2023-03-29-python-simple-test-selenium/</guid><description>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -111,7 +111,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;col&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="s1">反向已完成&amp;#39;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">col_num&lt;/span>&lt;span class="p">))&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>網頁觸發按鈕執行 SP，SP 會執行 SSIS dtsx，如果在 SP 執行時將網頁關閉，SP 還會繼續執行嗎?</title><link>https://caseyho.dev/post/2023-03-28-close-window-to-stop-stored-proc/</link><pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-28-close-window-to-stop-stored-proc/</guid><description>
+&lt;/div></description></item><item><title>網頁觸發按鈕執行 SP，SP 會執行 SSIS dtsx，如果在 SP 執行時將網頁關閉，SP 還會繼續執行嗎?</title><link>https://iosum.github.io/post/2023-03-28-close-window-to-stop-stored-proc/</link><pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-03-28-close-window-to-stop-stored-proc/</guid><description>
 &lt;p>如果在網頁上觸發按鈕執行的 stored procedure 中，執行了一個包含 SSIS 封裝的 dtsx 檔案，當你關閉網頁時，stored procedure 仍然會繼續執行。&lt;/p>
 &lt;p>這是因為在 SQL Server 中，stored procedure 通常在執行時是作為一個單獨的執行緒在運行的，而這個執行緒是獨立於網頁的。&lt;/p>
 &lt;p>換句話說，即使你關閉了網頁，stored procedure 仍然會在 SQL Server 上運行，直到其執行完成或被手動停止。&lt;/p>
@@ -154,7 +154,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-SQL" data-lang="SQL">&lt;span class="line">&lt;span class="cl">&lt;span class="n">KILL&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">SPID&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>View 簡介</title><link>https://caseyho.dev/post/2023-03-27-database-view-intro/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-27-database-view-intro/</guid><description>
+&lt;/div></description></item><item><title>View 簡介</title><link>https://iosum.github.io/post/2023-03-27-database-view-intro/</link><pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-03-27-database-view-intro/</guid><description>
 &lt;h2 id="什麼是-view-">
 &lt;a href="#%e4%bb%80%e9%ba%bc%e6%98%af-view-" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -267,7 +267,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/okutHK1.png"
 alt="Imgur"
-/>&lt;/p></description></item><item><title>Automapper 簡介</title><link>https://caseyho.dev/post/2023-03-25-automapper-intro/</link><pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-25-automapper-intro/</guid><description>
+/>&lt;/p></description></item><item><title>Automapper 簡介</title><link>https://iosum.github.io/post/2023-03-25-automapper-intro/</link><pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-03-25-automapper-intro/</guid><description>
 &lt;h2 id="automapper-是什麼">
 &lt;a href="#automapper-%e6%98%af%e4%bb%80%e9%ba%bc" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -345,17 +345,17 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;span class="lnt">12
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">User&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">User&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">Id&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">Age&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">Id&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">Age&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">UserInfo&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">UserInfo&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">Id&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">Id&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">Name&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -387,9 +387,9 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;span class="lnt">12
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">UserProfile&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">Profile&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">UserProfile&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">Profile&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="n">UserProfile&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="n">UserProfile&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// dest =&amp;gt; dest.Name 為目標 class 的 attribute，在這邊指的是 UserInfo.Name&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// opt 是表示目標 class 的 attribute 的 mapping 的參數名稱&lt;/span>
@@ -426,7 +426,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Startup.cs&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">ConfigureServices&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IServiceCollection&lt;/span> &lt;span class="n">services&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">ConfigureServices&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IServiceCollection&lt;/span> &lt;span class="n">services&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 註冊 AutoMapper&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">services&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">AddAutoMapper&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">typeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Startup&lt;/span>&lt;span class="p">));&lt;/span>
@@ -460,11 +460,11 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;span class="lnt">9
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">ControllerBase&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">ControllerBase&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">readonly&lt;/span> &lt;span class="n">IMapper&lt;/span> &lt;span class="n">_mapper&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">private&lt;/span> &lt;span class="k">readonly&lt;/span> &lt;span class="n">IMapper&lt;/span> &lt;span class="n">_mapper&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="n">ControllerBase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IMapper&lt;/span> &lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="n">ControllerBase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IMapper&lt;/span> &lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">_mapper&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">mapper&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
@@ -502,9 +502,9 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="na">[ApiController]&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">[Route(&amp;#34;[controller]&lt;/span>&lt;span class="s">&amp;#34;)]
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">&lt;/span>&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">UserController&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">ControllerBase&lt;/span>
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s">&lt;/span>&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">UserController&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">ControllerBase&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">private&lt;/span> &lt;span class="k">readonly&lt;/span> &lt;span class="n">IUserService&lt;/span> &lt;span class="n">_userService&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">private&lt;/span> &lt;span class="k">readonly&lt;/span> &lt;span class="n">IUserService&lt;/span> &lt;span class="n">_userService&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// base(mapper) 是在呼叫 base class ControllerBase 的 constructor 並傳入 mapper 參數，&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 在 UserController 的實例化過程中，先初始化 base controller (ControllerBase) 的部分，&lt;/span>
@@ -513,12 +513,12 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 所以在 UserController 的建構子中需要先呼叫基底類別的建構子，&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 並傳入 IMapper 物件。使用 base(mapper) 的方式可以達到這個目的。&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="n">UserController&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IMapper&lt;/span> &lt;span class="n">mapper&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">IUserService&lt;/span> &lt;span class="n">userService&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="k">base&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="n">UserController&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IMapper&lt;/span> &lt;span class="n">mapper&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">IUserService&lt;/span> &lt;span class="n">userService&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="k">base&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">mapper&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">_userService&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">userService&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="n">IActionResult&lt;/span> &lt;span class="n">GetUser&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="n">IActionResult&lt;/span> &lt;span class="n">GetUser&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">user&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">_userService&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">GetUser&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">userDto&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">_mapper&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Map&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">UserDto&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="n">user&lt;/span>&lt;span class="p">);&lt;/span>
@@ -537,7 +537,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://docs.automapper.org/en/latest/Getting-started.html">AutoMapper 官網&lt;/a>&lt;/p></description></item><item><title>C# Delegate 簡介</title><link>https://caseyho.dev/post/2023-03-20-c-sharp-delegate-intro/</link><pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-03-20-c-sharp-delegate-intro/</guid><description>
+&lt;p>&lt;a href="https://docs.automapper.org/en/latest/Getting-started.html">AutoMapper 官網&lt;/a>&lt;/p></description></item><item><title>C# Delegate 簡介</title><link>https://iosum.github.io/post/2023-03-20-c-sharp-delegate-intro/</link><pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-03-20-c-sharp-delegate-intro/</guid><description>
 &lt;h2 id="定義">
 &lt;a href="#%e5%ae%9a%e7%be%a9" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -623,7 +623,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">delegate&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">EventHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">object&lt;/span> &lt;span class="n">sender&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">EventArgs&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">delegate&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">EventHandler&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">object&lt;/span> &lt;span class="n">sender&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">EventArgs&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
@@ -643,7 +643,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">private&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">OnClick&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">object&lt;/span> &lt;span class="n">sender&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">EventArgs&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">OnClick&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">object&lt;/span> &lt;span class="n">sender&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">EventArgs&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">WriteLine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Button clicked&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
@@ -670,7 +670,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">private&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">button1_Click&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">object&lt;/span> &lt;span class="n">sender&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">EventArgs&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">private&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">button1_Click&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">object&lt;/span> &lt;span class="n">sender&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">EventArgs&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">OnClick&lt;/span>&lt;span class="p">();&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
@@ -684,13 +684,13 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;span class="lnt">4
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">OnClick&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">OnClick&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">WriteLine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Button clicked&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>NVARCHAR(9) v.s. VARCHAR(9) IN MSSQL</title><link>https://caseyho.dev/post/2023-02-04-nvarchar-9-what-does-it-mean/</link><pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-02-04-nvarchar-9-what-does-it-mean/</guid><description>
+&lt;/div></description></item><item><title>NVARCHAR(9) v.s. VARCHAR(9) IN MSSQL</title><link>https://iosum.github.io/post/2023-02-04-nvarchar-9-what-does-it-mean/</link><pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-02-04-nvarchar-9-what-does-it-mean/</guid><description>
 &lt;h2 id="nvarchar9">
 &lt;a href="#nvarchar9" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -856,7 +856,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/h2>
 &lt;p>&lt;a href="https://ithelp.ithome.com.tw/questions/10021627">請問&amp;quot;李襎&amp;quot;這個字是算幾個 BYTE ??&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://dotblogs.com.tw/henryli/2014/05/27/145277">[MSSQL] 欄位開立(1) - nvarchar, varchar, nchar, char 的抉擇&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://ithelp.ithome.com.tw/articles/10213922">[iT 鐵人賽 Day6]SQL Server 資料型態 char varchar nchar nvarchar&lt;/a>&lt;/p></description></item><item><title>找不到 bin\roslyn\csc.exe 檔案</title><link>https://caseyho.dev/post/2023-02-04-can-not-find-roslyn-csc-exe-file/</link><pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-02-04-can-not-find-roslyn-csc-exe-file/</guid><description>
+&lt;p>&lt;a href="https://ithelp.ithome.com.tw/articles/10213922">[iT 鐵人賽 Day6]SQL Server 資料型態 char varchar nchar nvarchar&lt;/a>&lt;/p></description></item><item><title>找不到 bin\roslyn\csc.exe 檔案</title><link>https://iosum.github.io/post/2023-02-04-can-not-find-roslyn-csc-exe-file/</link><pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-02-04-can-not-find-roslyn-csc-exe-file/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -914,7 +914,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://blog.darkthread.net/blog/aspnet-bin-roslyn-folder/">神祕的 ASP.NET bin\roslyn 目錄&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://dotblogs.com.tw/initials/2021/02/11/144248">[沒有蠢問題] 找不到路徑 bin\roslyn\csc.exe&lt;/a>&lt;/p></description></item><item><title>在SSMS上刪除SQL Server Agent 失敗</title><link>https://caseyho.dev/post/2023-01-16-fail-to-delete-sql-server-agenet/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-01-16-fail-to-delete-sql-server-agenet/</guid><description>
+&lt;p>&lt;a href="https://dotblogs.com.tw/initials/2021/02/11/144248">[沒有蠢問題] 找不到路徑 bin\roslyn\csc.exe&lt;/a>&lt;/p></description></item><item><title>在SSMS上刪除SQL Server Agent 失敗</title><link>https://iosum.github.io/post/2023-01-16-fail-to-delete-sql-server-agenet/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-01-16-fail-to-delete-sql-server-agenet/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -979,7 +979,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;strong>&lt;a href="https://dba.stackexchange.com/questions/121877/sql-server-cannot-drop-idle-job">SQL Server - cannot drop idle job&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>使用 Selenium 和手打驗證碼登入網頁</title><link>https://caseyho.dev/post/2023-01-03-auto-login-using-selenium/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2023-01-03-auto-login-using-selenium/</guid><description>
+&lt;p>&lt;strong>&lt;a href="https://dba.stackexchange.com/questions/121877/sql-server-cannot-drop-idle-job">SQL Server - cannot drop idle job&lt;/a>&lt;/strong>&lt;/p></description></item><item><title>使用 Selenium 和手打驗證碼登入網頁</title><link>https://iosum.github.io/post/2023-01-03-auto-login-using-selenium/</link><pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2023-01-03-auto-login-using-selenium/</guid><description>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -1060,7 +1060,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#browser.close()&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>執行 selenium 出包，此版本的 %1 與您執行的 Windows 版本不相容</title><link>https://caseyho.dev/post/2022-12-15-windows-not-compatible/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-12-15-windows-not-compatible/</guid><description>
+&lt;/div></description></item><item><title>執行 selenium 出包，此版本的 %1 與您執行的 Windows 版本不相容</title><link>https://iosum.github.io/post/2022-12-15-windows-not-compatible/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-12-15-windows-not-compatible/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -1143,7 +1143,7 @@ alt="https://i.imgur.com/pxI5Wrc.png"
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/kYFb9e5.png"
 alt="https://i.imgur.com/kYFb9e5.png"
-/>&lt;/p></description></item><item><title>No valid Oracle clients found. You need at least one 64-bit client properly configured. | Toad for Oracle</title><link>https://caseyho.dev/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</link><pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</guid><description>
+/>&lt;/p></description></item><item><title>No valid Oracle clients found. You need at least one 64-bit client properly configured. | Toad for Oracle</title><link>https://iosum.github.io/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</link><pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -1276,7 +1276,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://blog.toadworld.com/how-to-install-an-oracle-instant-client-for-toad-for-oracle">How to install an Oracle Instant Client for Toad® for Oracle&lt;/a>&lt;/p></description></item><item><title>將多筆資料合併為一筆顯示 - FOR XML PATH | SQL</title><link>https://caseyho.dev/post/2022-11-21-merge-column-data-to-a-cell/</link><pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-21-merge-column-data-to-a-cell/</guid><description>
+&lt;p>&lt;a href="https://blog.toadworld.com/how-to-install-an-oracle-instant-client-for-toad-for-oracle">How to install an Oracle Instant Client for Toad® for Oracle&lt;/a>&lt;/p></description></item><item><title>將多筆資料合併為一筆顯示 - FOR XML PATH | SQL</title><link>https://iosum.github.io/post/2022-11-21-merge-column-data-to-a-cell/</link><pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-11-21-merge-column-data-to-a-cell/</guid><description>
 &lt;h2 id="前情提要">
 &lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -1442,7 +1442,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://dotblogs.com.tw/kevinya/2012/06/01/72553">[SQL]將多筆資料合併為一筆顯示(FOR XML PATH)&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://dotblogs.com.tw/supershowwei/2016/01/26/145353">[食譜好菜] SQL Server 使用「FOR XML」語法做欄位合併&lt;/a>&lt;/p></description></item><item><title>如何壓縮 Transaction Log 檔案 | SQL</title><link>https://caseyho.dev/post/2022-11-11-how-to-compress-transaction-logs/</link><pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-11-how-to-compress-transaction-logs/</guid><description>
+&lt;p>&lt;a href="https://dotblogs.com.tw/supershowwei/2016/01/26/145353">[食譜好菜] SQL Server 使用「FOR XML」語法做欄位合併&lt;/a>&lt;/p></description></item><item><title>如何壓縮 Transaction Log 檔案 | SQL</title><link>https://iosum.github.io/post/2022-11-11-how-to-compress-transaction-logs/</link><pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-11-11-how-to-compress-transaction-logs/</guid><description>
 &lt;h2 id="方法">
 &lt;a href="#%e6%96%b9%e6%b3%95" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -1587,7 +1587,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://www.mssqltips.com/sqlservertutorial/3311/how-to-shrink-the-transaction-log/">How to shrink the transaction log&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://itorz324.blogspot.com/">阿湯哥@IT三兩事&lt;/a>&lt;/p></description></item><item><title>The DELETE statement conflicted with the REFERENCE constraint "FK_subplan_job_id" | SQL</title><link>https://caseyho.dev/post/2022-11-10-the-delete-statemet-conflicted/</link><pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-10-the-delete-statemet-conflicted/</guid><description>
+&lt;p>&lt;a href="https://itorz324.blogspot.com/">阿湯哥@IT三兩事&lt;/a>&lt;/p></description></item><item><title>The DELETE statement conflicted with the REFERENCE constraint "FK_subplan_job_id" | SQL</title><link>https://iosum.github.io/post/2022-11-10-the-delete-statemet-conflicted/</link><pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-11-10-the-delete-statemet-conflicted/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -1702,7 +1702,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://dbamohsin.wordpress.com/2011/12/13/the-delete-statement-conflicted-with-the-reference-constraint-fk_subplan_job_id/">The DELETE statement conflicted with the REFERENCE constraint &amp;ldquo;FK_subplan_job_id&amp;rdquo;&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://twchuck.blogspot.com/2010/10/ms-sql-server-jobs.html">MS SQL SERVER 刪除 工作排程(JOBS)時出現錯誤&lt;/a>&lt;/p></description></item><item><title>縮小 SSIS DB 檔案大小 | SSIS</title><link>https://caseyho.dev/post/2022-11-07-shrink-ssis-db-files/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-11-07-shrink-ssis-db-files/</guid><description>
+&lt;p>&lt;a href="https://twchuck.blogspot.com/2010/10/ms-sql-server-jobs.html">MS SQL SERVER 刪除 工作排程(JOBS)時出現錯誤&lt;/a>&lt;/p></description></item><item><title>縮小 SSIS DB 檔案大小 | SSIS</title><link>https://iosum.github.io/post/2022-11-07-shrink-ssis-db-files/</link><pubDate>Mon, 07 Nov 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-11-07-shrink-ssis-db-files/</guid><description>
 &lt;ol>
 &lt;li>
 &lt;p>將週期天數從預設的 365 天改到 30 天或其他更小的數字。
@@ -1777,7 +1777,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://sqlvikas.blogspot.com/2014/08/how-to-reduce-ssisdb-size-issue-ssisdb.html">How to Reduce SSISDB Size&lt;/a>&lt;/p></description></item><item><title>Dynamic Type 介紹 | c#</title><link>https://caseyho.dev/post/2022-10-24-dynamic-type-in-c-sharp/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-24-dynamic-type-in-c-sharp/</guid><description>
+&lt;p>&lt;a href="https://sqlvikas.blogspot.com/2014/08/how-to-reduce-ssisdb-size-issue-ssisdb.html">How to Reduce SSISDB Size&lt;/a>&lt;/p></description></item><item><title>Dynamic Type 介紹 | c#</title><link>https://iosum.github.io/post/2022-10-24-dynamic-type-in-c-sharp/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-24-dynamic-type-in-c-sharp/</guid><description>
 &lt;h2 id="前情提要">
 &lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -1828,10 +1828,10 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">System&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Program&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Program&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Main&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">&amp;#34;this is a string&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="m">123234&lt;/span>&lt;span class="p">;&lt;/span>
@@ -1883,10 +1883,10 @@ alt="Imgur"
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-c#" data-lang="c#">&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">System&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Program&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Program&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Main&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s1&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="n">Student&lt;/span>&lt;span class="p">();&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -1896,9 +1896,9 @@ alt="Imgur"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Student&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Student&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">DisplayStudentInfo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">DisplayStudentInfo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
@@ -1927,7 +1927,7 @@ alt="Imgur"
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-c#" data-lang="c#">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 2數相加&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">WriteLine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
@@ -1961,17 +1961,17 @@ alt="Imgur"
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-csharp" data-lang="csharp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">using&lt;/span> &lt;span class="nn">System&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Program&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Program&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Main&lt;/span>&lt;span class="p">()&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// compiler 不會有錯誤&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">true&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// 2數相加&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kd">static&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">Add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">dynamic&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">Console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">WriteLine&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s1&lt;/span> &lt;span class="p">+&lt;/span> &lt;span class="n">s2&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
@@ -2001,7 +2001,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://www.geeksforgeeks.org/dynamic-type-in-c-sharp/">Dynamic Type in C#&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.tutorialsteacher.com/csharp/csharp-dynamic-type">C# - Dynamic Types&lt;/a>&lt;/p></description></item><item><title>檢查 date 是否為 null | c#</title><link>https://caseyho.dev/post/2022-10-24-check-date-is-null-date/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-24-check-date-is-null-date/</guid><description>
+&lt;p>&lt;a href="https://www.tutorialsteacher.com/csharp/csharp-dynamic-type">C# - Dynamic Types&lt;/a>&lt;/p></description></item><item><title>檢查 date 是否為 null | c#</title><link>https://iosum.github.io/post/2022-10-24-check-date-is-null-date/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-24-check-date-is-null-date/</guid><description>
 &lt;h2 id="snippet">
 &lt;a href="#snippet" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -2036,7 +2036,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>[&lt;a href="https://stackoverflow.com/questions/305154/checking-to-see-if-a-datetime-variable-has-had-a-value-assigned">Checking to see if a DateTime variable has had a value assigned&lt;/a>&lt;/p></description></item><item><title>The contextual keyword 'var' may only appear within a local variable declaration. | c#</title><link>https://caseyho.dev/post/2022-10-21-the-contextual-keyword-var-may-only-appear-within-a-local-variable-declaration/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-21-the-contextual-keyword-var-may-only-appear-within-a-local-variable-declaration/</guid><description>
+&lt;p>[&lt;a href="https://stackoverflow.com/questions/305154/checking-to-see-if-a-datetime-variable-has-had-a-value-assigned">Checking to see if a DateTime variable has had a value assigned&lt;/a>&lt;/p></description></item><item><title>The contextual keyword 'var' may only appear within a local variable declaration. | c#</title><link>https://iosum.github.io/post/2022-10-21-the-contextual-keyword-var-may-only-appear-within-a-local-variable-declaration/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-21-the-contextual-keyword-var-may-only-appear-within-a-local-variable-declaration/</guid><description>
 &lt;h2 id="錯誤訊息">
 &lt;a href="#%e9%8c%af%e8%aa%a4%e8%a8%8a%e6%81%af" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -2099,9 +2099,9 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cs">/// &amp;lt;summary&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cs">/// Summary description for ClassName&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cs">/// &amp;lt;/summary&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Base&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Base&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">CalculateTotalPriceInCart&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">var&lt;/span> &lt;span class="n">PartNumber&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">var&lt;/span> &lt;span class="n">Description&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">var&lt;/span> &lt;span class="n">OrderId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="n">IsBoxed&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">CalculateTotalPriceInCart&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">var&lt;/span> &lt;span class="n">PartNumber&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">var&lt;/span> &lt;span class="n">Description&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">var&lt;/span> &lt;span class="n">OrderId&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">bool&lt;/span> &lt;span class="n">IsBoxed&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">database&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">Database&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;OSF&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">query&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
@@ -2201,10 +2201,10 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cs">/// &amp;lt;summary&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cs">/// Summary description for ClassName&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cs">/// &amp;lt;/summary&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Base&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">Base&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// var 不能當作參數的型態傳入，參數的資料型態必須是強型別的資料型態。&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">CalculateTotalPriceInCart&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IEnumerable&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="kt">dynamic&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">Description&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">PartNumber&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">OrderId&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">bool&lt;/span> &lt;span class="n">IsBoxed&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="k">void&lt;/span> &lt;span class="n">CalculateTotalPriceInCart&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">IEnumerable&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="kt">dynamic&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">Description&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">PartNumber&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">OrderId&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">bool&lt;/span> &lt;span class="n">IsBoxed&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">database&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">Database&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;OSF&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">var&lt;/span> &lt;span class="n">query&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
@@ -2241,7 +2241,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/6628358/the-contextual-keyword-var-may-only-appear-within-a-local-variable-declaration">The contextual keyword &amp;lsquo;var&amp;rsquo; may only appear within a local variable declaration issues&lt;/a>&lt;/p></description></item><item><title>保留原本 C# 的 Exception message，並加上客製化 Exception Message | c#</title><link>https://caseyho.dev/post/2022-10-19-add-a-message-to-an-exception-without-losing-any-information-in-c-sharp/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-19-add-a-message-to-an-exception-without-losing-any-information-in-c-sharp/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/6628358/the-contextual-keyword-var-may-only-appear-within-a-local-variable-declaration">The contextual keyword &amp;lsquo;var&amp;rsquo; may only appear within a local variable declaration issues&lt;/a>&lt;/p></description></item><item><title>保留原本 C# 的 Exception message，並加上客製化 Exception Message | c#</title><link>https://iosum.github.io/post/2022-10-19-add-a-message-to-an-exception-without-losing-any-information-in-c-sharp/</link><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-19-add-a-message-to-an-exception-without-losing-any-information-in-c-sharp/</guid><description>
 &lt;p>假設現在程式拋出了一個 Exception，那麼我們看到的訊息應該會是 C# 預設寫好的錯誤訊息，但同時我們希望使用者需要知道這一個錯誤訊息，開發者應該可以將預設寫好的錯誤訊息變成使用者看得懂的東西。此時可以使用 Exception 的 &lt;a href="https://learn.microsoft.com/en-us/dotnet/api/system.exception.data?redirectedfrom=MSDN&amp;amp;view=net-6.0#System_Exception_Data">Data 屬性&lt;/a>。&lt;/p>
 &lt;p>Data 屬於 key/value pair，可以傳入自己想要的 key 和 value，可以使用以下 &lt;code>Exception.Data[key]&lt;/code> 取到 Value。&lt;/p>
 &lt;h2 id="範例">
@@ -2308,7 +2308,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/14409988/how-can-i-add-a-message-to-an-exception-without-losing-any-information-in-c">How can I add a message to an exception without losing any information in C#?&lt;/a>&lt;/p></description></item><item><title>CSS positioning 介紹 | css</title><link>https://caseyho.dev/post/2022-10-17-intro-to-css-positioning/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-17-intro-to-css-positioning/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/14409988/how-can-i-add-a-message-to-an-exception-without-losing-any-information-in-c">How can I add a message to an exception without losing any information in C#?&lt;/a>&lt;/p></description></item><item><title>CSS positioning 介紹 | css</title><link>https://iosum.github.io/post/2022-10-17-intro-to-css-positioning/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-17-intro-to-css-positioning/</guid><description>
 &lt;h2 id="介紹">
 &lt;a href="#%e4%bb%8b%e7%b4%b9" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -2842,7 +2842,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>&lt;a href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://zh-tw.learnlayout.com/">學習 CSS 版面配置&lt;/a>&lt;/p>
 &lt;p>&lt;a href="http://www.ruanyifeng.com/blog/2019/11/css-position.html">CSS 定位詳解&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://ithelp.ithome.com.tw/articles/10212202">CSS relative? absolute? 傻傻分不清楚&lt;/a>&lt;/p></description></item><item><title>Hover div 的時候放大圖片 | css</title><link>https://caseyho.dev/post/2022-10-18-zoom-a-div-with-hover/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-18-zoom-a-div-with-hover/</guid><description>
+&lt;p>&lt;a href="https://ithelp.ithome.com.tw/articles/10212202">CSS relative? absolute? 傻傻分不清楚&lt;/a>&lt;/p></description></item><item><title>Hover div 的時候放大圖片 | css</title><link>https://iosum.github.io/post/2022-10-18-zoom-a-div-with-hover/</link><pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-18-zoom-a-div-with-hover/</guid><description>
 &lt;h2 id="預設結果">
 &lt;a href="#%e9%a0%90%e8%a8%ad%e7%b5%90%e6%9e%9c" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -2874,7 +2874,7 @@ background-position
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">x&lt;/span>&lt;span class="err">軸位置&lt;/span> &lt;span class="nt">y&lt;/span>&lt;span class="err">軸位置&lt;/span>&lt;span class="o">;&lt;/span>
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">x軸位置&lt;/span> &lt;span class="nt">y軸位置&lt;/span>&lt;span class="o">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div class="chroma">
@@ -2888,11 +2888,11 @@ background-position
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 靠左靠下對齊 */&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">left&lt;/span> &lt;span class="nt">bottom&lt;/span>&lt;span class="o">;&lt;/span>&lt;span class="err">　&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">left&lt;/span> &lt;span class="nt">bottom&lt;/span>&lt;span class="o">;&lt;/span>　
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 離左邊 30px，離上方 60px 的位置 */&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">30px&lt;/span> &lt;span class="nt">60px&lt;/span>&lt;span class="o">;&lt;/span>&lt;span class="err">　&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">30px&lt;/span> &lt;span class="nt">60px&lt;/span>&lt;span class="o">;&lt;/span>　
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">/* 離左邊 10%，離上方 50% 的位置 */&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">10&lt;/span>&lt;span class="o">%&lt;/span> &lt;span class="nt">50&lt;/span>&lt;span class="o">%;&lt;/span>&lt;span class="err">　&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">background-position&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="nd">10&lt;/span>&lt;span class="o">%&lt;/span> &lt;span class="nt">50&lt;/span>&lt;span class="o">%;&lt;/span>　
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="codepen-範例">
@@ -2996,7 +2996,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/74105081/how-to-zoom-a-div-with-hover-but-not-the-image-inside">how to zoom a div with :hover but not the image inside&lt;/a>&lt;/p></description></item><item><title>flex-shrink 屬性介紹 | css</title><link>https://caseyho.dev/post/2022-10-16-intro-to-flex-shrink/</link><pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-16-intro-to-flex-shrink/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/74105081/how-to-zoom-a-div-with-hover-but-not-the-image-inside">how to zoom a div with :hover but not the image inside&lt;/a>&lt;/p></description></item><item><title>flex-shrink 屬性介紹 | css</title><link>https://iosum.github.io/post/2022-10-16-intro-to-flex-shrink/</link><pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-16-intro-to-flex-shrink/</guid><description>
 &lt;h2 id="介紹">
 &lt;a href="#%e4%bb%8b%e7%b4%b9" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -3097,7 +3097,7 @@ alt="Imgur"
 src="https://i.imgur.com/Ms9ND66.png"
 alt="Imgur"
 />&lt;/p>
-&lt;p>那麼 flex item 3 ~ flex item 5 都和 flex item 1 的計算方式一樣，這裡就不多贅述。&lt;/p></description></item><item><title>PO - 採購單 | ORACLE ERP R12</title><link>https://caseyho.dev/post/2022-10-11-oracle-erp-ebs-r12-po-intro/</link><pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-11-oracle-erp-ebs-r12-po-intro/</guid><description>
+&lt;p>那麼 flex item 3 ~ flex item 5 都和 flex item 1 的計算方式一樣，這裡就不多贅述。&lt;/p></description></item><item><title>PO - 採購單 | ORACLE ERP R12</title><link>https://iosum.github.io/post/2022-10-11-oracle-erp-ebs-r12-po-intro/</link><pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-11-oracle-erp-ebs-r12-po-intro/</guid><description>
 &lt;p>&lt;a href="https://docs.oracle.com/en/cloud/saas/procurement/22b/oedmp/poheadersall-3719.html#poheadersall-3719">ORACLE 官方文件&lt;/a>&lt;/p>
 &lt;h2 id="po_headers_all">
 &lt;a href="#po_headers_all" class="anchor">
@@ -3339,7 +3339,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 說明
 &lt;/h3>
-&lt;p>當客戶或供應商已同意在某個特定時期內以特定價格購買或提供一定數量的某個項目時，就會形成一份&lt;strong>總括合約&lt;/strong>。&lt;/p></description></item><item><title>如何讓 flex item 等高? | css</title><link>https://caseyho.dev/post/2022-10-09-an-equal-height-div-using-flexbox/</link><pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-09-an-equal-height-div-using-flexbox/</guid><description>
+&lt;p>當客戶或供應商已同意在某個特定時期內以特定價格購買或提供一定數量的某個項目時，就會形成一份&lt;strong>總括合約&lt;/strong>。&lt;/p></description></item><item><title>如何讓 flex item 等高? | css</title><link>https://iosum.github.io/post/2022-10-09-an-equal-height-div-using-flexbox/</link><pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-09-an-equal-height-div-using-flexbox/</guid><description>
 &lt;p>&lt;a href="https://codepen.io/iosum/pen/eYrbJJy?editors=1100">CodePen 完成圖&lt;/a>&lt;/p>
 &lt;h2 id="步驟">
 &lt;a href="#%e6%ad%a5%e9%a9%9f" class="anchor">
@@ -3883,7 +3883,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://clearleft.com/thinking/an-equal-height-grid-using-flexbox">An equal height grid using Flexbox&lt;/a>&lt;/p></description></item><item><title>如何讓 image 塞進一個 div 裡面並維持解析度? | css</title><link>https://caseyho.dev/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/</link><pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/</guid><description>
+&lt;p>&lt;a href="https://clearleft.com/thinking/an-equal-height-grid-using-flexbox">An equal height grid using Flexbox&lt;/a>&lt;/p></description></item><item><title>如何讓 image 塞進一個 div 裡面並維持解析度? | css</title><link>https://iosum.github.io/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/</link><pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/</guid><description>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/l2ctqUP.png"
 alt="Imgur"
@@ -4005,7 +4005,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="https://stackoverflow.com/questions/4394309/how-do-i-fit-an-image-img-inside-a-div-and-keep-the-aspect-ratio">How do I fit an image (img) inside a div and keep the aspect ratio?&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">mdn web docs - object-fit&lt;/a>&lt;/p></description></item><item><title>SSIS ValidateExternalMetaData | SSIS</title><link>https://caseyho.dev/post/2022-09-30-ssis-validatemeta-data-attribute-intro/</link><pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-30-ssis-validatemeta-data-attribute-intro/</guid><description>
+&lt;p>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">mdn web docs - object-fit&lt;/a>&lt;/p></description></item><item><title>SSIS ValidateExternalMetaData | SSIS</title><link>https://iosum.github.io/post/2022-09-30-ssis-validatemeta-data-attribute-intro/</link><pubDate>Fri, 30 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-30-ssis-validatemeta-data-attribute-intro/</guid><description>
 &lt;h2 id="說明">
 &lt;a href="#%e8%aa%aa%e6%98%8e" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -4033,7 +4033,7 @@ alt="Imgur"
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/cUXgypX.png"
 alt="Imgur"
-/>&lt;/p></description></item><item><title>Clustered Index &amp; Non-Clustered Index | sql</title><link>https://caseyho.dev/post/2022-09-29-clustered-index-and-nonclustered-index-intro/</link><pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-29-clustered-index-and-nonclustered-index-intro/</guid><description>
+/>&lt;/p></description></item><item><title>Clustered Index &amp; Non-Clustered Index | sql</title><link>https://iosum.github.io/post/2022-09-29-clustered-index-and-nonclustered-index-intro/</link><pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-29-clustered-index-and-nonclustered-index-intro/</guid><description>
 &lt;h2 id="index">
 &lt;a href="#index" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -4158,7 +4158,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://learn.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-Non-clustered-indexes-described?view=sql-server-ver16">Clustered and Non-clustered indexes described&lt;/a>&lt;/p></description></item><item><title>MSSQL Update Query | SQL</title><link>https://caseyho.dev/post/2022-09-27-mssql-update-query/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-27-mssql-update-query/</guid><description>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-Non-clustered-indexes-described?view=sql-server-ver16">Clustered and Non-clustered indexes described&lt;/a>&lt;/p></description></item><item><title>MSSQL Update Query | SQL</title><link>https://iosum.github.io/post/2022-09-27-mssql-update-query/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-27-mssql-update-query/</guid><description>
 &lt;p>不知道為什麼，每一次只要有 FROM 或是 INNER JOIN 在 UPDATE 裡面都會忘記怎麼寫，大概是寫的不夠多吧，特別筆記一下。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -4178,7 +4178,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">ON&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ID&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ID&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>使用 OPENQUERY 新增 Temp Table | SQL</title><link>https://caseyho.dev/post/2022-09-27-create-a-temp-table-with-openquery/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-27-create-a-temp-table-with-openquery/</guid><description>
+&lt;/div></description></item><item><title>使用 OPENQUERY 新增 Temp Table | SQL</title><link>https://iosum.github.io/post/2022-09-27-create-a-temp-table-with-openquery/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-27-create-a-temp-table-with-openquery/</guid><description>
 &lt;p>因為 CTE 無法使用 2 個以上的 QUERIES，所以使用 TEMP TABLE 代替 CTE。也因為資料量較大(有 20 多萬筆)，所以我選擇 TEMP TABLE，而不是 TABLE VARIABLE。&lt;/p>
 &lt;ol>
 &lt;li>刪除 TEMP TABLE&lt;/li>
@@ -4236,7 +4236,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">INSERTED&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>使用 SSIS 的 RetainSameConnection 屬性 | SSIS</title><link>https://caseyho.dev/post/2022-09-28-ssis-remainsameconnection-intro/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-28-ssis-remainsameconnection-intro/</guid><description>
+&lt;/div></description></item><item><title>使用 SSIS 的 RetainSameConnection 屬性 | SSIS</title><link>https://iosum.github.io/post/2022-09-28-ssis-remainsameconnection-intro/</link><pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-28-ssis-remainsameconnection-intro/</guid><description>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/peQjqbW.png"
 alt="Imgur"
@@ -4283,7 +4283,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料
 &lt;/h2>
 &lt;p>&lt;a href="http://www.sqlerudition.com/what-is-the-retainsameconnection-property-of-oledb-connection-in-ssis/">What is the RetainSameConnection Property of OLEDB Connection in SSIS?&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://blog.csdn.net/p77ll9l53x/article/details/71108120">使用 Connetion 的屬性 RetainSameConnection&lt;/a>&lt;/p></description></item><item><title>web.config 無法存檔，跳出另存新檔視窗 | c#</title><link>https://caseyho.dev/post/2022-09-22-webconfig-cant-save/</link><pubDate>Thu, 22 Sep 2022 23:00:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-22-webconfig-cant-save/</guid><description>
+&lt;p>&lt;a href="https://blog.csdn.net/p77ll9l53x/article/details/71108120">使用 Connetion 的屬性 RetainSameConnection&lt;/a>&lt;/p></description></item><item><title>web.config 無法存檔，跳出另存新檔視窗 | c#</title><link>https://iosum.github.io/post/2022-09-22-webconfig-cant-save/</link><pubDate>Thu, 22 Sep 2022 23:00:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-22-webconfig-cant-save/</guid><description>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/EQjo1Cn.png"
 alt="Imgur"
@@ -4295,7 +4295,7 @@ alt="Imgur"
 src="https://i.imgur.com/85ei6GI.png"
 alt="Imgur"
 />&lt;/p>
-&lt;p>開啟工作管理員， 將 Microsoft.VisualStudio.Web.Host.exe 結束工作即可。&lt;/p></description></item><item><title>未設定所要求 URL 的預設文件，且未在伺服器上啟用瀏覽目錄 | c#</title><link>https://caseyho.dev/post/2022-09-22-enable-directory-browsing-by-default-on-iis-express/</link><pubDate>Thu, 22 Sep 2022 23:00:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-22-enable-directory-browsing-by-default-on-iis-express/</guid><description>
+&lt;p>開啟工作管理員， 將 Microsoft.VisualStudio.Web.Host.exe 結束工作即可。&lt;/p></description></item><item><title>未設定所要求 URL 的預設文件，且未在伺服器上啟用瀏覽目錄 | c#</title><link>https://iosum.github.io/post/2022-09-22-enable-directory-browsing-by-default-on-iis-express/</link><pubDate>Thu, 22 Sep 2022 23:00:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-22-enable-directory-browsing-by-default-on-iis-express/</guid><description>
 &lt;p>&lt;img loading="lazy"
 src="https://i.imgur.com/7XdrHH0.png"
 alt="Imgur"
@@ -4320,7 +4320,7 @@ alt="Imgur"
 &amp;lt;/configuration&amp;gt;
 &lt;/code>&lt;/pre>&lt;hr>
 &lt;p>參考資料：&lt;/p>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/8543761/how-to-enable-directory-browsing-by-default-on-iis-express">How to enable Directory browsing by default on IIS Express&lt;/a>&lt;/p></description></item><item><title>String values are immutable | JavaScript</title><link>https://caseyho.dev/post/2022-09-04-string-immutable/</link><pubDate>Sun, 04 Sep 2022 23:12:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-04-string-immutable/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/8543761/how-to-enable-directory-browsing-by-default-on-iis-express">How to enable Directory browsing by default on IIS Express&lt;/a>&lt;/p></description></item><item><title>String values are immutable | JavaScript</title><link>https://iosum.github.io/post/2022-09-04-string-immutable/</link><pubDate>Sun, 04 Sep 2022 23:12:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-04-string-immutable/</guid><description>
 &lt;p>在 JS 的世界裡面，&lt;code>string&lt;/code> 是 immutable，表示 &lt;code>string&lt;/code> 裡面的內容物是不可以變動的。
 這是什麼意思，我們看以下的例子就知道。&lt;/p>
 &lt;h2 id="範例">
@@ -4401,7 +4401,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料
 &lt;/h2>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/65548251/string-in-javascript-are-immutable-but-when-we-use-let-with-strings-it-become">string in javascript are immutable, but when we use let with strings , it becomes changeable,&lt;/a>&lt;/p></description></item><item><title>var vs let - Part 1 | JavaScript</title><link>https://caseyho.dev/post/2022-09-01-var-let-differeneces/</link><pubDate>Thu, 01 Sep 2022 16:20:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-09-01-var-let-differeneces/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/65548251/string-in-javascript-are-immutable-but-when-we-use-let-with-strings-it-become">string in javascript are immutable, but when we use let with strings , it becomes changeable,&lt;/a>&lt;/p></description></item><item><title>var vs let - Part 1 | JavaScript</title><link>https://iosum.github.io/post/2022-09-01-var-let-differeneces/</link><pubDate>Thu, 01 Sep 2022 16:20:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-09-01-var-let-differeneces/</guid><description>
 &lt;p>自從 JS 在 2015 年推出大改版後，相信大家都看過非常多 &lt;code>var&lt;/code>，&lt;code>let&lt;/code>，&lt;code>const&lt;/code> 的文章，雖然現已 2022，但有許多 legacy project 還是使用 var 來定義變數，就讓我們再了解一次 &lt;code>var&lt;/code> 和 &lt;code>let&lt;/code> 有何不同吧。&lt;/p>
 &lt;p>結論：
 用 &lt;code>var&lt;/code> 定義的變數可以輕易的被重新賦值，但是 &lt;code>let&lt;/code> 不行。&lt;/p>
@@ -4461,7 +4461,7 @@ alt="Imgur"
 &lt;hr>
 &lt;p>參考資料：&lt;/p>
 &lt;p>&lt;a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/explore-differences-between-the-var-and-let-keywords">Explore Differences Between the var and let Keywords&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/">How the let, const, and var Keywords Work in JavaScript&lt;/a>&lt;/p></description></item><item><title>Disabled Input 傳至 Controller | JavaScript</title><link>https://caseyho.dev/post/2022-08-31-pass-disabled-input-to-controller/</link><pubDate>Wed, 31 Aug 2022 11:00:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-31-pass-disabled-input-to-controller/</guid><description>
+&lt;p>&lt;a href="https://www.freecodecamp.org/news/understanding-let-const-and-var-keywords/">How the let, const, and var Keywords Work in JavaScript&lt;/a>&lt;/p></description></item><item><title>Disabled Input 傳至 Controller | JavaScript</title><link>https://iosum.github.io/post/2022-08-31-pass-disabled-input-to-controller/</link><pubDate>Wed, 31 Aug 2022 11:00:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-31-pass-disabled-input-to-controller/</guid><description>
 &lt;p>disabled input 是無法將 value 傳至 controller，但是我們仍需要用到 value，此時需要怎麼做?&lt;/p>
 &lt;p>解決辦法：&lt;/p>
 &lt;ol>
@@ -4495,7 +4495,7 @@ alt="Imgur"
 &lt;/div>
 &lt;/div>&lt;hr>
 &lt;p>參考資料：
-&lt;a href="https://stackoverflow.com/questions/2700696/how-do-i-submit-disabled-input-in-asp-net-mvc/2724483">How do I submit disabled input in ASP.NET MVC?&lt;/a>&lt;/p></description></item><item><title>點擊 Enter 之後，執行某一支 Function | Vue.js</title><link>https://caseyho.dev/post/2022-08-29-use-enter-to-trigger-function-vue-js/</link><pubDate>Wed, 31 Aug 2022 11:00:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-29-use-enter-to-trigger-function-vue-js/</guid><description>
+&lt;a href="https://stackoverflow.com/questions/2700696/how-do-i-submit-disabled-input-in-asp-net-mvc/2724483">How do I submit disabled input in ASP.NET MVC?&lt;/a>&lt;/p></description></item><item><title>點擊 Enter 之後，執行某一支 Function | Vue.js</title><link>https://iosum.github.io/post/2022-08-29-use-enter-to-trigger-function-vue-js/</link><pubDate>Wed, 31 Aug 2022 11:00:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-29-use-enter-to-trigger-function-vue-js/</guid><description>
 &lt;p>&lt;a href="https://jsfiddle.net/iosum/tsc069m1/3/">JSFiddle 範例&lt;/a>&lt;/p>
 &lt;p>使用 &lt;code>v-on:keyup.enter&lt;/code>=&lt;code>'function name'&lt;/code> 綁定 input 或是 form。&lt;/p>
 &lt;p>起初寫的時候，以為 &lt;code>v-on:keyup.enter&lt;/code> 要綁在 button 上，但是實際上其實是 form (或是其他的 input)， 以 form 為主體， trigger Enter 鍵之後，呼叫 login function，即可執行成功。&lt;/p>
@@ -4541,7 +4541,7 @@ alt="Imgur"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>參考資料: &lt;a href="https://stackoverflow.com/questions/46639549/on-key-press-of-enter-click-a-button-in-vuejs">On key press of Enter, click a button in vuejs&lt;/a>&lt;/p></description></item><item><title>確認 input string 是否為數字 | JavaScript</title><link>https://caseyho.dev/post/2022-08-29-is-input-string-numeric/</link><pubDate>Mon, 29 Aug 2022 23:11:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-29-is-input-string-numeric/</guid><description>
+&lt;/div>&lt;p>參考資料: &lt;a href="https://stackoverflow.com/questions/46639549/on-key-press-of-enter-click-a-button-in-vuejs">On key press of Enter, click a button in vuejs&lt;/a>&lt;/p></description></item><item><title>確認 input string 是否為數字 | JavaScript</title><link>https://iosum.github.io/post/2022-08-29-is-input-string-numeric/</link><pubDate>Mon, 29 Aug 2022 23:11:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-29-is-input-string-numeric/</guid><description>
 &lt;p>從 &lt;code>string&lt;/code> data type 轉成 &lt;code>int&lt;/code> 中間出的變化會非常多，有可能 input string 是空字串， input string 也有可能是 backctick&amp;hellip;等，一堆很奇怪的符號，這邊我使用我自己在專案中有使用的，並不保證大家都能夠判斷正確。&lt;/p>
 &lt;ul>
 &lt;li>
@@ -4580,7 +4580,7 @@ alt="Imgur"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;p>參考資料: &lt;a href="https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number">How can I check if a string is a valid number?&lt;/a>&lt;/p></description></item><item><title>設置 Git SSH key - Windows11 版本 | Git</title><link>https://caseyho.dev/post/2022-08-27-setup-ssh-key-win11/</link><pubDate>Sat, 27 Aug 2022 23:11:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-27-setup-ssh-key-win11/</guid><description>
+&lt;p>參考資料: &lt;a href="https://stackoverflow.com/questions/175739/how-can-i-check-if-a-string-is-a-valid-number">How can I check if a string is a valid number?&lt;/a>&lt;/p></description></item><item><title>設置 Git SSH key - Windows11 版本 | Git</title><link>https://iosum.github.io/post/2022-08-27-setup-ssh-key-win11/</link><pubDate>Sat, 27 Aug 2022 23:11:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-27-setup-ssh-key-win11/</guid><description>
 &lt;h2 id="設置步驟">
 &lt;a href="#%e8%a8%ad%e7%bd%ae%e6%ad%a5%e9%a9%9f" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
@@ -4696,7 +4696,7 @@ alt="Imgur"
 />&lt;/p>
 &lt;p>參考資料：&lt;/p>
 &lt;p>&lt;a href="https://medium.com/devops-with-valentine/2021-how-to-set-up-your-ssh-key-for-github-on-windows-10-afe6e729a3c0">[2022] How to Set Up your SSH key for GitHub on Windows 10&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository">Git error: &amp;ldquo;Host Key Verification Failed&amp;rdquo; when connecting to remote repository&lt;/a>&lt;/p></description></item><item><title>List&lt;自定義的 class> 轉成以逗號分隔字串 | c#</title><link>https://caseyho.dev/post/2022-08-24-combine-attribute-with-list/</link><pubDate>Wed, 24 Aug 2022 16:14:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-24-combine-attribute-with-list/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/13363553/git-error-host-key-verification-failed-when-connecting-to-remote-repository">Git error: &amp;ldquo;Host Key Verification Failed&amp;rdquo; when connecting to remote repository&lt;/a>&lt;/p></description></item><item><title>List&lt;自定義的 class> 轉成以逗號分隔字串 | c#</title><link>https://iosum.github.io/post/2022-08-24-combine-attribute-with-list/</link><pubDate>Wed, 24 Aug 2022 16:14:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-24-combine-attribute-with-list/</guid><description>
 &lt;p>搭配 LINQ 和 &lt;code>string.Join()&lt;/code>，將 List&amp;lt;自定義的 class&amp;gt; 轉成以逗號分隔字串。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -4749,14 +4749,14 @@ alt="Imgur"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// Define other methods and classes here&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">User&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">public&lt;/span> &lt;span class="k">class&lt;/span> &lt;span class="nc">User&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">name&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">type&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">username&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">name&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">type&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">username&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="k">get&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">set&lt;/span>&lt;span class="p">;}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">public&lt;/span> &lt;span class="n">User&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">type&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">username&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">public&lt;/span> &lt;span class="n">User&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">type&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">string&lt;/span> &lt;span class="n">username&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">id&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">id&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">this&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">;&lt;/span>
@@ -4782,7 +4782,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/a>
 參考資料：
 &lt;/h2>
-&lt;p>&lt;a href="https://stackoverflow.com/questions/3575029/c-sharp-liststring-to-string-with-delimiter">C# List&amp;lt;string&amp;gt; to string with delimiter&lt;/a>&lt;/p></description></item><item><title>2 陣列中找出至少有一個相同之元素 | JavaScript</title><link>https://caseyho.dev/post/2022-08-24-two-array-comparisions/</link><pubDate>Wed, 24 Aug 2022 14:14:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-24-two-array-comparisions/</guid><description>
+&lt;p>&lt;a href="https://stackoverflow.com/questions/3575029/c-sharp-liststring-to-string-with-delimiter">C# List&amp;lt;string&amp;gt; to string with delimiter&lt;/a>&lt;/p></description></item><item><title>2 陣列中找出至少有一個相同之元素 | JavaScript</title><link>https://iosum.github.io/post/2022-08-24-two-array-comparisions/</link><pubDate>Wed, 24 Aug 2022 14:14:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-24-two-array-comparisions/</guid><description>
 &lt;p>使用 &lt;code>Array.prototype.some()&lt;/code> 和 &lt;code>Array.prototype.filter()&lt;/code>，找出 2 個 array 至少有一個相同的元素。&lt;/p>
 &lt;ul>
 &lt;li>
@@ -4858,7 +4858,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 參考資料：
 &lt;/h2>
 &lt;p>&lt;a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/some">mdn web docs - Array.prototype.some()&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#%E5%98%97%E8%A9%A6%E4%B8%80%E4%B8%8B">mdn web docs - Array.prototype.filter()&lt;/a>&lt;/p></description></item><item><title>AD 驗證有可能造成資安問題嗎?</title><link>https://caseyho.dev/post/2022-08-19-is-attacking-available-when-using-ad-login-auth/</link><pubDate>Fri, 19 Aug 2022 21:14:00 +0800</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-08-19-is-attacking-available-when-using-ad-login-auth/</guid><description>
+&lt;p>&lt;a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#%E5%98%97%E8%A9%A6%E4%B8%80%E4%B8%8B">mdn web docs - Array.prototype.filter()&lt;/a>&lt;/p></description></item><item><title>AD 驗證有可能造成資安問題嗎?</title><link>https://iosum.github.io/post/2022-08-19-is-attacking-available-when-using-ad-login-auth/</link><pubDate>Fri, 19 Aug 2022 21:14:00 +0800</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-08-19-is-attacking-available-when-using-ad-login-auth/</guid><description>
 &lt;p>有一天我被我主管問到這件事，若企業網站使用 AD 驗證方式登入帳密，使用 POST 的方式將未加密的帳密傳至伺服器中，整個過程都是使用內網，有沒有可能會被壞人竊取帳號密碼? (假設沒有惡意主動攻擊的狀況下)&lt;/p>
 &lt;p>上網查了之後發現，應該是不太可能的，原因如下：&lt;/p>
 &lt;p>企業網站登入流程如下：&lt;/p>
@@ -4881,13 +4881,13 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;p>如有不同的想法，歡迎留言討論。&lt;/p>
 &lt;hr>
 &lt;p>參考資料：
-&lt;a href="https://ithelp.ithome.com.tw/articles/10000019">HTTPS 的連線夠安全嗎？&lt;/a>&lt;/p></description></item><item><title>值違反資料行的完整性條件約束</title><link>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</link><pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-19-ssis-value-constraint/</guid><description>
+&lt;a href="https://ithelp.ithome.com.tw/articles/10000019">HTTPS 的連線夠安全嗎？&lt;/a>&lt;/p></description></item><item><title>值違反資料行的完整性條件約束</title><link>https://iosum.github.io/post/2022-07-19-ssis-value-constraint/</link><pubDate>Tue, 19 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-07-19-ssis-value-constraint/</guid><description>
 &lt;p>錯誤訊息：&lt;/p>
 &lt;blockquote>
 &lt;p>DataFlow:錯誤: 寫入 Table_A.輸入[OLE DB 目的地輸入] 上的 寫入 Table_A 輸入[OLE DB 目的地輸入].資料行[Column_A] 發生錯誤。傳回的資料行狀態是: &amp;ldquo;值違反資料行的完整性條件約束。&amp;quot;。&lt;/p>
 &lt;/blockquote>
 &lt;p>解決方法：&lt;/p>
-&lt;p>&lt;code>Table_A&lt;/code>.&lt;code>Column_A&lt;/code> 不接受 NULL，但是傳入的資料是 NULL&lt;/p></description></item><item><title>排序後再 SELECT TOP N 筆資料</title><link>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link><pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid><description>
+&lt;p>&lt;code>Table_A&lt;/code>.&lt;code>Column_A&lt;/code> 不接受 NULL，但是傳入的資料是 NULL&lt;/p></description></item><item><title>排序後再 SELECT TOP N 筆資料</title><link>https://iosum.github.io/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link><pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid><description>
 &lt;p>寫法一：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -4964,7 +4964,7 @@ d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ROWNUM&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">BETWEEN&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">MIN_ROW&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">MAX_ROW&lt;/span>&lt;span class="w">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>定義變數</title><link>https://caseyho.dev/post/2022-07-11-define-variables-oracle-sql/</link><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://caseyho.dev/post/2022-07-11-define-variables-oracle-sql/</guid><description>
+&lt;/div></description></item><item><title>定義變數</title><link>https://iosum.github.io/post/2022-07-11-define-variables-oracle-sql/</link><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><author>Casey</author><guid>https://iosum.github.io/post/2022-07-11-define-variables-oracle-sql/</guid><description>
 &lt;h2 id="目的">
 &lt;a href="#%e7%9b%ae%e7%9a%84" class="anchor">
 &lt;svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
