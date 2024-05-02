@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle-Sql on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/oracle-sql/</link>
+    <description>Recent content in Oracle-Sql on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/oracle-sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>排序後再 SELECT TOP N 筆資料</title>
+      <link>http://localhost:1313/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</link>
+      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-07-13-oracle-sql-limit-number-of-rows-after-ordering/</guid>
+      <description>寫法一：&#xA;1 2 3 4 5 6 7 SELECT * FROM ( SELECT * FROM TABLE_A ORDER BY TABLE_A.COLUMN_A DESC ) WHERE ROWNUM &amp;lt;= 5; 寫法二：&#xA;1 2 3 4 SELECT * FROM TABLE_A ORDER BY TABLE_A.COLUMN_A DESC OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY; 寫法三： (Ask Tom) 速度最快&#xA;1 2 3 4 5 6 7 SELECT * FROM ( SELECT a.*, ROWNUM rnum FROM ( SELECT * FROM TABLE_A ORDER BY TABLE_A.</description>
+    </item>
+    <item>
+      <title>定義變數</title>
+      <link>http://localhost:1313/post/2022-07-11-define-variables-oracle-sql/</link>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-07-11-define-variables-oracle-sql/</guid>
+      <description>目的&#xD;Oracle SQL 定義變數跟 SQL Server 的用法十分不一樣(踩到非常多坑啊 😭)，所以這一篇主要紀錄 Oracle SQL 定義變數 的 VARIABLE 和 DEFINE。&#xA;DEFINE 的 VARIABLE 的差別&#xD;DEFINE 的目的是替代變數，在 client 端執行解析，需要加入&amp;amp;在變數名稱前面，且必須要有變數名稱和預設值。不可以指定 data type，唯一的 data type 為 char。&#xA;語法：&#xA;DEFINE variable_name = value&#xA;VARIABLE 的目的是綁定變數，在 server 端執行解析，需要加入:在變數名稱前面，可以綁定多種 data type。&#xA;語法：&#xA;VARIABLE variable_name data_type&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 -- 先定義 VARIABLE variable_name data_type VARIABLE po_header_ids VARCHAR2(1000); -- 如果需要賦予預設值，必須在 variable_name 前面加入 :，也就是 :variable_name -- := 在 ORACLE SQL 表示 ASSIGN BEGIN :po_header_ids := &amp;#39;1,2,3&amp;#39;; END; / SELECT PHA.</description>
+    </item>
+  </channel>
+</rss>

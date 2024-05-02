@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sql on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/sql/</link>
+    <description>Recent content in Sql on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>網頁觸發按鈕執行 SP，SP 會執行 SSIS dtsx，如果在 SP 執行時將網頁關閉，SP 還會繼續執行嗎?</title>
+      <link>http://localhost:1313/post/2023-03-28-close-window-to-stop-stored-proc/</link>
+      <pubDate>Tue, 28 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023-03-28-close-window-to-stop-stored-proc/</guid>
+      <description>如果在網頁上觸發按鈕執行的 stored procedure 中，執行了一個包含 SSIS 封裝的 dtsx 檔案，當你關閉網頁時，stored procedure 仍然會繼續執行。&#xA;這是因為在 SQL Server 中，stored procedure 通常在執行時是作為一個單獨的執行緒在運行的，而這個執行緒是獨立於網頁的。&#xA;換句話說，即使你關閉了網頁，stored procedure 仍然會在 SQL Server 上運行，直到其執行完成或被手動停止。&#xA;因此，希望停止 stored procedure 的執行，可以使用 SQL Server Management Studio 或 Transact-SQL 命令來停止其執行，具體方法可以參考前面的回答。&#xA;找到正在執行的 SP ID&#xD;找到 session ID&#xA;1 SELECT session_id FROM sys.dm_exec_requests WHERE session_id &amp;gt; 50 停止 Stored Procedure 的執行&#xD;&amp;lt;SPID&amp;gt; 是指正在執行 stored procedure 的 session ID&#xA;1 KILL &amp;lt;SPID&amp;gt; </description>
+    </item>
+    <item>
+      <title>View 簡介</title>
+      <link>http://localhost:1313/post/2023-03-27-database-view-intro/</link>
+      <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023-03-27-database-view-intro/</guid>
+      <description>什麼是 View ?&#xD;View 是 Select 完多個 Table 所組合而成的資料表，是一種 Virtual Structure，並且可以在資料表上進行 SELECT、INSERT、UPDATE、DELETE 的操作。&#xA;優點&#xD;SQL Server Database View 具有以下優點：&#xA;提供了一個簡單的方式來查詢多個 Table View 可以簡化複雜的查詢，並且讓使用者只查看他們需要的資訊，而不用顧慮底層的資料表結構 View 可以提高資料安全性，因為可以限制使用者只能查詢特定欄位 缺點&#xD;SQL Server Database View 也有一些缺點：&#xA;View 的效能可能會比直接查詢 Table 差，因為需要額外的資源和時間來處理 View View 可能會讓資料庫設計更複雜，因為需要考慮許多 Table 之間的關係 View 可能會增加資料庫的存儲空間，因為 View 通常需要儲存 Table 的複本 為什麼要使用&#xD;查詢多個 Table：如果需要查詢多個 Table 來取得所需資訊，使用 View 可以簡化這個過程，讓查詢更加簡單。 保持資料庫的一致性：透過 View，可以將 Table 的結構和應用程式分離，讓資料庫的設計更具有彈性，並且保持資料庫的一致性。 提高資料安全性：可以使用 View 來限制使用者只能查詢特定欄位，提高資料安全性。 常用的場景&#xD;通常會用到 View 的地方都是 Data Access 的時候，需要 LEFT JOIN 或是 INNER JOIN View</description>
+    </item>
+    <item>
+      <title>NVARCHAR(9) v.s. VARCHAR(9) IN MSSQL</title>
+      <link>http://localhost:1313/post/2023-02-04-nvarchar-9-what-does-it-mean/</link>
+      <pubDate>Sat, 04 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023-02-04-nvarchar-9-what-does-it-mean/</guid>
+      <description>NVARCHAR(9)&#xD;在 MSSQL 中， NVARCHAR(9) 的 9 代表的是在這一個 COLUMN 中，可以最多放 9 個字元，若未滿 9 個字元，則會補到 9 個字元，欄位長度是固定的。&#xA;以英文和中文，可以是 abcdefghi，或是 aaaaccccd，一二三日禮拜拜日日&amp;hellip;等最多擺放 9 個字元。&#xA;1 2 3 4 5 6 7 8 DROP TABLE IF EXISTS TEST CREATE TABLE TEST ( TEST1 NVARCHAR(9), TEST2 VARCHAR(9) ) INSERT INTO TEST VALUES(N&amp;#39;一二三日禮拜拜日日&amp;#39;, &amp;#39;&amp;#39;) INSERT INTO TEST VALUES(N&amp;#39;123456789&amp;#39;, &amp;#39;&amp;#39;) 如果輸入大於 9 個字元，會出現以下錯誤訊息&#xA;儲存空間&#xD;nvarchar(n)：(2 * n + 2) bytes&#xA;不管是英文或中文，每一個字元都以 2 個 bytes 做計算，NVARCHAR(9) 表示儲存空間為 18 bytes + 2 byes，其中 2 bytes 為地址位置。</description>
+    </item>
+    <item>
+      <title>將多筆資料合併為一筆顯示 - FOR XML PATH | SQL</title>
+      <link>http://localhost:1313/post/2022-11-21-merge-column-data-to-a-cell/</link>
+      <pubDate>Mon, 21 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-11-21-merge-column-data-to-a-cell/</guid>
+      <description>前情提要&#xD;本篇使用 AdventureWorks2016 資料庫，將每一個產品的利用 FOR XML PATH 將評論人顯示多筆資料。&#xA;步驟&#xD;先找出要使用合併的資料 (通常在 detail page)，先鎖定 ProductID = 937，較容易寫出完整 query 1 2 3 4 SELECT &amp;#39;,&amp;#39; + [Production].[ProductReview].ReviewerName FROM [Production].[ProductReview] WHERE ProductID = 937 FOR XML PATH(&amp;#39;&amp;#39;) 可以看到評論 ProductId = 937 的人有 David 和 Jill&#xA;在每一個產品中，顯示各個產品的評論的人並使用 FOR XML PATH 顯示 將 WHERE ProductID = 937 拿掉 加入 [Production].[ProductReview].ProductID = [Product].ProductID 和 FROM [Production].[Product] 1 2 3 4 5 6 7 8 SELECT ProductID, ( SELECT &amp;#39;,&amp;#39; + [Production].</description>
+    </item>
+    <item>
+      <title>如何壓縮 Transaction Log 檔案 | SQL</title>
+      <link>http://localhost:1313/post/2022-11-11-how-to-compress-transaction-logs/</link>
+      <pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-11-11-how-to-compress-transaction-logs/</guid>
+      <description>方法&#xD;有 2 種方法&#xA;使用 SSMS 使用 TSQL TSQL&#xD;在資料庫按右鍵 &amp;gt; 屬性 &amp;gt; 復原模式&#xA;如果 DB 的復原模式使用「簡單」，直接使用 DBCC SHRINK 指令即可。&#xA;1 2 3 4 5 -- 找出 log 檔案名稱 SELECT name FROM sys.master_files WHERE type_desc = &amp;#39;LOG&amp;#39; -- AdventureWorks2012_log為壓縮的檔名 -- 1 為 AdventureWorks2012_log 壓縮到剩 1 MB DBCC SHRINKFILE (AdventureWorks2012_log, 1) 如果 DB 的復原模式使用「完整」，可以將復原模式從完整變成「簡單」後再壓縮檔案，壓縮檔案結束後再將復原模式調回完整。&#xA;1 2 3 4 5 6 7 8 9 10 -- 將復原模式變成「簡單」 ALTER DATABASE AdventureWorks2012 SET RECOVERY SIMPLE GO -- 壓縮檔案 DBCC SHRINKFILE (AdventureWorks2012_log, 1) GO -- 將復原模式變成「完整」 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL SSMS&#xD;資料庫按右鍵 &amp;gt; 工作(Tasks) &amp;gt; 壓縮(Shrink) &amp;gt; 檔案(Files) 檔案類型選擇紀錄檔 (log)，並選擇要壓縮的 log 檔的位置，壓縮動作可以自行選擇。 按下確定即可壓縮 log 檔 TSQL&#xD;1 2 3 4 5 6 7 8 USE [master]; GO -- 要備份的資料庫名稱 BACKUP DATABASE [SQLTestDB] TO DISK = N&amp;#39;Z:\SQLServerBackups\AdvWorksData.</description>
+    </item>
+    <item>
+      <title>The DELETE statement conflicted with the REFERENCE constraint &#34;FK_subplan_job_id&#34; | SQL</title>
+      <link>http://localhost:1313/post/2022-11-10-the-delete-statemet-conflicted/</link>
+      <pubDate>Thu, 10 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-11-10-the-delete-statemet-conflicted/</guid>
+      <description>錯誤訊息&#xD;&amp;ldquo;子計劃 缷除失敗&amp;rdquo;&#xA;delete 陳述式與reference 條件的約束&amp;rsquo;FK_subplan_job_id&amp;rsquo;衝突。衝突發生在資料庫&#xA;&amp;ldquo;msdb&amp;rdquo;,資料表 &amp;ldquo;dbo.sysmaintplan_subplans&amp;rdquo;,colum &amp;ldquo;job_id&amp;rdquo;。&#xA;英文版：&#xA;TITLE: Microsoft SQL Server Management Studio &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; Drop failed for Job &amp;lsquo;manual_db_backups.Subplan_1&amp;rsquo;. (Microsoft.SqlServer.Smo) For help, click: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&amp;amp;ProdVer=9.00.3042.00&amp;amp;EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.FailedOperationExceptionText&amp;amp;EvtID=Drop+Job&amp;amp;LinkId=20476 &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; ADDITIONAL INFORMATION: An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo) &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; The DELETE statement conflicted with the REFERENCE constraint &amp;ldquo;FK_subplan_job_id&amp;rdquo;. The conflict occurred in database &amp;ldquo;msdb&amp;rdquo;, table &amp;ldquo;dbo.sysmaintplan_subplans&amp;rdquo;, column &amp;lsquo;job_id&amp;rsquo;. The statement has been terminated. (Microsoft SQL Server, Error: 547) For help, click: http://go.</description>
+    </item>
+    <item>
+      <title>Clustered Index &amp; Non-Clustered Index | sql</title>
+      <link>http://localhost:1313/post/2022-09-29-clustered-index-and-nonclustered-index-intro/</link>
+      <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-09-29-clustered-index-and-nonclustered-index-intro/</guid>
+      <description>INDEX&#xD;主要以下的特點：&#xA;Index 加快從 Table 或 View 中拿到資料的速度 Index 的值可以為一個或是多個值，這一些值會從 Table 或是 View 來的 Index 會存在一個資料結構叫做 B-tree 中 Index 可以分成 2 種：&#xA;CLUSTERED INDEX (叢集索引) NON-CLUSTERED INDEX (非叢集索引) CLUSTERED INDEX (叢集索引)&#xD;Clustered Index 可以將 View 或是 Table 中的資料依照 Index 的 Value 排序後儲存 因為資料本身只能以一種順序排序，所以每個 Table 只能有一個 Clustered Index 只有當 Table 包含 Clustered Index 時，Table 中的資料才會以排序順序儲存 Table 有 Clustered Index 時，Table 又稱為 Clustered Table (叢集資料表) 如果 Table 沒有任何 Clustered Index，它的資料就儲存在未排序的資料結構中，這個資料結構稱為 Heap (堆積)。 Non-clustered Index (非叢集索引)&#xD;Non-clustered Index 包含 Non-clustered Index Value (非叢集索引鍵值)， Non-clustered Index Value 可以是一個或是多個，為 Table 中的欄位。而每個 Non-clustered Index Value 都有一個 Pointer，指向包含 Non-clustered Index Value 的資料，也就是 Table 裡的欄位資料。 Non-clustered Index Value 的 Pointer 稱為 Row Locator (資料列定位器)。Row Locator 的資料結構須要看資料儲存是在 Heap 或 Clustered Table 而定。若是 Heap，Row Locator 是指向 Pointer。 若是 Clustered Table，Row Locator 就是 Clustered Index。 共通點&#xD;每當修改 Table 的資料時，就會自動維護資料表或檢視的索引。 Clustered Index 與 Non-clustered Index 都可以是 Unique 或是不是 Unique，Unique 表示資料值不能重複，不是 Unique 表示資料值可以重複。 Query Optimizer 如何使用 Index&#xD;建立好的 Index 可以降低磁碟 I/O 作業並耗用較少的系統資源，因此可改善查詢效能。 當執行 SELECT、UPDATE、DELETE 或 MERGE 時， Query Optimizer 會評估每個擷取資料的可用方法。 擷取資料的可用方法可以分成 2 種 Table Scan 掃描一個或是多個 Index Table Scan (資料表掃描)&#xD;當執行 Table Scan 時，Query Optimizer 可以讀取 Table 中的所有資料，並擷取符合查詢條件的資料列。 Table Scan 將產生許多磁碟 I/O 作業，而且可能需要大量資源。 使用 Index 掃描&#xD;當 Query Optimizer 使用 Index 掃描時，它會搜尋 Index Value 、尋找查詢所需的資料之儲存位置，並從該位置擷取符合的資料。 一般而言，搜尋 Index 會比搜尋 Table 更快。 參考資料&#xD;Clustered and Non-clustered indexes described</description>
+    </item>
+    <item>
+      <title>MSSQL Update Query | SQL</title>
+      <link>http://localhost:1313/post/2022-09-27-mssql-update-query/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-09-27-mssql-update-query/</guid>
+      <description>不知道為什麼，每一次只要有 FROM 或是 INNER JOIN 在 UPDATE 裡面都會忘記怎麼寫，大概是寫的不夠多吧，特別筆記一下。&#xA;1 2 3 4 5 6 UPDATE A SET A.X = B.X FROM A INNER JOIN B ON A.ID = B.ID </description>
+    </item>
+    <item>
+      <title>使用 OPENQUERY 新增 Temp Table | SQL</title>
+      <link>http://localhost:1313/post/2022-09-27-create-a-temp-table-with-openquery/</link>
+      <pubDate>Tue, 27 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-09-27-create-a-temp-table-with-openquery/</guid>
+      <description>因為 CTE 無法使用 2 個以上的 QUERIES，所以使用 TEMP TABLE 代替 CTE。也因為資料量較大(有 20 多萬筆)，所以我選擇 TEMP TABLE，而不是 TABLE VARIABLE。&#xA;刪除 TEMP TABLE 將 SUB QUERY 的資料使用 SELECT &amp;hellip; INTO 加到 TEMP TABLE SELECT &amp;hellip; INTO 會 CREATE 一個 TEMP TABLE 並將資料 INSERT 到 TEMP TABLE 中&#xA;TEMP TABLE 的資料來源可以是別的 DATA SOURCE。例如：ORACLE&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 DROP TABLE IF EXISTS #TEMP_TABLE; SELECT INSERTED.</description>
+    </item>
+  </channel>
+</rss>

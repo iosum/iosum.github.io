@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>如何讓 flex item 等高? | css | Casey&#39;s Blog</title>
+
+    
+  
+
+
+    
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="如何讓 flex item 等高? | css | Casey&#39;s Blog"/>
+    <meta itemprop="name" content="如何讓 flex item 等高? | css | Casey&#39;s Blog" />
+    <meta name="twitter:title" content="如何讓 flex item 等高? | css | Casey&#39;s Blog" />
+    <meta name="application-name" content="如何讓 flex item 等高? | css | Casey&#39;s Blog" /><meta name="twitter:card" content="summary"/>
+
+    <meta name="description" content="" />
+    <meta name="twitter:description" content=""/>
+    <meta itemprop="description" content=""/>
+    <meta property="og:description" content="" />
+
+    
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="Casey" />
+<meta property="og:article:published_time" content=2022-10-03T00:00:00Z />
+<meta property="article:published_time" content=2022-10-03T00:00:00Z />
+
+
+  <meta property="og:article:author" content="Casey" />
+  <meta property="article:author" content="Casey" />
+  <meta name="author" content="Casey" />
+
+
+
+
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "如何讓 flex item 等高? | css",
+    "author": {
+      "@type": "Person",
+      "name": "Casey"
+    },
+    "datePublished": "2022-10-03",
+    "description": "",
+    "wordCount":  771 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2022-10-03",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Casey",
+      "logo": {
+        "@type": "imageObject",
+        "url": "http:\/\/localhost:1313\/favicon.ico"
+      }
+    }
+  }
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
+    
+</head>
+    
+    <script>
+        (function() {
+            const colorSchemeKey = 'ThemeColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        😎
+                    </span>
+                    
+                    
+                    Casey&#39;s Blog
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                
+                    <button id="dark-mode-button">
+                    <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    </button>
+                
+            </div>
+            </div>
+    </div>
+</nav>
+
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>如何讓 flex item 等高? | css</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                            By Casey | <time>October 03, 2022</time>
+                            | 4 minutes
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/css-flexbox/">Css Flexbox</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <p><a href="https://codepen.io/iosum/pen/eYrbJJy?editors=1100">CodePen 完成圖</a></p>
+<h2 id="步驟">
+    <a href="#%e6%ad%a5%e9%a9%9f" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    步驟
+</h2>
+<h3 id="step-1">
+    <a href="#step-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step 1
+</h3>
+<p>先畫出理想的 HTML Mark up，簡單來講分成 3 層，最外層紅色的 <code>.container</code>，橘色的 <code>.card</code>，和螢光綠的 <code>.card__header</code>，<code>.card__body</code> 和 <code>.card__footer</code>。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/xmFgXbu.png" 
+    alt="Imgur" 
+     /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">        <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://source.unsplash.com/600x400/?computer&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;card__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag tag-blue&#34;</span><span class="p">&gt;</span>Technology<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>What&#39;s new in 2022 Techhhhhhhhhhhhhhh<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+</span></span><span class="line"><span class="cl">        laudantium eos molestiae porro cum, doloribus, nostrum nisi error fugit
+</span></span><span class="line"><span class="cl">        optio rerum velit, eius sunt placeat vitae! Ipsam a mollitia cupiditate
+</span></span><span class="line"><span class="cl">        error sequi pariatur porro, in cum doloribus commodi voluptates. Nulla
+</span></span><span class="line"><span class="cl">        blanditiis ea dolore voluptas quaerat veniam aut asperiores sed quis.
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__footer&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">          <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://i.pravatar.cc/40?img=1&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">alt</span><span class="o">=</span><span class="s">&#34;user__image&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">class</span><span class="o">=</span><span class="s">&#34;user__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user__info&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Jane Doe<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>2h ago<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">        <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://source.unsplash.com/600x400/?food&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;card__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag tag-brown&#34;</span><span class="p">&gt;</span>Food<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Delicious Food<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+</span></span><span class="line"><span class="cl">        perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque
+</span></span><span class="line"><span class="cl">        quidem!
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__footer&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">          <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://i.pravatar.cc/40?img=2&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">alt</span><span class="o">=</span><span class="s">&#34;user__image&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">class</span><span class="o">=</span><span class="s">&#34;user__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user__info&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Jony Doe<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>Yesterday<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">        <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://source.unsplash.com/600x400/?car,automobile&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">alt</span><span class="o">=</span><span class="s">&#34;card__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">width</span><span class="o">=</span><span class="s">&#34;600&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tag tag-red&#34;</span><span class="p">&gt;</span>Automobile<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Race to your heart content<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+</span></span><span class="line"><span class="cl">        perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque
+</span></span><span class="line"><span class="cl">        quidem!
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;card__footer&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span>
+</span></span><span class="line"><span class="cl">          <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://i.pravatar.cc/40?img=3&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">alt</span><span class="o">=</span><span class="s">&#34;user__image&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">class</span><span class="o">=</span><span class="s">&#34;user__image&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;user__info&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>John Doe<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">small</span><span class="p">&gt;</span>2d ago<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="step-2">
+    <a href="#step-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step 2
+</h3>
+<p>在 <code>.container </code> 設定 flex container，可以使 <code>.card</code>變成 flex item，
+加入<code>flex-wrap: wrap;</code> 是希望寬度不夠時，flex item 在 ltr 的方向，最右邊的 flex item 可以自己換到下一行。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">flex-wrap</span><span class="p">:</span> <span class="kc">wrap</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" 
+    src="https://i.imgur.com/ay9bL1o.png" 
+    alt="Imgur" 
+     /></p>
+<h3 id="step-3">
+    <a href="#step-3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step 3
+</h3>
+<p>希望將 <code>.card</code> 裡面的 <code>.card__header</code>，<code>.card__body</code>，和 <code>.card__footer</code> 垂直排列，因此我們需要將 <code>.card</code> 變成 flex container，並將 <code>flex-direction: column</code>。</p>
+<p>在桌機或是筆電的大螢幕下，我們希望 item 可以在一個 row 可以一次顯示 3 個，因此一個 item 的 width 大約是 30%，並隨著螢幕的縮小，每一個 row 所放的 item 愈來愈少，直到一個 row 只有一個 item。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="nt">all</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">card</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" 
+    src="https://i.imgur.com/2RzOoZJ.png" 
+    alt="Imgur" 
+     /></p>
+<blockquote>
+<p>上圖還未加 media query</p>
+</blockquote>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/TltEhsO.gif" 
+    alt="Imgur" 
+     /></p>
+<blockquote>
+<p>已加入 media query</p>
+</blockquote>
+<h3 id="step-4">
+    <a href="#step-4" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step 4
+</h3>
+<p>將照片依照等比例縮小。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">.</span><span class="nc">card__header</span> <span class="p">.</span><span class="nc">card__image</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">max-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">object-fit</span><span class="p">:</span> <span class="kc">contain</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" 
+    src="https://i.imgur.com/ASdrpAa.png" 
+    alt="Imgur" 
+     /></p>
+<h3 id="step-5">
+    <a href="#step-5" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step 5
+</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">.</span><span class="nc">card__body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">flex</span><span class="p">:</span> <span class="mi">1</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-top</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>最重要的步驟，我們需要將 <code>.card__body</code> 的高度維持最大化，也就是頭像永遠都會在底部，圖片都會占一定的高度，其他的部分都是 <code>.card__body</code>。</p>
+<hr>
+<p>先來分析 <code>flex: 1 0 auto;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">flex-grow</span><span class="o">:</span> <span class="nt">1</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">flex-shrink</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">flex-basis</span><span class="o">:</span> <span class="nt">auto</span><span class="o">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>flex-grow: 1;</code>，預設值爲 0。依照 flex item 的設定比例分配剩餘空間，因為 <code>flex-grow</code> 預設值為 0，所以如果只有一個 flex item 設定 <code>flex-grow: 1</code>，表示如果有剩餘的空間，會將這空間都分配給設定 <code>flex-grow: 1</code> 的 flex item，以這一個例子就是 <code>.card__body</code>。</p>
+<p><code>flex-shrink: 0;</code>，預設值爲 1，表示空間如果不夠分，flex item 會等比例縮小。如果將 <code>flex-shrink: 0;</code>，表示我們要讓 flex item 不隨著 flex container 的大小跟著改變，flex item 該是多大就是多大。以這一個例子，將 <code>.card__body</code> 設定為 <code>flex-shrink: 0;</code>，並不會壓縮到 <code>.card__body</code> 的空間，而是壓到其他 <code>.card__header</code> 和 <code>.card__footer</code> 的空間。</p>
+<p><code>flex-basis: auto</code>，設定 flex item 在 main axis 上的預設大小，如果 main axis 為水平線，表示 flex container 的 <code>flex-direction: row</code>，flex-basis 將設定 flex item 的高度。如果 main axis 為垂直線，表示 flex container 的 <code>flex-direction: column</code>，flex-basis 將設定 flex item 的寬度。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/uw4iatV.png" 
+    alt="Imgur" 
+     /></p>
+<h3 id="step-6">
+    <a href="#step-6" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Step 6
+</h3>
+<p>剩下其他的 styling，使用 comment 的方式快速帶過。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* style h4 標題 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">.</span><span class="nc">card__body</span> <span class="nt">h4</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">letter-spacing</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">text-transform</span><span class="p">:</span> <span class="kc">capitalize</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-top</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">/* h4 標題如果超過 2 行，則用 ... 表示 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="n">box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">-webkit-</span><span class="n">line-clamp</span><span class="p">:</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">-webkit-</span><span class="n">box-orient</span><span class="p">:</span> <span class="kc">vertical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">/* p如果超過 4 行，則用 ... 表示 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">.</span><span class="nc">card__body</span> <span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="n">box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">-webkit-</span><span class="n">line-clamp</span><span class="p">:</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">-webkit-</span><span class="n">box-orient</span><span class="p">:</span> <span class="kc">vertical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 頭像和 username，日期並排 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">.</span><span class="nc">card__footer</span> <span class="p">.</span><span class="nc">user</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-top</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 頭像呈現圓形狀 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">.</span><span class="nc">card__footer</span> <span class="p">.</span><span class="nc">user</span> <span class="p">.</span><span class="nc">user__image</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-right</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果希望 <code>.card</code>的 border 有 glassmorphism 的效果，可以在 <code>.card</code> 加入以下的 css code。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">card</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c">/* 原本有的 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">30</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">margin-top</span><span class="p">:</span> <span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">/* glassmorphism styling */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">32</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mf">0.37</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">backdrop-filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">4</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">-webkit-</span><span class="n">backdrop-filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">4</span><span class="kt">px</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.18</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="結果圖">
+    <a href="#%e7%b5%90%e6%9e%9c%e5%9c%96" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    結果圖
+</h2>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/mjLOqX2.gif" 
+    alt="Imgur" 
+     /></p>
+<h2 id="參考資料">
+    <a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    參考資料
+</h2>
+<p><a href="https://clearleft.com/thinking/an-equal-height-grid-using-flexbox">An equal height grid using Flexbox</a></p>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/" title="Previous post (older)">
+            <span>Previous</span>
+            如何讓 image 塞進一個 div 裡面並維持解析度? | css
+            </a>
+        
+        
+        
+        <a rel="next" href="/post/2022-10-11-oracle-erp-ebs-r12-po-intro/" title="Next post (newer)">
+            <span>Next</span>
+            PO - 採購單 | ORACLE ERP R12
+            </a> 
+        
+    </nav>
+    
+</div>
+ 
+<div class="container">
+    
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-hugo-tania-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            })
+        }
+    })
+</script>
+
+</div>
+
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.83328c24dd2e04b778a9d875819baa81b858dfaf3bae705f38934f75e1a6e6ce.js" 
+    data-enable-footnotes="true"
+    ></script>
+</footer>
+
+    </body>
+</html>

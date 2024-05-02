@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/css/</link>
+    <description>Recent content in Css on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS positioning 介紹 | css</title>
+      <link>http://localhost:1313/post/2022-10-17-intro-to-css-positioning/</link>
+      <pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-10-17-intro-to-css-positioning/</guid>
+      <description>介紹&#xD;position 屬性用於 HTML 元素的定位方法，再搭配使用 top、bottom、left 和 right 屬性定位。&#xA;但是，除非首先設置了 position 屬性，否則 top、bottom、left 和 right 屬性將不起作用。&#xA;以下為 position 屬性值：&#xA;position: static position: relative position: fixed position: absolute position: sticky Static Positioning&#xD;position: static 是 HTML 元素的預設值。&#xA;任何套用 position: static; 的元素「不會被特別定位」在頁面上特定位置，而是照著瀏覽器預設的設定自動排版在頁面上。&#xA;position: static; 的元素不受 top 、 right 、 bottom 和 left 屬性影響。&#xA;範例&#xD;CodePen&#xA;可以看到加上了 position: static;之後，元素依然在相同的位置。&#xA;Relative Positioning&#xD;position: relative; 的元素和 position: static的元素 十分類似，position: relative;的元素可以讓開發者修改元素的最終位置。&#xA;position: relative; 的元素必須加上top 、 right 、 bottom 和 left 屬性，才能修改元素的最終位置，使元素相對於原本元素該出現的位置進行定位。</description>
+    </item>
+    <item>
+      <title>Hover div 的時候放大圖片 | css</title>
+      <link>http://localhost:1313/post/2022-10-18-zoom-a-div-with-hover/</link>
+      <pubDate>Mon, 17 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-10-18-zoom-a-div-with-hover/</guid>
+      <description>預設結果&#xD;此為我們要做的結果圖。&#xA;background-position&#xD;background-position 用來設定背景圖片位置，如果只指定 x 軸位置，y 軸位置必定為 center。&#xA;1 background-position: x軸位置 y軸位置; 1 2 3 4 5 6 /* 靠左靠下對齊 */ background-position:left bottom;　/* 離左邊 30px，離上方 60px 的位置 */ background-position:30px 60px;　/* 離左邊 10%，離上方 50% 的位置 */ background-position:10% 50%;　CodePen 範例&#xD;CodePen&#xA;1 2 3 4 5 6 &amp;lt;div class=&amp;#34;wrapper&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;frame&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;frame&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;frame&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;frame&amp;#34;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 .</description>
+    </item>
+    <item>
+      <title>如何讓 image 塞進一個 div 裡面並維持解析度? | css</title>
+      <link>http://localhost:1313/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/</link>
+      <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-10-03-how-to-remain-image-aspect-ratio-in-a-div/</guid>
+      <description>範例&#xD;CodePen 範例&#xA;1 2 3 4 5 6 &amp;lt;div class=&amp;#34;img-wrap&amp;#34;&amp;gt; &amp;lt;img src=&amp;#34;https://images.unsplash.com/photo-1615147342761-9238e15d8b96?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1001&amp;amp;q=80&amp;#34; alt=&amp;#34;&amp;#34; /&amp;gt; &amp;lt;/div&amp;gt; 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 body { display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; margin: 0; padding: 0; } .img-wrap { border: 1px solid green; width: 50%; height: 50%; } .img-wrap img { width: 100%; height: 100%; object-fit: contain; } 解說&#xD;先設定圖片的容器的 width 和 height</description>
+    </item>
+  </channel>
+</rss>

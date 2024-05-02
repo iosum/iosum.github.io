@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>CSS positioning 介紹 | css | Casey&#39;s Blog</title>
+
+    
+  
+
+
+    
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="CSS positioning 介紹 | css | Casey&#39;s Blog"/>
+    <meta itemprop="name" content="CSS positioning 介紹 | css | Casey&#39;s Blog" />
+    <meta name="twitter:title" content="CSS positioning 介紹 | css | Casey&#39;s Blog" />
+    <meta name="application-name" content="CSS positioning 介紹 | css | Casey&#39;s Blog" /><meta name="twitter:card" content="summary"/>
+
+    <meta name="description" content="" />
+    <meta name="twitter:description" content=""/>
+    <meta itemprop="description" content=""/>
+    <meta property="og:description" content="" />
+
+    
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="Casey" />
+<meta property="og:article:published_time" content=2022-10-17T00:00:00Z />
+<meta property="article:published_time" content=2022-10-17T00:00:00Z />
+
+
+  <meta property="og:article:author" content="Casey" />
+  <meta property="article:author" content="Casey" />
+  <meta name="author" content="Casey" />
+
+
+
+
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "CSS positioning 介紹 | css",
+    "author": {
+      "@type": "Person",
+      "name": "Casey"
+    },
+    "datePublished": "2022-10-17",
+    "description": "",
+    "wordCount":  664 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2022-10-17",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Casey",
+      "logo": {
+        "@type": "imageObject",
+        "url": "http:\/\/localhost:1313\/favicon.ico"
+      }
+    }
+  }
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
+    
+</head>
+    
+    <script>
+        (function() {
+            const colorSchemeKey = 'ThemeColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        😎
+                    </span>
+                    
+                    
+                    Casey&#39;s Blog
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                
+                    <button id="dark-mode-button">
+                    <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    </button>
+                
+            </div>
+            </div>
+    </div>
+</nav>
+
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>CSS positioning 介紹 | css</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                            By Casey | <time>October 17, 2022</time>
+                            | 4 minutes
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/css/">Css</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h2 id="介紹">
+    <a href="#%e4%bb%8b%e7%b4%b9" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    介紹
+</h2>
+<p><code>position</code> 屬性用於 HTML 元素的<strong>定位方法</strong>，再搭配使用 <code>top</code>、<code>bottom</code>、<code>left</code> 和 <code>right</code> 屬性定位。</p>
+<p>但是，除非首先設置了 <code>position</code> 屬性，否則 <code>top</code>、<code>bottom</code>、<code>left</code> 和 <code>right</code> 屬性將不起作用。</p>
+<p>以下為 <code>position</code> 屬性值：</p>
+<ul>
+<li><code>position: static</code></li>
+<li><code>position: relative</code></li>
+<li><code>position: fixed</code></li>
+<li><code>position: absolute</code></li>
+<li><code>position: sticky</code></li>
+</ul>
+<h2 id="static-positioning">
+    <a href="#static-positioning" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Static Positioning
+</h2>
+<p><code>position: static</code> 是 HTML 元素的預設值。</p>
+<p>任何套用 <code>position: static;</code> 的元素「不會被特別定位」在頁面上特定位置，而是照著瀏覽器預設的設定自動排版在頁面上。</p>
+<p><code>position: static;</code> 的元素不受 <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 屬性影響。</p>
+<h3 id="範例">
+    <a href="#%e7%af%84%e4%be%8b" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例
+</h3>
+<p><a href="https://codepen.io/iosum/pen/JjvVXyx">CodePen</a></p>
+<p>可以看到加上了 <code>position: static;</code>之後，元素依然在相同的位置。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/pRQ92d4.png" 
+    alt="Imgur" 
+     /></p>
+<h2 id="relative-positioning">
+    <a href="#relative-positioning" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Relative Positioning
+</h2>
+<p><code>position: relative;</code> 的元素和 <code>position: static</code>的元素 十分類似，<code>position: relative;</code>的元素可以讓開發者修改元素的最終位置。</p>
+<p><code>position: relative;</code> 的元素必須加上<code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 屬性，才能修改元素的最終位置，使元素相對於<strong>原本元素該出現的位置</strong>進行定位。</p>
+<p>而不管這些「相對定位」過的元素如何在頁面上移動位置或增加了多少空間，都不會影響到原本其他元素所在的位置。</p>
+<h3 id="範例-1">
+    <a href="#%e7%af%84%e4%be%8b-1" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例
+</h3>
+<p><a href="https://codepen.io/iosum/pen/KKRNgOy?editors=1100">CodePen</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">relative</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看到加了 <code>.relative</code> 的 <code>.box2</code>，<code>.box2</code> 會<strong>相對於原本的位置</strong>向下移動 20px，向右移動 10px，表示離上方 20px，左邊 10px。</p>
+<p>也可以看到 <code>.box2</code> 已經疊在 <code>.box3</code> 上方，表示 <code>.box3</code> 並沒有因為 <code>.box2</code>有移動跟著移動。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/i3N3QRZ.png" 
+    alt="Imgur" 
+     /></p>
+<p>如果把 <code>.relative</code> 拿掉，表示沒有特別定位，<code>.box2</code>元素就會回到原本的位置。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/ZTTKirX.png" 
+    alt="Imgur" 
+     /></p>
+<h2 id="fixed-positioning">
+    <a href="#fixed-positioning" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Fixed Positioning
+</h2>
+<p>設定為 <code>position: fixed</code> 的元素是相對於<strong>視窗</strong>進行定位，即使往下 scroll 或是往上 scroll，元素都同一位置，不會隨著滾動而有所改變。</p>
+<p>可以搭配 <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 屬性將此元素定位在瀏覽器的某一個地方。</p>
+<h3 id="範例-2">
+    <a href="#%e7%af%84%e4%be%8b-2" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例
+</h3>
+<p><a href="https://codepen.io/iosum/pen/YzLpLWJ?editors=1100">CodePen</a></p>
+<p>可以看到範例，即便我是把要固定的元素放在文字裡面，我還是會相對於瀏覽器視窗做定位。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/cVcVIpz.gif" 
+    alt="Imgur" 
+     /></p>
+<h2 id="absolute-positioning">
+    <a href="#absolute-positioning" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Absolute Positioning
+</h2>
+<p>需要注意以下 3 件事情：</p>
+<ul>
+<li>剩下的元素向上移動</li>
+<li>寬度變化</li>
+<li>相對於哪一個元素定位</li>
+</ul>
+<h3 id="注意事項">
+    <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    注意事項
+</h3>
+<h4 id="剩下的元素向上移動">
+    <a href="#%e5%89%a9%e4%b8%8b%e7%9a%84%e5%85%83%e7%b4%a0%e5%90%91%e4%b8%8a%e7%a7%bb%e5%8b%95" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    剩下的元素向上移動
+</h4>
+<p>設定為 <code>position: absolute;</code> 的元素，會完全跳脫該頁面，會感覺像浮在頁面之上。</p>
+<p>所以，設定為 <code>position: absolute;</code> 的元素原本所占用的空間將會消失，在 <code>position: absolute;</code> 以後的元素將會往上移動。</p>
+<h4 id="寬度變化">
+    <a href="#%e5%af%ac%e5%ba%a6%e8%ae%8a%e5%8c%96" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    寬度變化
+</h4>
+<p>我們一開始沒有設元素的寬度，所以寬度會完全撐開至父元素的邊界，這是 block 元素的特性。</p>
+<p>當設定為 <code>position: absolute;</code> 的元素跳脫該頁面後，也意味著，它脫離了父元素的範圍，寬度就以內容為基準。</p>
+<h4 id="相對於哪一個元素定位">
+    <a href="#%e7%9b%b8%e5%b0%8d%e6%96%bc%e5%93%aa%e4%b8%80%e5%80%8b%e5%85%83%e7%b4%a0%e5%ae%9a%e4%bd%8d" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    相對於哪一個元素定位
+</h4>
+<p>當元素的 position 設定 <code>position: absolute </code>後，
+該元素就會往外層的元素找是否有 <code>position:relative</code>、<code>position: absolute</code> 、<code>position: fixed</code> 和 <code>position: inherit</code> (若繼承的是前面 3 個之一)的元素，若是都沒有，就會以該網頁頁面(<code>&lt;body&gt;</code>)的左上角為定位點。</p>
+<p>若沒有設定任何 <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 屬性，設定為 <code>position: absolute;</code> 的元素的位置將遵照原本的位置(<code>position: static</code>)，但依舊會跳脫原本頁面。</p>
+<h3 id="範例-3">
+    <a href="#%e7%af%84%e4%be%8b-3" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例
+</h3>
+<p><a href="https://codepen.io/iosum/pen/NWMdxqQ?editors=1100">CodePen</a></p>
+<h4 id="原圖">
+    <a href="#%e5%8e%9f%e5%9c%96" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    原圖
+</h4>
+<p>下圖為原本元素的定位。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrapper &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box1 &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    box 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero totam
+</span></span><span class="line"><span class="cl">    eaque mollitia explicabo cum aut sint ut nam enim deserunt!
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box2&#34;</span><span class="p">&gt;</span>box 2 Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    box 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</span></span><span class="line"><span class="cl">    Voluptatibus, quis. Lorem ipsum dolor sit, amet consectetur adipisicing
+</span></span><span class="line"><span class="cl">    elit. Cum voluptates veniam fuga, cupiditate ipsam laboriosam!
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#046865</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e53d00</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffe900</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#21a0a0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" 
+    src="https://i.imgur.com/h4EopGQ.png" 
+    alt="Imgur" 
+     /></p>
+<hr>
+<h4 id="範例-1---在-box-2-加上-position-absolute">
+    <a href="#%e7%af%84%e4%be%8b-1---%e5%9c%a8-box-2-%e5%8a%a0%e4%b8%8a-position-absolute" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例 1 - 在 box 2 加上 <code>position: absolute;</code>
+</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrapper &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box1 &#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    box 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero totam
+</span></span><span class="line"><span class="cl">    eaque mollitia explicabo cum aut sint ut nam enim deserunt!
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box2 absolute&#34;</span><span class="p">&gt;</span>box 2 Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;box3&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    box 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</span></span><span class="line"><span class="cl">    Voluptatibus, quis. Lorem ipsum dolor sit, amet consectetur adipisicing
+</span></span><span class="line"><span class="cl">    elit. Cum voluptates veniam fuga, cupiditate ipsam laboriosam!
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#046865</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e53d00</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffe900</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#21a0a0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以看到 <code>.box2</code> 加上了 <code>position: absolute</code> 之後，後面的 <code>.box3</code> 會跑上來，因為 <code>.box2</code> 已經有自己獨立的一層。</p>
+<p>寬度的部分也因為 <code>.box2</code> 沒有設定絕對寬度，再加上脫離父元素(<code>.wrapper</code>)，所以<code>.box2</code>寬度等於該內容寬度。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/g53E5JM.png" 
+    alt="Imgur" 
+     /></p>
+<hr>
+<h4 id="範例-2---在-box-2-加上-position-absolute-再加上-top-0">
+    <a href="#%e7%af%84%e4%be%8b-2---%e5%9c%a8-box-2-%e5%8a%a0%e4%b8%8a-position-absolute-%e5%86%8d%e5%8a%a0%e4%b8%8a-top-0" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例 2 - 在 box 2 加上 <code>position: absolute;</code> 再加上 <code>top: 0</code>
+</h4>
+<p>如果在 <code>.absolute</code> 上面加上 <code>top: 0</code>，可以看到因為父元素 <code>.wrapper</code> 的 <code>position: static</code>，所以 <code>.box2</code> 並不會相對於<code>.wrapper</code> 的位置進行定位，反而是相對定位於左上角的 <code>&lt;html&gt;</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#046865</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e53d00</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffe900</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#21a0a0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" 
+    src="https://i.imgur.com/iFfASvR.png" 
+    alt="Imgur" 
+     /></p>
+<hr>
+<h4 id="範例-3---在-box-2-加上-position-absolute-再加上-top-0在父元素wrapper-加上-position-relative">
+    <a href="#%e7%af%84%e4%be%8b-3---%e5%9c%a8-box-2-%e5%8a%a0%e4%b8%8a-position-absolute-%e5%86%8d%e5%8a%a0%e4%b8%8a-top-0%e5%9c%a8%e7%88%b6%e5%85%83%e7%b4%a0wrapper-%e5%8a%a0%e4%b8%8a-position-relative" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例 3 - 在 box 2 加上 <code>position: absolute;</code> 再加上 <code>top: 0</code>，在父元素<code>.wrapper</code> 加上 <code>position: relative</code>
+</h4>
+<p>如果在 <code>.wrapper</code> 上面加上 <code>position: relative;</code>，可以看到 <code>.box2</code> 會相對於<code>.wrapper</code> 的位置進行定位。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">wrapper</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#046865</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e53d00</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#ffe900</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">box3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#21a0a0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img loading="lazy" 
+    src="https://i.imgur.com/l7lVWg4.png" 
+    alt="Imgur" 
+     /></p>
+<h2 id="sticky-positioning">
+    <a href="#sticky-positioning" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Sticky Positioning
+</h2>
+<p><code>position: sticky;</code>是一個比較新的屬性，如果要支援舊瀏覽器或是 IE，需要使用別的方法。詳細瀏覽器支援可以參考 <a href="https://caniuse.com/?search=position%3Asticky">Can I Use&hellip;</a>。</p>
+<p>使用 <code>position: sticky;</code> 的元素會根據<strong>使用者的 scroll bar 位置</strong>進行定位。</p>
+<p><code>position: sticky;</code> 的元素有點像是 <code>position: relative</code> 和 <code>position: fixed</code> 之間做切換。
+在預設時有 <code>position: relative</code>，但 scroll 到某一位置時，該元素會變成 <code>position: fixed</code>，一直固定在瀏覽器的某一個位置。</p>
+<h3 id="範例-4">
+    <a href="#%e7%af%84%e4%be%8b-4" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    範例
+</h3>
+<p><a href="https://codepen.io/iosum/pen/GRdrpqM">CodePen</a></p>
+<p>可以看到一開始時，紅色底色的 <code>div</code> 被定位在某一個位置，但是當我 scroll 到某一個地方的時候，紅色底色的 <code>div</code> 就好像使用了<code>position: fixed</code>，將 <code>div</code> 一直定位在上方。</p>
+<p><img loading="lazy" 
+    src="https://i.imgur.com/8zuS1NO.gif" 
+    alt="Imgur" 
+     /></p>
+<h2 id="參考資料">
+    <a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    參考資料
+</h2>
+<p><a href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性</a></p>
+<p><a href="https://zh-tw.learnlayout.com/">學習 CSS 版面配置</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2019/11/css-position.html">CSS 定位詳解</a></p>
+<p><a href="https://ithelp.ithome.com.tw/articles/10212202">CSS relative? absolute? 傻傻分不清楚</a></p>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/2022-10-18-zoom-a-div-with-hover/" title="Previous post (older)">
+            <span>Previous</span>
+            Hover div 的時候放大圖片 | css
+            </a>
+        
+        
+        
+        <a rel="next" href="/post/2022-10-19-add-a-message-to-an-exception-without-losing-any-information-in-c-sharp/" title="Next post (newer)">
+            <span>Next</span>
+            保留原本 C# 的 Exception message，並加上客製化 Exception Message  | c#
+            </a> 
+        
+    </nav>
+    
+</div>
+ 
+<div class="container">
+    
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-hugo-tania-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            })
+        }
+    })
+</script>
+
+</div>
+
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.83328c24dd2e04b778a9d875819baa81b858dfaf3bae705f38934f75e1a6e6ce.js" 
+    data-enable-footnotes="true"
+    ></script>
+</footer>
+
+    </body>
+</html>

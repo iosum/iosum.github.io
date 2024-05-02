@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="dark">
+    <title>Clustered Index &amp; Non-Clustered Index | sql | Casey&#39;s Blog</title>
+
+    
+  
+
+
+    
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Clustered Index &amp; Non-Clustered Index | sql | Casey&#39;s Blog"/>
+    <meta itemprop="name" content="Clustered Index &amp; Non-Clustered Index | sql | Casey&#39;s Blog" />
+    <meta name="twitter:title" content="Clustered Index &amp; Non-Clustered Index | sql | Casey&#39;s Blog" />
+    <meta name="application-name" content="Clustered Index &amp; Non-Clustered Index | sql | Casey&#39;s Blog" /><meta name="twitter:card" content="summary"/>
+
+    <meta name="description" content="" />
+    <meta name="twitter:description" content=""/>
+    <meta itemprop="description" content=""/>
+    <meta property="og:description" content="" />
+
+    
+
+<meta property="og:type" content="article" />
+<meta property="article:publisher" content="Casey" />
+<meta property="og:article:published_time" content=2022-09-29T00:00:00Z />
+<meta property="article:published_time" content=2022-09-29T00:00:00Z />
+
+
+  <meta property="og:article:author" content="Casey" />
+  <meta property="article:author" content="Casey" />
+  <meta name="author" content="Casey" />
+
+
+
+
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Clustered Index \u0026 Non-Clustered Index | sql",
+    "author": {
+      "@type": "Person",
+      "name": "Casey"
+    },
+    "datePublished": "2022-09-29",
+    "description": "",
+    "wordCount":  203 ,
+    "mainEntityOfPage": "True",
+    "dateModified": "2022-09-29",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Casey",
+      "logo": {
+        "@type": "imageObject",
+        "url": "http:\/\/localhost:1313\/favicon.ico"
+      }
+    }
+  }
+</script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <link rel="stylesheet" href="/sass/main.min.ab99ff095f832511e24ffb2fba2b51ad473b2f7e9301d674eba2c6c3a6e8bd81.css">
+    
+</head>
+    
+    <script>
+        (function() {
+            const colorSchemeKey = 'ThemeColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'ThemeColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.userColorScheme = 'dark';
+        } else {
+            document.documentElement.dataset.userColorScheme = 'light';
+        }
+    })();
+</script>
+
+
+    <body class="dark">
+        <nav class="navbar">
+    <div class="container">
+        <div class="flex">
+            <div>
+                <a class="brand" href="/">
+                    
+                    <span class="emoji">
+                        😎
+                    </span>
+                    
+                    
+                    Casey&#39;s Blog
+                    </a>
+            </div>
+            <div class="flex">
+                
+                <a href="/articles/">Articles</a>
+                
+                
+                    <button id="dark-mode-button">
+                    <svg class="light" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M30.312.776C32 19 20 32 .776 30.312c8.199 7.717 21.091 7.588 29.107-.429C37.9 21.867 38.03 8.975 30.312.776z"/><path d="M30.705 15.915a1.163 1.163 0 1 0 1.643 1.641a1.163 1.163 0 0 0-1.643-1.641zm-16.022 14.38a1.74 1.74 0 0 0 0 2.465a1.742 1.742 0 1 0 0-2.465zm13.968-2.147a2.904 2.904 0 0 1-4.108 0a2.902 2.902 0 0 1 0-4.107a2.902 2.902 0 0 1 4.108 0a2.902 2.902 0 0 1 0 4.107z" fill="#FFCC4D"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    <svg class="dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36"><path fill="#FFD983" d="M16 2s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2V2zm18 14s2 0 2 2s-2 2-2 2h-2s-2 0-2-2s2-2 2-2h2zM4 16s2 0 2 2s-2 2-2 2H2s-2 0-2-2s2-2 2-2h2zm5.121-8.707s1.414 1.414 0 2.828s-2.828 0-2.828 0L4.878 8.708s-1.414-1.414 0-2.829c1.415-1.414 2.829 0 2.829 0l1.414 1.414zm21 21s1.414 1.414 0 2.828s-2.828 0-2.828 0l-1.414-1.414s-1.414-1.414 0-2.828s2.828 0 2.828 0l1.414 1.414zm-.413-18.172s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zm-21 21s-1.414 1.414-2.828 0s0-2.828 0-2.828l1.414-1.414s1.414-1.414 2.828 0s0 2.828 0 2.828l-1.414 1.414zM16 32s0-2 2-2s2 2 2 2v2s0 2-2 2s-2-2-2-2v-2z"/><circle fill="#FFD983" cx="18" cy="18" r="10"/><rect x="0" y="0" width="36" height="36" fill="rgba(0, 0, 0, 0)" /></svg>
+                    </button>
+                
+            </div>
+            </div>
+    </div>
+</nav>
+
+        <main>
+            
+<div class="container">
+    <article>
+        <header class="article-header">
+            <div class="thumb">
+                <div>
+                    <h1>Clustered Index &amp; Non-Clustered Index | sql</h1>
+                    <div class="post-meta">
+                        <div>
+                            
+                            
+                            By Casey | <time>September 29, 2022</time>
+                            | 1 minutes
+                        </div>
+                        <div class="tags">
+                            
+                            <a href="/tags/sql/">Sql</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </article>
+
+    <div class="article-post">
+    <h2 id="index">
+    <a href="#index" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    INDEX
+</h2>
+<p>主要以下的特點：</p>
+<ul>
+<li>Index 加快從 Table 或 View 中拿到資料的速度</li>
+<li>Index 的值可以為一個或是多個值，這一些值會從 Table 或是 View 來的</li>
+<li>Index 會存在一個資料結構叫做 B-tree 中</li>
+</ul>
+<p>Index 可以分成 2 種：</p>
+<ul>
+<li>CLUSTERED INDEX (叢集索引)</li>
+<li>NON-CLUSTERED INDEX (非叢集索引)</li>
+</ul>
+<h2 id="clustered-index-叢集索引">
+    <a href="#clustered-index-%e5%8f%a2%e9%9b%86%e7%b4%a2%e5%bc%95" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    CLUSTERED INDEX (叢集索引)
+</h2>
+<ul>
+<li>Clustered Index 可以將 View 或是 Table 中的資料依照 Index 的 Value 排序後儲存</li>
+<li>因為資料本身只能以一種順序排序，所以每個 Table 只能有一個 Clustered Index</li>
+<li>只有當 Table 包含 Clustered Index 時，Table 中的資料才會以排序順序儲存</li>
+<li>Table 有 Clustered Index 時，Table 又稱為 Clustered Table (叢集資料表)</li>
+<li>如果 Table 沒有任何 Clustered Index，它的資料就儲存在未排序的資料結構中，這個資料結構稱為 Heap (堆積)。</li>
+</ul>
+<h2 id="non-clustered-index-非叢集索引">
+    <a href="#non-clustered-index-%e9%9d%9e%e5%8f%a2%e9%9b%86%e7%b4%a2%e5%bc%95" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Non-clustered Index (非叢集索引)
+</h2>
+<ul>
+<li>Non-clustered Index 包含 Non-clustered Index Value (非叢集索引鍵值)， Non-clustered Index Value 可以是一個或是多個，為 Table 中的欄位。而每個 Non-clustered Index Value 都有一個 Pointer，指向包含 Non-clustered Index Value 的資料，也就是 Table 裡的欄位資料。</li>
+<li>Non-clustered Index Value 的 Pointer 稱為 Row Locator (資料列定位器)。Row Locator 的資料結構須要看資料儲存是在 Heap 或 Clustered Table 而定。若是 Heap，Row Locator 是指向 Pointer。 若是 Clustered Table，Row Locator 就是 Clustered Index。</li>
+</ul>
+<h2 id="共通點">
+    <a href="#%e5%85%b1%e9%80%9a%e9%bb%9e" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    共通點
+</h2>
+<ul>
+<li>每當修改 Table 的資料時，就會自動維護資料表或檢視的索引。</li>
+<li>Clustered Index 與 Non-clustered Index 都可以是 Unique 或是不是 Unique，Unique 表示資料值不能重複，不是 Unique 表示資料值可以重複。</li>
+</ul>
+<h2 id="query-optimizer-如何使用-index">
+    <a href="#query-optimizer-%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8-index" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Query Optimizer 如何使用 Index
+</h2>
+<ul>
+<li>建立好的 Index 可以降低磁碟 I/O 作業並耗用較少的系統資源，因此可改善查詢效能。</li>
+<li>當執行 SELECT、UPDATE、DELETE 或 MERGE 時， Query Optimizer 會評估每個擷取資料的可用方法。</li>
+<li>擷取資料的可用方法可以分成 2 種
+<ul>
+<li>Table Scan</li>
+<li>掃描一個或是多個 Index</li>
+</ul>
+</li>
+</ul>
+<h3 id="table-scan-資料表掃描">
+    <a href="#table-scan-%e8%b3%87%e6%96%99%e8%a1%a8%e6%8e%83%e6%8f%8f" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    Table Scan (資料表掃描)
+</h3>
+<ul>
+<li>當執行 Table Scan 時，Query Optimizer 可以讀取 Table 中的所有資料，並擷取符合查詢條件的資料列。</li>
+<li>Table Scan 將產生許多磁碟 I/O 作業，而且可能需要大量資源。</li>
+</ul>
+<h3 id="使用-index-掃描">
+    <a href="#%e4%bd%bf%e7%94%a8-index-%e6%8e%83%e6%8f%8f" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    使用 Index 掃描
+</h3>
+<ul>
+<li>當 Query Optimizer 使用 Index 掃描時，它會搜尋 Index Value 、尋找查詢所需的資料之儲存位置，並從該位置擷取符合的資料。</li>
+<li>一般而言，搜尋 Index 會比搜尋 Table 更快。</li>
+</ul>
+<h2 id="參考資料">
+    <a href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99" class="anchor">
+        <svg class="icon" aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16">
+            <path fill-rule="evenodd"
+                d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z">
+            </path>
+        </svg>
+    </a>
+    參考資料
+</h2>
+<p><a href="https://learn.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-Non-clustered-indexes-described?view=sql-server-ver16">Clustered and Non-clustered indexes described</a></p>
+
+    </div>
+</div>
+
+<div class="container">
+    
+    <nav class="flex container suggested">
+        
+        <a rel="prev" href="/post/2022-09-27-mssql-update-query/" title="Previous post (older)">
+            <span>Previous</span>
+            MSSQL Update Query | SQL
+            </a>
+        
+        
+        
+        <a rel="next" href="/post/2022-09-30-ssis-validatemeta-data-attribute-intro/" title="Next post (newer)">
+            <span>Next</span>
+            SSIS ValidateExternalMetaData | SSIS
+            </a> 
+        
+    </nav>
+    
+</div>
+ 
+<div class="container">
+    
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-hugo-tania-netlify-app" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            })
+        }
+    })
+</script>
+
+</div>
+
+</main>
+
+
+        </main>
+        <footer class="footer flex">
+    <section class="container">
+        <nav class="footer-links">
+            
+        </nav>
+
+        
+    </section>
+    <script defer src="/ts/features.83328c24dd2e04b778a9d875819baa81b858dfaf3bae705f38934f75e1a6e6ce.js" 
+    data-enable-footnotes="true"
+    ></script>
+</footer>
+
+    </body>
+</html>

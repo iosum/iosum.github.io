@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sql</title>
+      <link>http://localhost:1313/tags/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>.NET</title>
+      <link>http://localhost:1313/tags/.net/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/.net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C#</title>
+      <link>http://localhost:1313/tags/c%23/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/c%23/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ASP.NET</title>
+      <link>http://localhost:1313/tags/asp.net/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/asp.net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSMS</title>
+      <link>http://localhost:1313/tags/ssms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ssms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Selenium</title>
+      <link>http://localhost:1313/tags/selenium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/selenium/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Toad</title>
+      <link>http://localhost:1313/tags/toad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/toad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssis</title>
+      <link>http://localhost:1313/tags/ssis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ssis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css</title>
+      <link>http://localhost:1313/tags/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Css Flexbox</title>
+      <link>http://localhost:1313/tags/css-flexbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/css-flexbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R12</title>
+      <link>http://localhost:1313/tags/r12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/r12/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sql Ssis</title>
+      <link>http://localhost:1313/tags/sql-ssis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/sql-ssis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vue.js</title>
+      <link>http://localhost:1313/tags/vue.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vue.js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C# LINQ</title>
+      <link>http://localhost:1313/tags/c%23-linq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/c%23-linq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security Ad</title>
+      <link>http://localhost:1313/tags/security-ad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/security-ad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle-Sql</title>
+      <link>http://localhost:1313/tags/oracle-sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/oracle-sql/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

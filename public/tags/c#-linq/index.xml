@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# LINQ on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/c%23-linq/</link>
+    <description>Recent content in C# LINQ on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Aug 2022 16:14:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/c%23-linq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>List&lt;自定義的 class&gt; 轉成以逗號分隔字串 | c#</title>
+      <link>http://localhost:1313/post/2022-08-24-combine-attribute-with-list/</link>
+      <pubDate>Wed, 24 Aug 2022 16:14:00 +0800</pubDate>
+      <guid>http://localhost:1313/post/2022-08-24-combine-attribute-with-list/</guid>
+      <description>搭配 LINQ 和 string.Join()，將 List&amp;lt;自定義的 class&amp;gt; 轉成以逗號分隔字串。&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 void Main() { // 新增一個 User List 叫做 result List&amp;lt;User&amp;gt; result = new List&amp;lt;User&amp;gt;(); // 加入 3 個 object 到 result，分別為 Sharon，John 和 Bobby result.Add(new User(1, &amp;#34;Sharon&amp;#34;, &amp;#34;User&amp;#34;, &amp;#34;sharon&amp;#34;)); result.Add(new User(2, &amp;#34;John&amp;#34;, &amp;#34;User&amp;#34;, &amp;#34;john&amp;#34;)); result.</description>
+    </item>
+  </channel>
+</rss>

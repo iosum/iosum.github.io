@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Toad on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/toad/</link>
+    <description>Recent content in Toad on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/toad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No valid Oracle clients found. You need at least one 64-bit client properly configured. | Toad for Oracle</title>
+      <link>http://localhost:1313/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</link>
+      <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2022-11-22-no-valid-oracle-clients-found-toad-for-oracle/</guid>
+      <description>錯誤訊息&#xD;No valid Oracle clients found. You need at least one 64-bit client properly configured.&#xA;錯誤原因&#xD;因為我安裝的 Toad 為 64 bit，但是 Oracle Instant Client 為 32 bit，所以需要另外再下載 64 bit 的 Oracle Instant Client。&#xA;可以從 Help &amp;gt; About 查看 Toad 目前使用 x86 還是 x64&#xA;如果之前有安裝過 sqlplus，可以執行 sqlplus.exe 並打開工作管理員之後查看 Oracle Instant Client 的版本&#xA;解決步驟&#xD;到 Oracle 官網下載 Oracle Instant Client Downloads，需要注意位元，如果 Toad 安裝 32 bit的版本 ，Oracle Instant Client 也需要安裝 32 bit，如果 Toad 安裝 64 bit的版本 ，Oracle Instant Client 也需要安裝 64 bit。 這一步很重要，因為容易踩雷!</description>
+    </item>
+  </channel>
+</rss>

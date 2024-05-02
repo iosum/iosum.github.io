@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.NET on Casey&#39;s Blog</title>
+    <link>http://localhost:1313/tags/.net/</link>
+    <description>Recent content in .NET on Casey&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automapper 簡介</title>
+      <link>http://localhost:1313/post/2023-03-25-automapper-intro/</link>
+      <pubDate>Sat, 25 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2023-03-25-automapper-intro/</guid>
+      <description>AutoMapper 是什麼&#xD;AutoMapper 是一個在 .NET 平台上使用的工具，它可以幫助開發人員更快速、更方便地處理不同物件之間的 Mapping。&#xA;什麼是物件之間的 Mapping，是指把一個物件的某些屬性自動地複製到另一個物件對應的屬性。&#xA;這樣描述似乎有一點複雜，可以參考以下範例和步驟。&#xA;使用步驟&#xD;透過 Nuget 安裝 AutoMapper 套件。&#xA;建立 DTO 和 Entity 類別，Click here&#xA;建立 Profile 類別，設定 Attribute Mapping 的關係，Click here&#xA;Setup AutoMapper，指定使用哪些 Profile 類別，Click here&#xA;在需要使用 AutoMapper 的地方，透過 Dependency Injection 或手動建立 IMapper 物件，使用 Map 方法進行類型轉換，Click here&#xA;範例&#xD;第二步&#xD;建立 DTO 和 Entity 類別，假設我們有一個 User class 和一個 UserInfo class，它們分別如下所示：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 public class User { public int Id { get; set; } public string Name { get; set; } public int Age { get; set; } } public class UserInfo { public int Id { get; set; } public string Name { get; set; } } 我們希望將 User 物件的值 mapping 到 UserInfo 物件上，只保留 Id 和 Name 屬性的值，這樣可以得到一個新的 UserInfo 物件。</description>
+    </item>
+  </channel>
+</rss>
