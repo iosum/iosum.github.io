@@ -7,7 +7,7 @@ categories: Blogging
 tags: sql
 ---
 
-## INDEX
+## Index
 
 主要以下的特點：
 
@@ -58,4 +58,4 @@ Index 可以分成 2 種：
 
 ## 參考資料
 
-[Clustered and Non-clustered indexes described](https://learn.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-Non-clustered-indexes-described?view=sql-server-ver16)
+[Clustered and nonclustered indexes](https://learn.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described?view=sql-server-ver16)
