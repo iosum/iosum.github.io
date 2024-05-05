@@ -1,5 +1,5 @@
 ---
-title: Articles
-subtitle: Posts, tutorials, snippets, musings, and everything else.
+title: 所有文章
+subtitle: 
 layout: "archives"
 ---

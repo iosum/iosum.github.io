@@ -1,14 +1,14 @@
-baseurl = "https://iosum.github.io"
+baseurl = "https://caseyho.dev"
 languageCode = "en-us"
-title = "Casey's Blog"
+title = "爆肝工程師 Casey"
 theme = "hugo-tania"
-paginate = 6
+paginate = 5
 
 disqusShortname = "https-hugo-tania-netlify-app"
 
 [params]
   # Emoji will show before the blog title on site navbar.
-  titleEmoji  = "😎"
+  titleEmoji  = "👩‍💻"
 
   # Logo will show before the blog title on site navbar.
   titleLogo = ""
@@ -33,7 +33,7 @@ disqusShortname = "https-hugo-tania-netlify-app"
     facebook = ""
     github = "https://github.com/iosum"
     instagram = ""
-    linkedin = ""
+    linkedin = "https://www.linkedin.com/in/chiayingho/"
     medium = ""
     stack-overflow = ""
     steam = ""
@@ -49,7 +49,7 @@ disqusShortname = "https-hugo-tania-netlify-app"
 
 [menu]
 [[menu.header]]
-  name = "Articles"
+  name = "所有文章"
   url = "/articles/"
 
 
