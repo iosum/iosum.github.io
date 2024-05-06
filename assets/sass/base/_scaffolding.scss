@@ -12,6 +12,9 @@ body {
     background: var(--background);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 section {
@@ -42,6 +45,7 @@ section>h2 {
 }
 
 @media screen and (min-width: 800px) {
+
     .index h2,
     section>h2 {
         border-bottom-width: 4px;
@@ -120,6 +124,7 @@ ul {
 }
 
 @media screen and (min-width: 800px) {
+
     p,
     ol,
     ul,

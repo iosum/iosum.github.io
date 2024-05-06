@@ -52,6 +52,10 @@ disqusShortname = "https-hugo-tania-netlify-app"
   name = "所有文章"
   url = "/articles/"
 
+  [[menu.footer]]
+    name = "© 2024"
+    weight = 1
+
 
 [markup]
 [markup.highlight]
