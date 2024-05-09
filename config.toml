@@ -26,6 +26,11 @@ disqusShortname = "https-hugo-tania-netlify-app"
   # Default to 5
   maxCategoryToShow = 10
 
+  displayName = "何佳穎 Casey"
+
+  intro = "hello "
+
+
   # Show your social information with icon on index bio with `_index.md` content.
   [params.socialOptions]
     dev-to = ""
@@ -41,7 +46,8 @@ disqusShortname = "https-hugo-tania-netlify-app"
     twitter = ""
     twitch = ""
     whatsapp = ""
-  
+
+
   # Comments settigns
   [params.comments]
     enabled = true
@@ -51,6 +57,10 @@ disqusShortname = "https-hugo-tania-netlify-app"
 [[menu.header]]
   name = "所有文章"
   url = "/articles/"
+
+[[menu.header]]
+  name = "關於"
+  url = "/about/"
 
   [[menu.footer]]
     name = "© 2024"
