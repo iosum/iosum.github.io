@@ -215,8 +215,8 @@
     <loc>http://localhost:1313/post/2022-07-11-define-variables-oracle-sql/</loc>
     <lastmod>2022-07-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
-  </url><url>
     <loc>http://localhost:1313/articles/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
   </url>
 </urlset>
