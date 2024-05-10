@@ -17,10 +17,11 @@ disqusShortname = "https-hugo-tania-netlify-app"
   # Default to true
   enableFootnotes = true
 
-  #siteName = "Hugo Tania is Amazing"
-  #siteDesc = "Hugo is Absurdly Fast!"
   author = "Casey"
 
+  siteName = "爆肝工程師 Casey"
+
+  description = "隨手筆記。"
 
   # Limit how many categories filter show above search input.
   # Default to 5
