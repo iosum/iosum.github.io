@@ -20,8 +20,8 @@ disqusShortname = "https-hugo-tania-netlify-app"
   author = "Casey"
 
   siteName = "爆肝工程師 Casey"
-
   description = "隨手筆記。"
+  canonical = "https://www.caseyho.dev"
 
   # Limit how many categories filter show above search input.
   # Default to 5

@@ -8,10 +8,22 @@
   {{ template "_internal/google_analytics.html" . }}
 
   <meta property="og:site_name" content="{{.Site.Params.siteName}}" />
-  <meta property="og:title" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
-  <meta itemprop="name" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
-  <meta name="twitter:title" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
-  <meta name="application-name" content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}" />
+  <meta
+    property="og:title"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
+  <meta
+    itemprop="name"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
+  <meta
+    name="twitter:title"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
+  <meta
+    name="application-name"
+    content="{{with.Title}}{{.}} | {{end}}{{.Site.Title}}"
+  />
 
   {{- with $.Params.images -}}
   <meta name="twitter:card" content="summary_large_image" />
@@ -28,26 +40,38 @@
   <meta name="twitter:card" content="summary" />
   {{- end -}} {{- end -}} {{- end }}
 
-  <meta name="description"
-    content="{{ if .Description }}{{.Description}}{{ else }}{{.Site.Params.Description}}{{end}}" />
-  <meta name="twitter:description"
-    content="{{ if .Description }}{{.Description}} {{ else }}{{.Site.Params.Description}}{{end}}" />
-  <meta itemprop="description"
-    content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.Description}}{{end}}" />
-  <meta property="og:description"
-    content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.Description}}{{ end }}" />
+  <meta
+    name="description"
+    content="{{ if .Description }}{{.Description}}{{ else }}{{.Site.Params.Description}}{{end}}"
+  />
+  <meta
+    name="twitter:description"
+    content="{{ if .Description }}{{.Description}} {{ else }}{{.Site.Params.Description}}{{end}}"
+  />
+  <meta
+    itemprop="description"
+    content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.Description}}{{end}}"
+  />
+  <meta
+    property="og:description"
+    content="{{ if .Description }} {{.Description}} {{ else }}{{.Site.Params.Description}}{{ end }}"
+  />
 
-  {{ partial "post-meta.html" . }}
-  <link rel="shortcut icon" type="image/x-icon" href="{{ " favicon.ico" | relURL }}" /> {{ $style := resources.Get
+  {{ partial "post-meta.html" . }} <link rel="shortcut icon" type="image/x-icon"
+  href="{{ " favicon.ico" | relURL }}" /> {{ $style := resources.Get
   "sass/main.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+  />
 
   {{ partial "head/custom.html" . }}
 </head>
