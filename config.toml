@@ -1,6 +1,6 @@
 baseurl = "https://caseyho.dev"
 languageCode = "en-us"
-title = "爆肝工程師 Casey"
+title = "工程師 Casey"
 theme = "hugo-tania"
 paginate = 5
 
@@ -19,7 +19,7 @@ disqusShortname = "https-hugo-tania-netlify-app"
 
   author = "Casey"
 
-  siteName = "爆肝工程師 Casey"
+  siteName = "工程師 Casey"
   description = "隨手筆記。"
   canonical = "https://www.caseyho.dev"
 
@@ -29,7 +29,7 @@ disqusShortname = "https-hugo-tania-netlify-app"
 
   displayName = ""
 
-  intro = "我是何佳穎 Casey，畢業於銘傳資工系，目前在 Ringus TW 擔任 OutSystems 工程師，真實的肝苦人。Why 取名為爆肝，是因為從110年罹患自體免疫肝炎到現在，早就不是新鮮的肝了😂😂😂，話說醫學並沒有爆肝這個詞，這只是形容我的肝不給力而已。"
+  intro = "我是何佳穎 Casey，畢業於銘傳資工系，目前在 Ringus TW 擔任 OutSystems 工程師"
 
 
   # Show your social information with icon on index bio with `_index.md` content.
